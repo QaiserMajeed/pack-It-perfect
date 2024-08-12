@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pack It Perfect</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .product-card {
+            transition: transform 0.3s;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-img-container {
+            height: 200px;
+            overflow: hidden;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-color: #fce4ec;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 20px;
+        }
+
+        .product-title {
+            text-align: center;
+            padding: 15px;
+            background-color: white;
+            margin: 0;
+        }
+
+        .products-container {
+            padding: 30px 0;
+        }
+
+        .card-title {
+            font-size: 14px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="bg-white">
+        <!-- Top Bar (Free Shipping Announcement) -->
+        <div class="bg-danger text-white text-center ">
+            Free shipping on all UK orders £300+
+        </div>
+
+        <!-- Navbar -->
+        <div class="container-fluid" id="top-items">
+            <div id="navbar-pic1">
+                <a class="navbar-brand" href="#">
+                    <svg width="200" height="95" viewBox="0 0 349.99999999999994 158.18343123165647"
+                        class="looka-1j8o68f">
+                        <defs id="SvgjsDefs3647" />
+                        <g id="SvgjsG3648" featurekey="JKiIdh-0"
+                            transform="matrix(0.9984913215593707,0,0,0.9984913215593707,125.06828982939216,-10.103058982088948)"
+                            fill="#141f4a">
+                            <path xmlns="http://www.w3.org/2000/svg"
+                                d="M93.5515442,41.1912308L82.7678604,30.7618694l-0.0040741,0.0349636  c-0.0484619-0.0715256-0.0975723-0.1406288-0.1505432-0.2057114c-0.0047379-0.0048466-0.0095825-0.0112877-0.0144272-0.0169048  c-0.0644226-0.0781326-0.1353455-0.1498241-0.2109985-0.2174397c-0.012886-0.0129395-0.026535-0.0249977-0.0426178-0.0370579  c-0.0660706-0.057209-0.1354523-0.1111698-0.2062607-0.160284c-0.0144272-0.0096912-0.0265427-0.020153-0.0410767-0.0290184  c-0.0836945-0.0555573-0.1715775-0.1054993-0.260994-0.1497688c-0.0063858-0.0024223-0.0112305-0.006443-0.0168533-0.0096912  l-9.9143677-4.7598419v-3.0749969c0-0.0007706,0-0.002367,0-0.0031929c0-0.1030769-0.0080338-0.2053814-0.0218048-0.3084583  c-0.0015411-0.0185547-0.0047302-0.0378819-0.0079269-0.057209c-0.0129929-0.0861721-0.0330353-0.1723442-0.0563812-0.2585163  c-0.0048447-0.0144806-0.0065002-0.029789-0.0113449-0.043499c-0.0298386-0.0950375-0.0628815-0.1876526-0.1038437-0.2802658  c-0.0081482-0.0185013-0.0169601-0.036232-0.0266495-0.0539608c-0.0200424-0.0466938-0.0409698-0.0926151-0.0676193-0.13694  c-0.012886-0.0249424-0.0297318-0.0482883-0.0442657-0.0724621c-0.0145416-0.0241718-0.0297394-0.0483437-0.0442734-0.0716896  c-0.0499954-0.0757103-0.1023026-0.1473465-0.1586914-0.2158432c-0.0048447-0.006443-0.0096893-0.0136566-0.0144272-0.0193272  c-0.0660706-0.0773067-0.1354523-0.1481724-0.2094498-0.2158432c-0.0160828-0.0136566-0.0298462-0.0265961-0.0475769-0.0394802  c-0.062767-0.0563278-0.1303864-0.1086922-0.1997681-0.1562119c-0.0160751-0.0104618-0.0312729-0.0217495-0.0474625-0.0330372  c-0.0821533-0.0539608-0.1683807-0.1039009-0.2560349-0.1473999c-0.0081482-0.0023689-0.0129929-0.0072136-0.0186157-0.0104618  l-20.1129646-9.6614132c-0.6443367-0.3101101-1.396595-0.3101101-2.0417023,0l-20.1146164,9.6598167  c-0.0039654,0.0024223-0.00881,0.0056152-0.0127754,0.0080376c-0.0918427,0.0450974-0.181263,0.0958633-0.2666092,0.1522465  c-0.0121136,0.0080395-0.0234566,0.0169048-0.036232,0.0249443c-0.0733414,0.0499401-0.1426105,0.1054993-0.2102261,0.1643047  c-0.0145378,0.0121136-0.027422,0.0233459-0.0419579,0.0354595c-0.0732327,0.0676174-0.1449242,0.139307-0.2101173,0.2174416  c-0.0048447,0.0064411-0.0096912,0.0128841-0.0153065,0.0193253c-0.0556126,0.0676727-0.107151,0.139307-0.1562672,0.2150173  c-0.016077,0.0241737-0.0313854,0.0491714-0.0459213,0.073288c-0.0153065,0.0241718-0.0313854,0.0467491-0.0442696,0.0709209  c-0.0249977,0.0434437-0.0443802,0.0877686-0.0653038,0.132864c-0.0095806,0.020153-0.0209236,0.0394802-0.0297337,0.0595779  c-0.0403061,0.0910168-0.0741138,0.1836319-0.1023045,0.277071c-0.0048466,0.0169048-0.0080395,0.0330391-0.012886,0.0491161  c-0.0233459,0.0838051-0.0410748,0.1675549-0.0548401,0.2521286c-0.0030842,0.0200977-0.0063877,0.0410767-0.0095825,0.0620003  c-0.0137653,0.1006546-0.0216942,0.2029591-0.0216942,0.3044395c0,0.0015965,0,0.0031929,0,0.0048447v3.0749416  l-9.9135971,4.7638607c-0.0048447,0.0016518-0.00881,0.0056725-0.0136547,0.0088654  c-0.0927238,0.0443249-0.1812649,0.0950375-0.2666111,0.1514206c-0.0128841,0.0080948-0.0241165,0.0177307-0.0371113,0.0265961  c-0.0724621,0.0499401-0.1425018,0.1039009-0.2093468,0.1627083c-0.0136547,0.0120583-0.0289631,0.0241165-0.0426178,0.0370007  c-0.0733433,0.0668449-0.1442623,0.1385365-0.2103367,0.2166691c-0.0047359,0.006443-0.00881,0.0137119-0.0144272,0.020153  c-0.0425072,0.0509872-0.0802803,0.1064911-0.1183834,0.1621037l-0.1231174-0.1125469L5.4122429,42.2367516  c-0.3704576,0.4048157-0.5365252,0.9558754-0.4510689,1.4976883c0.0850158,0.5418091,0.4118643,1.0157852,0.8880415,1.287571  l9.8628302,5.6267929v20.1988678c0,0.8561554,0.4654942,1.6470108,1.2145596,2.0626221l31.3642426,17.3923492  c0.0008812,0.0016556,0.0024223,0.0016556,0.0033035,0.0016556c0.0828133,0.0466919,0.1698112,0.0861664,0.2576904,0.1223984  c0.0151978,0.0056152,0.0297318,0.0112915,0.0442696,0.0160828c0.0716896,0.02742,0.1433792,0.0499344,0.2182655,0.0716858  c0.0224648,0.0064468,0.0466919,0.0121155,0.0692673,0.0169067c0.0683861,0.0169601,0.1368866,0.0281906,0.2078056,0.0403061  c0.0224648,0.0031891,0.0458107,0.0080338,0.0691566,0.0104599c0.0894203,0.0104599,0.1804924,0.0169067,0.27388,0.0169067  c0.0934944,0,0.1844559-0.0072708,0.2738762-0.0169067c0.0233498-0.0024261,0.0466957-0.0072708,0.0691605-0.0104599  c0.0701485-0.0121155,0.1394157-0.0233459,0.2070312-0.0403061c0.0233459-0.0056152,0.0475769-0.0112305,0.0709229-0.0169067  c0.0740013-0.0209198,0.1449203-0.0442657,0.2173843-0.0716858c0.014534-0.0047913,0.0281906-0.0104675,0.0443802-0.0160828  c0.0877686-0.036232,0.1747665-0.0765381,0.2576904-0.1223984c0.0016518,0,0.0031929,0,0.0031929-0.0016556l31.3642426-17.3923492  c0.7490616-0.4156113,1.2146683-1.2056961,1.2146683-2.0626221V52.1718216  c2.5151291-1.4879417,6.1421738-3.6133385,9.1919556-5.3197136C97.0852127,44.2020836,93.5515442,41.1912308,93.5515442,41.1912308z   M15.7120457,46.4939842l-6.1133232-3.4876862l6.1133232-6.6830482l1.3088245-1.4309006l0.4030552-0.4405518l10.7644157,5.9513855  c0.0056171,0.0024223,0.0112324,0.0056152,0.0169601,0.0088654l18.4524021,10.2325172l-7.6276398,9.1525841L20.4283333,49.1847038  L15.7120457,46.4939842z M47.0788193,85.1929398L19.5264149,70.1573563l0.0751057-17.3661423l18.9528084,10.8893547  c0.2805977,0.1594582,0.5885048,0.2369881,0.8933258,0.2369881c0.5211105,0,1.0338478-0.2255363,1.3871269-0.649292  l6.2440376-7.4919128V85.1929398z M47.0788193,45.4859657l-15.3999825-8.5387001V26.1389122l15.3999825,8.5395775V45.4859657z   M49.435257,31.3857212l-16.5113564-9.1557217l16.5113564-7.929986l16.5115738,7.929986L49.435257,31.3857212z   M51.793457,34.6784897l15.3982162-8.5395775v10.8083534L51.793457,45.4859657V34.6784897z M83.1570358,47.6462135  l-2.4913406,1.3861351L60.3982277,60.3090057l-8.5703049-9.9503212l28.6428566-15.7605858l1.6800537,1.527256l1.0062027,0.9148026  l7.2372513,6.5793114L83.1570358,47.6462135z" />
+                        </g>
+                        <g id="SvgjsG3649" featurekey="A7DQL5-0"
+                            transform="matrix(1.7183817083924757,0,0,1.7183817083924757,0,89.72408144797872)"
+                            fill="#235592">
+                            <path
+                                d="M0 5.98 l11.42 0 c2.14 0 3.88 1.74 3.88 3.9 c0 2.14 -1.74 3.9 -3.88 3.9 l-9.86 -0.02 l0 4.68 l1.56 0 l0 -3.12 l1.54 0 l0 4.68 l-4.66 0 l0 -7.8 l11.42 0.02 c1.28 0 2.32 -1.06 2.32 -2.34 c0 -1.3 -1.04 -2.34 -2.32 -2.34 l-9.86 0 l0 1.56 l9.86 0 c0.4 0.02 0.74 0.36 0.74 0.78 s-0.32 0.76 -0.78 0.78 l-0.02 0 l-11.36 0 l0 -4.68 z M40.730000000000004 15.32 l0.9 -1.56 l2.72 4.68 l1.8 0 c-0.4 -0.64 -4.2 -7.14 -4.52 -7.78 l-3.92 6.8 l-1.46 2.54 l-5.4 0 c0.3 -0.5 2.32 -4.02 4.26 -7.4 c1.14 -1.98 2.4 -4.2 3.82 -6.62 l1.8 0 l-3.72 6.44 l-3.46 6.02 l1.8 0 c2.46 -4.34 4 -6.9 6.28 -10.9 c0.14 0.24 7.18 12.44 7.22 12.46 l-5.4 0 z M78 5.98 l0 4.7 l-8.6 0 c-1.18 0.1 -2.08 1.12 -2.08 2.32 s0.9 2.18 2.08 2.32 l5.48 0 l0 1.56 l-5.48 0 c-2.02 -0.16 -3.62 -1.82 -3.62 -3.9 c0 -2 1.54 -3.7 3.54 -3.86 l7.12 0 l0 -1.58 l-7.04 0 l0 0.02 c-2.86 0.16 -5.14 2.52 -5.14 5.44 c0 2.9 2.28 5.28 5.14 5.44 l7.04 0 l0 -3.12 l1.56 0 l0 4.68 l-8.6 0 c-3.74 -0.16 -6.7 -3.24 -6.7 -7 c0 -3.78 2.96 -6.84 6.7 -7 z M102.05000000000001 15.16 l1.14 -1.06 l6.42 5.9 l-6.9 0 l-5.24 -4.8 l8.12 -7.66 l-2.26 0 l-5.86 5.66 l0 -5.66 l-1.56 0 l0 10.9 l2.76 0 l1.72 1.56 l-6.04 0 l0 -14.02 l4.68 0 l0 3.44 l3.68 -3.44 l6.82 0 l-9.78 9.2 l3.56 3.26 l2.3 0 z M154.19000000000003 20 l-4.68 0 l0 -14.02 l4.68 0 l0 10.9 l-1.56 0 l0 -9.34 l-1.56 0 l0 10.9 l3.12 0 l0 1.56 z M170.54000000000002 10.66 l0 -4.68 l15.3 0 l0 4.68 l-3.76 0 l0 -1.56 l2.2 0 l0 -1.56 l-12.18 0 l0 1.56 l5.32 0 l-0.02 9.34 l1.56 0 l0 -9.34 l1.56 0 l0 10.9 l-4.68 0 l0 -9.34 l-5.3 0 z" />
+                        </g>
+                        <g id="SvgjsG3650" featurekey="A7DQL5-1"
+                            transform="matrix(1.7183817083924757,0,0,1.7183817083924757,0,123.72408144797872)"
+                            fill="#235592">
+                            <path
+                                d="M0 5.98 l11.42 0 c2.14 0 3.88 1.74 3.88 3.9 c0 2.14 -1.74 3.9 -3.88 3.9 l-9.86 -0.02 l0 4.68 l1.56 0 l0 -3.12 l1.54 0 l0 4.68 l-4.66 0 l0 -7.8 l11.42 0.02 c1.28 0 2.32 -1.06 2.32 -2.34 c0 -1.3 -1.04 -2.34 -2.32 -2.34 l-9.86 0 l0 1.56 l9.86 0 c0.4 0.02 0.74 0.36 0.74 0.78 s-0.32 0.76 -0.78 0.78 l-0.02 0 l-11.36 0 l0 -4.68 z M46.150000000000006 5.98 l0 4.68 l-10.62 0 l0 1.56 l7.88 0 l0 1.56 l-9.44 0 l0 -4.68 l10.62 0 l0 -1.56 l-12.18 0 l0 10.9 l12.18 0 l0 -1.56 l-10.62 0 l0 -1.56 l12.18 0 l0 4.68 l-15.3 0 l0 -14.02 l15.3 0 z M77.88 20 l-5.4 0 l-1.82 -3.14 l-3.5 0 l0 3.14 l-4.66 0 l0 -7.8 l11.44 0.02 c1.3 0 2.34 -1.06 2.34 -2.34 c0 -1.3 -1.04 -2.34 -2.34 -2.34 l-9.88 0 l0 1.56 l9.88 0 c0.42 0.02 0.74 0.36 0.74 0.78 s-0.32 0.76 -0.74 0.78 l-0.02 0 l-0.02 0 l-11.4 0 l0 -4.68 l11.44 0 c2.16 0 3.9 1.74 3.9 3.9 c0 2.14 -1.74 3.9 -3.9 3.9 l-9.88 -0.02 l0 4.68 l1.56 0 l0 -3.14 l5.94 0 c0.64 1.16 1.72 2.94 1.82 3.14 l1.8 0 c-0.16 -0.22 -1.08 -1.86 -1.82 -3.14 l1.8 0 c0.66 1.14 1.32 2.32 1.86 3.2 z M109.53 5.98 l0 4.68 l-10.62 0 l0 1.56 l7.88 0 l0 1.56 l-9.44 0 l0 -4.68 l10.62 0 l0 -1.56 l-12.18 0 l0 10.9 l1.56 0 l0 -3.12 l1.56 0 l0 4.68 l-4.68 0 l0 -14.02 l15.3 0 z M140.38000000000002 5.98 l0 4.68 l-10.62 0 l0 1.56 l7.88 0 l0 1.56 l-9.44 0 l0 -4.68 l10.62 0 l0 -1.56 l-12.18 0 l0 10.9 l12.18 0 l0 -1.56 l-10.62 0 l0 -1.56 l12.18 0 l0 4.68 l-15.3 0 l0 -14.02 l15.3 0 z M172.03000000000003 5.98 l0 4.7 l-8.6 0 c-1.18 0.1 -2.08 1.12 -2.08 2.32 s0.9 2.18 2.08 2.32 l5.48 0 l0 1.56 l-5.48 0 c-2.02 -0.16 -3.62 -1.82 -3.62 -3.9 c0 -2 1.54 -3.7 3.54 -3.86 l7.12 0 l0 -1.58 l-7.04 0 l0 0.02 c-2.86 0.16 -5.14 2.52 -5.14 5.44 c0 2.9 2.28 5.28 5.14 5.44 l7.04 0 l0 -3.12 l1.56 0 l0 4.68 l-8.6 0 c-3.74 -0.16 -6.7 -3.24 -6.7 -7 c0 -3.78 2.96 -6.84 6.7 -7 z M188.38000000000002 10.66 l0 -4.68 l15.3 0 l0 4.68 l-3.76 0 l0 -1.56 l2.2 0 l0 -1.56 l-12.18 0 l0 1.56 l5.32 0 l-0.02 9.34 l1.56 0 l0 -9.34 l1.56 0 l0 10.9 l-4.68 0 l0 -9.34 l-5.3 0 z" />
+                        </g>
+                    </svg>
+
+                </a>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" class="search-bar" placeholder="What are you looking for?">
+            </div>
+            <div class="call">
+                <a href="tel:+923324855062" class="btn btn-lg" style="width: 200px;"><b>Call Us Toll Free 0203332
+                        0061</b></a>
+            </div>
+            <div id="navbar-pic2">
+                <a href="https://www.provenexpert.com/en-us/">
+                    <img src="images/rating-provan-header.4a1ad861e4a06501dd70.jpg" height="50">
+                </a>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button">
+                                By Industry
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <div class="row industry-items">
+                                                <div class="col-md-4">
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-spa"></i>Beauty
+                                                        and
+                                                        Cosmetics Packaging</a>
+                                                    <a class="dropdown-item" href="#"><i
+                                                            class="fas fa-cannabis"></i>Cannabis Custom Packaging</a>
+                                                    <a class="dropdown-item" href="#"><i
+                                                            class="fas fa-laptop"></i>Electronics Boxes</a>
+                                                    <a class="dropdown-item" href="#"><i
+                                                            class="fas fa-briefcase-medical"></i>Healthcare Boxes</a>
+                                                    <a class="dropdown-item" href="#"><i
+                                                            class="fas fa-shoe-prints"></i>Shoes Packaging</a>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <a class="dropdown-item" href="#"><i
+                                                            class="fas fa-shopping-cart"></i>E-Commerce Packaging</a>
+                                                    <a class="dropdown-item" href="#"><i
+                                                            class="fas fa-tshirt"></i>Clothing
+                                                        and Apparel Boxes</a>
+                                                    <a class="dropdown-item" href="#"><i
+                                                            class="fas fa-hamburger"></i>Fast
+                                                        Food Packaging</a>
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-gem"></i>Jewelry
+                                                        Packaging</a>
+                                                    <a class="dropdown-item" href="#"><i
+                                                            class="fas fa-shopping-basket"></i>Super Markets
+                                                        Packaging</a>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <a class="dropdown-item" href="#"><i
+                                                            class="fas fa-wine-bottle"></i>Beverage Custom Boxes</a>
+                                                    <a class="dropdown-item" href="#"><i
+                                                            class="fas fa-box-open"></i>Custom
+                                                        Made Boxes</a>
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-gift"></i>Gifts
+                                                        and
+                                                        Souvenirs Boxes</a>
+                                                    <a class="dropdown-item" href="#"><i
+                                                            class="fas fa-stethoscope"></i>Medical Devices Boxes</a>
+                                                    <a class="dropdown-item" href="#"><i
+                                                            class="fas fa-pills"></i>Supplements Packaging</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 help-section">
+                                            <h2>Get Help With Expert Guidance</h2>
+                                            <p>Need help finding the perfect packaging? Contact us now for a free
+                                                consultation with a trained packaging specialist.</p>
+                                            <p><strong>Call Us Tool Free</strong></p>
+                                            <h3>020 3332 0061</h3>
+                                            <button class="cta-button">Get Instant Quote</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">By Material</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">By Style</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">By Tages</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">By Sticker</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Hot Items</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+
+    <!-- inner content  -->
+    <div class="container">
+        <h1 class="text-center mb-4" style="font-weight: bold;"><b>Discover Our Custom Made boxes</b></h1>
+        <div class="row">
+            <div class="col-lg-12 mx-auto">
+                <p class="lead">
+                    In the dynamic UK beauty market, we stand out with our extensive collection of bespoke cosmetics and
+                    packaging. Our meticulously designed packaging solutions will take your brand to new heights of
+                    notoriety. In addition to safeguarding your belongings, our exquisite wrapping will make them shine.
+                    Any
+                    advantage that might make your cosmetics product stand out in the highly competitive cosmetics
+                    sector is
+                    greatly appreciated.
+                </p>
+                <div class="text-center mt-4">
+                    <button class="btn btn-lg" style="background-color: rgb(0, 0, 90); color: white; font-weight: bold;" id="quoteBtn">
+                        <i class="fas fa-quote-right me-2"></i> Get a Quote
+                    </button>
+                </div>
+            </div>
+        </div>
+        <h1 class="text-center my-5"><b>Our Products</b></h1>
+        
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="images/CustomMadeBoxes/HeaderCardPackaging.webp" class="card-img-top" alt="Header Card Packaging">
+                    <div class="card-body">
+                        <h5 class="card-title">Header Card Packaging</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="images/CustomMadeBoxes//CharityBoxes.webp" class="card-img-top" alt="Charity Boxes">
+                    <div class="card-body">
+                        <h5 class="card-title">Charity Boxes</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="images/CustomMadeBoxes/Bakery product boxes.webp" class="card-img-top" alt="Bakery Product Boxes">
+                    <div class="card-body">
+                        <h5 class="card-title">Bakery Product Boxes</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="images/CustomMadeBoxes/CustomJarSleeveBoxes.webp" class="card-img-top" alt="Custom Jar Sleeve Boxes">
+                    <div class="card-body">
+                        <h5 class="card-title">Custom Jar Sleeve Boxes</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="images/CustomMadeBoxes/DonutBoxes.webp" class="card-img-top" alt="Donut Boxes">
+                    <div class="card-body">
+                        <h5 class="card-title">Donut Boxes</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="images/CustomMadeBoxes//FoundationJarPackaging.webp" class="card-img-top" alt="Foundation Jar Packaging">
+                    <div class="card-body">
+                        <h5 class="card-title">Foundation Jar Packaging</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="images/CustomMadeBoxes/SocksCustomBoxes.webp" class="card-img-top" alt="Socks Custom Boxes">
+                    <div class="card-body">
+                        <h5 class="card-title">Socks Custom Boxes</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="images/CustomMadeBoxes/PersonalizedBoxes.webp" class="card-img-top" alt="Personalized Boxes">
+                    <div class="card-body">
+                        <h5 class="card-title">Personalized Boxes</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="images/CustomMadeBoxes/BeltPackaging.webp" class="card-img-top" alt="Belt Packaging">
+                    <div class="card-body">
+                        <h5 class="card-title">Belt Packaging</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="images/CustomMadeBoxes/CornflourPackaging.webp" class="card-img-top" alt="Cornflower Packaging">
+                    <div class="card-body">
+                        <h5 class="card-title">Cornflower Packaging</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="images/CustomMadeBoxes/DiffuserCustomPacakaging.webp" class="card-img-top" alt="Diffuser Custom Packaging">
+                    <div class="card-body">
+                        <h5 class="card-title">Diffuser Custom Packaging</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="images/CustomMadeBoxes/LipBom.jpg" class="card-img-top " alt="Lip Bom">
+                    <div class="card-body" style="height: 200px;">
+                        <h5 class="card-title">lip bom</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="justify-content: center;">
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="images/CustomMadeBoxes/SesameSeedsBoxes.png" class="card-img-top" alt="Sesame Seeds Boxes">
+                    <div class="card-body">
+                        <h5 class="card-title">Sesame Seeds Boxes</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+ <!-- Footer -->
+ <footer class="footer bg-dark text-white py-4">
+    <div class="container text-center">
+        <p>&copy; 2024 CustomBoxes. All Rights Reserved.</p>
+        <p><a href="#" class="text-white">Privacy Policy</a> | <a href="#" class="text-white">Terms of Service</a>
+        </p>
+    </div>
+</footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- FontAwesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>
