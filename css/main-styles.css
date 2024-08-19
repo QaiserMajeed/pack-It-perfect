@@ -459,6 +459,16 @@ h1 span.text-danger {
   outline: none; 
 }
 
+#top-products{
+  background-color: rgb(158, 156, 156);
+}
+
+.card {
+  padding: 5%;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 
 .carousel-controls {
   position: absolute;
@@ -482,3 +492,162 @@ h1 span.text-danger {
   /* background-color: white; */
   color:white;
 }
+
+
+
+.carousel-container-style {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 300px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.carousel-style {
+    display: flex;
+    height: 100%;
+    
+}
+
+.carousel-slide-style {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.style-button {
+    flex: 1 0 16.666%;
+    box-sizing: border-box;
+    border: none;
+    background: none;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+}
+
+.style-button img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.style-button p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(0, 0, 90);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.nav-btn {
+    background-color: rgb(0, 0, 90);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 90, 0.8);
+}
+
+.nav-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed; 
+ }
+ .style-button:focus {
+  outline: none; 
+}
+
+.image-container {  
+  position: relative; /* Add this to create a containing block for absolute positioning */  
+}  
+  
+.background-image {  
+  opacity: 0.5; /* Reduce opacity to dim the image */  
+  width: 100%; /* Adjust width as needed (e.g., 80% of the div's width) */  
+  height: auto; /* Maintain aspect ratio */  
+  object-fit: contain; /* Ensures the entire image is visible within the div */  
+}  
+  
+.overlay-content {  
+  position: absolute; /* Position the overlay content absolutely */  
+  top: 0 ; /* Position at the top of the container */  
+  left: 0; /* Position at the left of the container */  
+  width: 100%; /* Take up the full width of the container */  
+  height: 100%; /* Take up the full height of the container */  
+  display: flex;  
+  flex-direction: column; 
+  justify-content: center; /* Center the rows vertically */
+  align-items: center; 
+   
+  color: black; /* Text color */  
+  z-index: 1; /* Ensure it is on top of the background image */  
+  
+}  
+.row {
+  display: flex;
+  justify-content: center; /* Center the columns within the row */
+  align-items: center;
+  width: 100%;
+}
+.col-md-3-ensure {
+  flex: 0 0 10%; /* Make each column take up 20% of the row */
+  max-width: 20%;
+  text-align: center; /* Center the text and image in each column */
+  margin-right: 100px;
+  margin-left: 50px;
+  padding: -5px;
+}
+  
+.overlay-image {  
+ /* Adjust the size as needed */  
+  height: auto;  
+  margin-top: 10px;  
+}
+.small-image {
+  width: 80px;
+  height: 60px; /* Smaller image size */
+
+}
+
+/* .small-content {
+  font-size: 14px; /* Smaller text size */
+
+.fixed-size-image {
+  width: 100px; /* Set a fixed width for the image */
+  height: auto; /* Maintain the aspect ratio of the image */
+}
+.card-body-ensure {  
+  width: 100%; /* Make the card body take up the full width of the column */  
+  margin: 0;  
+}  
+
+.card-body-ensure h3,.card-body-ensure p {  
+  display: inline-block; /* Display the h3 and p elements inline */  
+  vertical-align: middle; /* Vertically align the h3 and p elements */  
+  margin: 0 10px; /* Add some margin to the h3 and p elements */  
+}
+
+.card-img-top {  
+  width: 90%; /* Set a fixed width for the image */  
+  height: auto; /* Maintain the aspect ratio of the image */  
+  margin: 10px; /* Add some margin to the image */  
+  vertical-align: middle; /* Vertically align the image */  
+}  
