@@ -14,6 +14,7 @@ import StyleCarouselComponent from './components/StyleCarasoulComponent';
 import ImageGridComponent from './components/ImageOverlay';
 import TextContainer from './components/Textcontainer';
 import CustomBoxesForm from './components/CustomBoxform';
+import MainContent2 from './components/maincontent2';
 function App() {
 
   const materialSlides = [
@@ -240,6 +241,7 @@ function App() {
       <ImageGridComponent/>
       <TextContainer list={TextContainers}/>
       <CustomBoxesForm/>
+      <MainContent2/>
     </>
   );
   return (
