@@ -1,70 +1,185 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import Products from './Products';
+import React from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import Products from "./Products";
 
 const TopProductDetails = () => {
-    const { product } = useParams();;
-    debugger
-    const trimmedProduct = product.trim().toLowerCase();
+  const { product } = useParams();
+  const navigate = useNavigate();
 
-    const category = Products.find(cat =>
-        cat.subProducts && cat.subProducts.some(subP => subP.title.toLowerCase().trim() === trimmedProduct)
-    );
+  // Normalize the product name for comparison
+  const trimmedProduct = product.trim().toLowerCase();
 
+  // Find the category containing this product
+  const category = Products.find(
+    (cat) =>
+      cat.subProducts &&
+      cat.subProducts.some(
+        (subP) => subP.title.toLowerCase().trim() === trimmedProduct
+      )
+  );
 
-    const productDetails = category.subProducts.find(p => p.title.toLowerCase() === trimmedProduct);
-
-    // let productDetails = null;
-    // let category = null;
-
-    // for (let cat of Products) {
-    //     if (cat.subProducts) {
-    //         productDetails = cat.subProducts.find(p => p.title === trimmedProduct);
-    //         if (productDetails) {
-    //             category = cat;
-    //             break;
-    //         }
-    //     }
-    // }
+  // If category not found, handle gracefully
+  if (!category) {
     return (
-        <div className='container'>
-            <div className='row'>
-                <div className='col-md-6 product-image-container'>
-                    <img src={productDetails.image} alt={productDetails.title} />
-                </div>
-                <div className='col-md-6 product-info '>
-                    <div className='product-heading'>
-                        <h2>{productDetails.title}</h2>
-                    </div>
-                    <div className='row product-rating'>
-                        <div className="col-md-3 product-stars" style={{ borderRight: '2px solid #ddd' }} dangerouslySetInnerHTML={{ __html: productDetails.stars }}></div>
-                        <div className="col-md-3 product-social-links">
-                            <a href={productDetails.socialLinks.facebook} target="_blank" rel="noopener noreferrer">
-                                <i className="fab fa-facebook-f"></i>
-                            </a>
-                            <a href={productDetails.socialLinks.instagram} target="_blank" rel="noopener noreferrer">
-                                <i className="fab fa-instagram"></i>
-                            </a>
-                            <a href={productDetails.socialLinks.twitter} target="_blank" rel="noopener noreferrer">
-                                <i className="fab fa-twitter"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="product-description">
-                        <p>{productDetails.description}</p>
-                    </div>
-                    <div className="product-category">
-                        <p>Category: {productDetails.category}</p>
-                    </div>
-                </div>
-            </div>
-
-
-
+      <div className="container mt-5">
+        <div className="alert alert-warning">
+          <h4>Product Not Found</h4>
+          <p>Sorry, we couldn't find information about this product.</p>
+          <button
+            className="btn mt-3"
+            style={{ backgroundColor: "rgb(0, 0, 90)", color: "white" }}
+            onClick={() => navigate("/")}
+          >
+            Return to Home
+          </button>
         </div>
-
-
+      </div>
     );
+  }
+
+  // Find the specific product details in the category
+  const productDetails = category.subProducts.find(
+    (p) => p.title.toLowerCase().trim() === trimmedProduct
+  );
+
+  // If product details not found, handle gracefully
+  if (!productDetails) {
+    return (
+      <div className="container mt-5">
+        <div className="alert alert-warning">
+          <h4>Product Details Not Available</h4>
+          <p>
+            Sorry, we couldn't find detailed information about this product.
+          </p>
+          <button
+            className="btn mt-3"
+            style={{ backgroundColor: "rgb(0, 0, 90)", color: "white" }}
+            onClick={() => navigate("/")}
+          >
+            Return to Home
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="container mt-5">
+      <div className="row">
+        <div className="col-md-6 product-image-container">
+          <img src={productDetails.image} alt={productDetails.title} />
+        </div>
+        <div className="col-md-6 product-info">
+          <div className="product-heading">
+            <h2>{productDetails.title}</h2>
+          </div>
+          <div className="row product-rating">
+            <div
+              className="col-md-6 product-stars"
+              style={{ borderRight: "2px solid #ddd" }}
+              dangerouslySetInnerHTML={{ __html: productDetails.stars }}
+            ></div>
+            <div className="col-md-6 product-social-links">
+              <a
+                href={productDetails.socialLinks?.facebook || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href={productDetails.socialLinks?.instagram || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a
+                href={productDetails.socialLinks?.twitter || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <div className="product-description">
+            <p>
+              {productDetails.description ||
+                "No description available for this product."}
+            </p>
+          </div>
+          <div className="product-category">
+            <p>Category: {category.category}</p>
+          </div>
+
+          {/* Product actions section */}
+          <div className="product-actions mt-4">
+            <button
+              className="btn me-3"
+              style={{
+                backgroundColor: "rgb(0, 0, 90)",
+                color: "white",
+                padding: "10px 20px",
+              }}
+            >
+              Request Quote
+            </button>
+            <button
+              className="btn"
+              style={{
+                border: "1px solid rgb(0, 0, 90)",
+                color: "rgb(0, 0, 90)",
+                padding: "10px 20px",
+              }}
+              onClick={() => navigate("/")}
+            >
+              Continue Shopping
+            </button>
+          </div>
+
+          {/* Product features */}
+          <div className="product-features mt-4">
+            <h4>Features:</h4>
+            <ul>
+              <li>Customizable design</li>
+              <li>Multiple size options</li>
+              <li>Eco-friendly materials available</li>
+              <li>Premium printing quality</li>
+              <li>Fast production times</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Related products section */}
+      <div className="related-products mt-5">
+        <h3 className="mb-4">Related Products</h3>
+        <div className="row">
+          {category.subProducts
+            .filter((p) => p.title !== productDetails.title)
+            .slice(0, 4)
+            .map((relatedProduct, index) => (
+              <div key={index} className="col-md-3 mb-4">
+                <div
+                  className="card product-card"
+                  onClick={() => navigate(`/product/${relatedProduct.title}`)}
+                >
+                  <img
+                    src={relatedProduct.image}
+                    className="card-img-top"
+                    alt={relatedProduct.title}
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">{relatedProduct.title}</h5>
+                  </div>
+                </div>
+              </div>
+            ))}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default TopProductDetails;
