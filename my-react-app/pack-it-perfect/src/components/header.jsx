@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Products from "./Products";
-import './Header.css';
+import "./Header.css";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -106,8 +106,7 @@ const Header = () => {
                   className={`menu-toggle ${mobileMenuOpen ? "active" : ""}`}
                   onClick={toggleMobileMenu}
                   aria-label="Menu"
-                >
-                </button>
+                ></button>
               </div>
             </div>
           </div>
@@ -158,19 +157,23 @@ const Header = () => {
                           <div className="row">
                             {Products.map((category, index) => (
                               <div key={index} className="col-md-4 mb-3">
-                                <Link
-                                  to={`/category/${category.category}`}
-                                  className="category-item"
-                                >
-                                  <span className="category-icon">
-                                    <i
-                                      className={category.icon || "fas fa-box"}
-                                    ></i>
-                                  </span>
-                                  <span className="category-name">
-                                    {category.category}
-                                  </span>
-                                </Link>
+                                {category.category != "packaging-by-style" && (
+                                  <Link
+                                    to={`/category/${category.category}`}
+                                    className="category-item"
+                                  >
+                                    <span className="category-icon">
+                                      <i
+                                        className={
+                                          category.icon || "fas fa-box"
+                                        }
+                                      ></i>
+                                    </span>
+                                    <span className="category-name">
+                                      {category.name}
+                                    </span>
+                                  </Link>
+                                )}
                               </div>
                             ))}
                           </div>
@@ -198,14 +201,17 @@ const Header = () => {
                   </div>
                 </li>
                 <li className="nav-item">
-                  <a href="#" className="nav-link">
+                  <a href="/category/packaging-by-style" className="nav-link">
                     By Material
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="#" className="nav-link">
+                  <Link
+                    to={`/category/packaging-by-style`}
+                    className="nav-link"
+                  >
                     By Style
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
                   <a href="#" className="nav-link">

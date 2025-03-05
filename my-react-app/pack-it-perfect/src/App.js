@@ -15,6 +15,13 @@ import ImageGridComponent from "./components/ImageOverlay";
 import TextContainer from "./components/Textcontainer";
 import CustomBoxesForm from "./components/CustomBoxform";
 import MainContent2 from "./components/maincontent2";
+import HeroSection from "./components/HomePageComponents//HeroSection";
+import FeatureHighlights from "./components/HomePageComponents//FeatureHighlights";
+import IndustryCategoriesSection from "./components/HomePageComponents//IndustryCategoriesSection";
+import BestSellingProducts from "./components/HomePageComponents//BestSellingProducts";
+import TestimonialsSection from "./components/HomePageComponents//TestimonialsSection";
+import CompanyBenefitsSection from "./components/HomePageComponents//CompanyBenefitsSection";
+
 
 function App() {
   // Load Bootstrap JS
@@ -79,6 +86,20 @@ function App() {
       // ...other services
     ],
   };
+
+const HomePage = () => {
+  return (
+    <>
+      {/* <MainContent /> */}
+      <HeroSection />
+      <FeatureHighlights />
+      <IndustryCategoriesSection />
+      <BestSellingProducts />
+      <CompanyBenefitsSection />
+      <TestimonialsSection />
+    </>
+  );
+};
 
   const HomePage = () => (
     <>
