@@ -151,10 +151,17 @@
   margin: 0;
   padding: 0;
 }
-
-.nav-item {
- padding-left: 1.4rem;
+/* Fix for nav items to ensure they distribute evenly */
+.nav-menu .nav-item {
+  flex: 1;
+  text-align: center;
+  padding-left: 1.4rem;
  font-size: larger;
+}
+
+.main-nav .row {
+  width: 100%;
+  margin: 0;
 }
 
 .nav-link {
