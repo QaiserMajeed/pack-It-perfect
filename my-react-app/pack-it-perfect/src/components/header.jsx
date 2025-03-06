@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Products from "./Products";
 import "./Header.css";
+import QuoteRequestForm from "./QuoteRequestForm";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -59,7 +60,7 @@ const Header = () => {
             <div className="col-6 col-md-3">
               <Link to="/" className="header-logo">
                 <img
-                  src="/images/svgviewer-output (2).jpg"
+                  src="/images/svgviewer-output (2).svg"
                   alt="Pack it Perfect"
                   className="img-fluid"
                 />
@@ -87,7 +88,7 @@ const Header = () => {
                 className="header-phone d-none d-md-flex"
               >
                 <i className="fas fa-phone-alt me-2"></i>
-                <span>020 3332 0061</span>
+                <span>02038308319</span>
               </a>
 
               {/* Mobile buttons */}
@@ -193,7 +194,7 @@ const Header = () => {
                             <p className="mt-3 mb-0">
                               <strong>Call us:</strong>
                             </p>
-                            <p className="fw-bold">020 3332 0061</p>
+                            <p className="fw-bold">02038308319</p>
                           </div>
                         </div>
                       </div>
@@ -228,6 +229,14 @@ const Header = () => {
                     Blog
                   </a>
                 </li>
+                <li className="nav-item">
+                  <Link
+                    to={`/category/packaging-by-style`}
+                    className="nav-link"
+                  >
+                    Request Quote
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -244,7 +253,7 @@ const Header = () => {
           <div className="mobile-menu-header">
             <div className="mobile-logo">
               <img
-                src="/images/svgviewer-output (2).jpg"
+                src="/images/svgviewer-output (2).svg"
                 alt="Pack it Perfect"
                 className="img-fluid"
               />
@@ -416,7 +425,7 @@ const Header = () => {
                 <strong>Call us:</strong>
               </p>
               <a href="tel:02033320061" className="mobile-phone">
-                020 3332 0061
+                02038308319
               </a>
             </div>
           </div>

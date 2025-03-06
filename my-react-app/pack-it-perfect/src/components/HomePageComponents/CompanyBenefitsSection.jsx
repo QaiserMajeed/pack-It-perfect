@@ -1,5 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHeadset,
+  faGlobeAmericas,
+  faCreditCard,
+  faBoxes,
+  faStore,
+  faPumpSoap,
+  faPizzaSlice,
+  faTshirt,
+} from "@fortawesome/free-solid-svg-icons";
 
 const SectionContainer = styled.div`
   padding: 4rem 0;
@@ -76,9 +87,9 @@ const BenefitIcon = styled.div`
   justify-content: center;
   margin-bottom: 1.5rem;
 
-  img {
-    height: 60px;
-    width: auto;
+  svg {
+    font-size: 3rem;
+    color: #ff3b30;
   }
 `;
 
@@ -124,49 +135,85 @@ const ClientsImagesGrid = styled.div`
 const ClientImage = styled.div`
   background-color: #fff;
   border-radius: 8px;
-  overflow: hidden;
+  padding: 2.5rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
 
-  img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
+  svg {
+    font-size: 3.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, color 0.3s ease;
   }
 
-  &:hover img {
-    transform: scale(1.05);
+  h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #666;
+    margin: 0;
+    text-align: center;
+    transition: color 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+
+    svg {
+      color: #ff3b30;
+      transform: scale(1.1);
+    }
+
+    h5 {
+      color: #333;
+    }
   }
 `;
 
 const CompanyBenefitsSection = () => {
   const benefits = [
     {
-      icon: "/images/icons/24-7-support.svg",
+      icon: faHeadset,
       title: "Live 24/7 Support",
       text: "Our team is available anytime to answer your questions and provide assistance.",
     },
     {
-      icon: "/images/icons/worldwide-shipping.svg",
+      icon: faGlobeAmericas,
       title: "Worldwide Shipping",
       text: "We deliver our custom packaging boxes to clients all over the world.",
     },
     {
-      icon: "/images/icons/flexible-payment.svg",
+      icon: faCreditCard,
       title: "Flexible Payment",
       text: "Multiple payment options available for your convenience.",
     },
     {
-      icon: "/images/icons/low-moq.svg",
+      icon: faBoxes,
       title: "Low Minimum Orders",
       text: "Start with as few as 100 units for most of our custom packaging solutions.",
     },
   ];
 
-  const clientImages = [
-    "/images/clients/client1.jpg",
-    "/images/clients/client2.jpg",
-    "/images/clients/client3.jpg",
-    "/images/clients/client4.jpg",
+  const clients = [
+    {
+      icon: faStore,
+      name: "Retail Stores",
+    },
+    {
+      icon: faPumpSoap,
+      name: "Cosmetics Brands",
+    },
+    {
+      icon: faPizzaSlice,
+      name: "Food Industry",
+    },
+    {
+      icon: faTshirt,
+      name: "Apparel Brands",
+    },
   ];
 
   return (
@@ -188,7 +235,7 @@ const CompanyBenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <BenefitCard key={index}>
               <BenefitIcon>
-                <img src={benefit.icon} alt={benefit.title} />
+                <FontAwesomeIcon icon={benefit.icon} />
               </BenefitIcon>
               <BenefitTitle>{benefit.title}</BenefitTitle>
               <BenefitText>{benefit.text}</BenefitText>
@@ -201,9 +248,10 @@ const CompanyBenefitsSection = () => {
             Some of our client's success stories
           </ClientShowcaseTitle>
           <ClientsImagesGrid>
-            {clientImages.map((image, index) => (
+            {clients.map((client, index) => (
               <ClientImage key={index}>
-                <img src={image} alt={`Client Packaging ${index + 1}`} />
+                <FontAwesomeIcon icon={client.icon} />
+                <h5>{client.name}</h5>
               </ClientImage>
             ))}
           </ClientsImagesGrid>

@@ -21,6 +21,8 @@ import IndustryCategoriesSection from "./components/HomePageComponents//Industry
 import BestSellingProducts from "./components/HomePageComponents//BestSellingProducts";
 import TestimonialsSection from "./components/HomePageComponents//TestimonialsSection";
 import CompanyBenefitsSection from "./components/HomePageComponents//CompanyBenefitsSection";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
+
 
 
 function App() {
@@ -97,23 +99,31 @@ const HomePage = () => {
       <BestSellingProducts />
       <CompanyBenefitsSection />
       <TestimonialsSection />
+      <FloatingWhatsApp
+        phoneNumber="+44 07440189478"
+        accountName="Nancy "
+        allowEsc
+        allowClickAway
+        notification
+        notificationSound
+      />
     </>
   );
 };
 
-  const HomePage = () => (
-    <>
-      <MainContent />
-      <TopProducts products={topproducts} />
-      <CarouselComponent />
-      <StyleCarouselComponent slides={styleSlides} />
-      <StyleCarouselComponent slides={materialSlides} />
-      <ImageGridComponent />
-      <TextContainer list={TextContainers} />
-      <CustomBoxesForm />
-      <MainContent2 />
-    </>
-  );
+  // const HomePage = () => (
+  //   <>
+  //     <MainContent />
+  //     <TopProducts products={topproducts} />
+  //     <CarouselComponent />
+  //     <StyleCarouselComponent slides={styleSlides} />
+  //     <StyleCarouselComponent slides={materialSlides} />
+  //     <ImageGridComponent />
+  //     <TextContainer list={TextContainers} />
+  //     <CustomBoxesForm />
+  //     <MainContent2 />
+  //   </>
+  // );
 
   return (
     <Router>

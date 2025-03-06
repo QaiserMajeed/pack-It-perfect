@@ -1,5 +1,25 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faQuoteRight,
+  faChevronLeft,
+  faChevronRight,
+  faStar as faStarSolid,
+} from "@fortawesome/free-solid-svg-icons";
+// If you're getting an error with this import, make sure you've installed the package:
+// npm install @fortawesome/free-regular-svg-icons
+// Alternatively, you can use only solid icons for now:
+import {
+  faStar as faStarRegular,
+  faStarHalfAlt,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faUser,
+  faUserTie,
+  faUserGraduate,
+  faUserDoctor,
+} from "@fortawesome/free-solid-svg-icons";
 
 const SectionContainer = styled.div`
   padding: 4rem 0;
@@ -77,7 +97,7 @@ const QuoteIcon = styled.div`
   font-size: 2rem;
   margin-bottom: 1rem;
 
-  i {
+  svg {
     transform: rotate(180deg);
   }
 `;
@@ -92,8 +112,9 @@ const TestimonialText = styled.p`
 
 const TestimonialRating = styled.div`
   margin-bottom: 1rem;
+  display: flex;
 
-  i {
+  svg {
     color: #ffd700;
     margin-right: 0.2rem;
   }
@@ -108,13 +129,15 @@ const AuthorAvatar = styled.div`
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  overflow: hidden;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 1rem;
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  svg {
+    font-size: 1.6rem;
+    color: #555;
   }
 `;
 
@@ -204,7 +227,7 @@ const TestimonialsSection = () => {
       rating: 5,
       author: "Sarah P.",
       title: "CEO of Glow Cosmetics",
-      avatar: "/images/testimonials/avatar1.jpg",
+      avatar: faUser,
     },
     {
       id: 2,
@@ -212,7 +235,7 @@ const TestimonialsSection = () => {
       rating: 5,
       author: "James C.",
       title: "Manager at Fresh Foods",
-      avatar: "/images/testimonials/avatar2.jpg",
+      avatar: faUserTie,
     },
     {
       id: 3,
@@ -220,7 +243,7 @@ const TestimonialsSection = () => {
       rating: 5,
       author: "Emily R.",
       title: "Owner of Pure Skincare",
-      avatar: "/images/testimonials/avatar3.jpg",
+      avatar: faUserGraduate,
     },
     {
       id: 4,
@@ -228,9 +251,12 @@ const TestimonialsSection = () => {
       rating: 5,
       author: "Robert T.",
       title: "Head of Marketing at NutraLife",
-      avatar: "/images/testimonials/avatar4.jpg",
+      avatar: faUserDoctor,
     },
   ];
+
+  // Note: If you're getting errors with Font Awesome packages, make sure these are installed:
+  // npm install @fortawesome/react-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons
 
   // Update slides per view based on window width
   useEffect(() => {
@@ -280,7 +306,10 @@ const TestimonialsSection = () => {
     const stars = [];
     for (let i = 0; i < 5; i++) {
       stars.push(
-        <i key={i} className={i < rating ? "fas fa-star" : "far fa-star"}></i>
+        <FontAwesomeIcon
+          key={i}
+          icon={i < rating ? faStarSolid : faStarRegular}
+        />
       );
     }
     return stars;
@@ -307,7 +336,7 @@ const TestimonialsSection = () => {
                 >
                   <TestimonialInner>
                     <QuoteIcon>
-                      <i className="fas fa-quote-right"></i>
+                      <FontAwesomeIcon icon={faQuoteRight} />
                     </QuoteIcon>
                     <TestimonialText>"{testimonial.text}"</TestimonialText>
                     <TestimonialRating>
@@ -315,10 +344,7 @@ const TestimonialsSection = () => {
                     </TestimonialRating>
                     <TestimonialAuthor>
                       <AuthorAvatar>
-                        <img
-                          src={testimonial.avatar}
-                          alt={testimonial.author}
-                        />
+                        <FontAwesomeIcon icon={testimonial.avatar} />
                       </AuthorAvatar>
                       <AuthorInfo>
                         <AuthorName>{testimonial.author}</AuthorName>
@@ -333,13 +359,13 @@ const TestimonialsSection = () => {
 
           <NavigationButtons>
             <NavButton onClick={handlePrev} disabled={currentSlide === 0}>
-              <i className="fas fa-chevron-left"></i>
+              <FontAwesomeIcon icon={faChevronLeft} />
             </NavButton>
             <NavButton
               onClick={handleNext}
               disabled={currentSlide >= testimonials.length - slidesPerView}
             >
-              <i className="fas fa-chevron-right"></i>
+              <FontAwesomeIcon icon={faChevronRight} />
             </NavButton>
           </NavigationButtons>
         </TestimonialsContainer>

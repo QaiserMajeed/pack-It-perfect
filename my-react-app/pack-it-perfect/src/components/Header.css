@@ -473,7 +473,7 @@
 
 /* Container within the dropdown */
 .dropdown-menu .container {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 

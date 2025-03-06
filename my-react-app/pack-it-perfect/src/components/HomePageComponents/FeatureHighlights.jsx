@@ -1,5 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// You need to import the specific icons you want to use
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faSterlingSign,
+  faTruck,
+  faBox,
+  faShippingFast,
+  faPencilRuler,
+} from "@fortawesome/free-solid-svg-icons";
+
+// Add the icons to the library
+library.add(faSterlingSign, faTruck, faBox, faShippingFast, faPencilRuler);
 
 const FeaturesContainer = styled.div`
   padding: 2rem 0;
@@ -49,6 +62,7 @@ const IconContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #1a54b2; /* Blue color to match your logo */
 
   img {
     max-width: 100%;
@@ -72,27 +86,27 @@ const FeatureDescription = styled.p`
 const FeatureHighlights = () => {
   const features = [
     {
-      icon: "/images/icons/no-die-cut.svg",
+      icon: faSterlingSign,
       title: "No Die and Plate Charges",
       description: "Save on setup costs",
     },
     {
-      icon: "/images/icons/delivery.svg",
+      icon: faTruck,
       title: "Delivery within 7-10 working days",
       description: "Fast turnaround time",
     },
     {
-      icon: "/images/icons/starting-100.svg",
+      icon: faBox,
       title: "Starting from 100 units",
       description: "Low minimum order quantity",
     },
     {
-      icon: "/images/icons/free-shipping.svg",
+      icon: faShippingFast,
       title: "Free Shipping all across UK",
       description: "No hidden delivery costs",
     },
     {
-      icon: "/images/icons/free-design.svg",
+      icon: faPencilRuler,
       title: "Free Designing Assistance",
       description: "Professional design support",
     },
@@ -111,7 +125,7 @@ const FeatureHighlights = () => {
           {features.map((feature, index) => (
             <FeatureCard key={index}>
               <IconContainer>
-                <img src={feature.icon} alt={feature.title} />
+                <FontAwesomeIcon icon={feature.icon} size="2x" />
               </IconContainer>
               <FeatureTitle>{feature.title}</FeatureTitle>
               <FeatureDescription>{feature.description}</FeatureDescription>

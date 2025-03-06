@@ -1,6 +1,42 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faSprayCan,
+  faUtensils,
+  faPills,
+  faGift,
+  faWineBottle,
+  faCannabis,
+  faTshirt,
+  faShoppingCart,
+  faLaptop,
+  faShoePrints,
+  faHeartbeat,
+  faGem,
+  faBoxes,
+  faPrescriptionBottleMedical,
+} from "@fortawesome/free-solid-svg-icons";
+
+// Add icons to the library
+library.add(
+  faSprayCan,
+  faUtensils,
+  faPills,
+  faGift,
+  faWineBottle,
+  faCannabis,
+  faTshirt,
+  faShoppingCart,
+  faLaptop,
+  faShoePrints,
+  faHeartbeat,
+  faGem,
+  faBoxes,
+  faPrescriptionBottleMedical
+);
 
 const SectionContainer = styled.div`
   padding: 4rem 0;
@@ -74,12 +110,7 @@ const CategoryIcon = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: center;
-
-  img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-  }
+  color: #333; /* Icon color */
 `;
 
 const CategoryName = styled.span`
@@ -123,90 +154,89 @@ const IndustryCategoriesSection = () => {
   const categories = [
     {
       name: "Cosmetics",
-      icon: "/images/categories/cosmetics.png",
+      icon: faSprayCan,
       bgColor: "#FFD699",
-      link: "/category/Beauty and Cosmetics Packaging",
+      link: "/category/Beauty-and-Cosmetics-Packaging",
     },
     {
       name: "Food",
-      icon: "/images/categories/food.png",
+      icon: faUtensils,
       bgColor: "#ADE4FF",
-      link: "/category/Fast Food Packaging",
+      link: "/category/Fast-Food-Packaging",
     },
     {
       name: "Supplements",
-      icon: "/images/categories/supplements.png",
+      icon: faPills,
       bgColor: "#FFB380",
-      link: "/category/Supplements Packaging",
+      link: "/category/Supplements-Packaging",
     },
     {
       name: "Gifts",
-      icon: "/images/categories/gifts.png",
+      icon: faGift,
       bgColor: "#FF99A6",
-      link: "/category/Gifts and Souvenirs Boxes",
+      link: "/category/Gifts-and-Souvenirs-Boxes",
     },
     {
       name: "Beverages",
-      icon: "/images/categories/beverages.png",
+      icon: faWineBottle,
       bgColor: "#FFEDB3",
-      link: "/category/Beverage Custom Boxes",
+      link: "/category/Beverage-Custom-Boxes",
     },
     {
       name: "Cannabis",
-      icon: "/images/categories/cannabis.png",
+      icon: faCannabis,
       bgColor: "#B3E6CC",
-      link: "/category/Cannabis Custom Packaging",
+      link: "/category/Cannabis-Custom-Packaging",
     },
     {
       name: "Clothing",
-      icon: "/images/categories/clothing.png",
+      icon: faTshirt,
       bgColor: "#CCE0FF",
-      link: "/category/Clothing and Apparel Boxes",
+      link: "/category/Clothing-and-Apparel-Boxes",
     },
     {
       name: "E-commerce",
-      icon: "/images/categories/ecommerce.png",
+      icon: faShoppingCart,
       bgColor: "#DDBDF1",
-      link: "/category/E-Commerce Packaging",
+      link: "/category/E-Commerce-Packaging",
     },
     {
       name: "Electronics",
-      icon: "/images/categories/electronics.png",
+      icon: faLaptop,
       bgColor: "#99E6E6",
-      link: "/category/Electronics Boxes",
+      link: "/category/Electronics-Boxes",
     },
     {
       name: "Shoes",
-      icon: "/images/categories/shoes.png",
+      icon: faShoePrints,
       bgColor: "#A6D388",
-      link: "/category/Shoes Packaging",
+      link: "/category/Shoes-Packaging",
     },
     {
       name: "Healthcare",
-      icon: "/images/categories/healthcare.png",
+      icon: faHeartbeat,
       bgColor: "#FFB3F0",
-      link: "/category/Healthcare Boxes",
+      link: "/category/Healthcare-Boxes",
     },
     {
       name: "Jewelry",
-      icon: "/images/categories/jewelry.png",
+      icon: faGem,
       bgColor: "#E6CCFF",
-      link: "/category/Jewelry Packaging",
+      link: "/category/jewelry-packaging",
     },
     {
       name: "Custom Made",
-      icon: "/images/categories/custom.png",
+      icon: faBoxes,
       bgColor: "#B3B3CC",
-      link: "/category/Custom Made Boxes",
+      link: "/category/Custom-Made-Boxes",
     },
     {
       name: "Medical",
-      icon: "/images/categories/medical.png",
+      icon: faPrescriptionBottleMedical,
       bgColor: "#99CCFF",
-      link: "/category/Medical Devices Boxes",
+      link: "/category/Medical-Devices-Boxes",
     },
   ];
-
   return (
     <SectionContainer>
       <div className="container">
@@ -223,7 +253,7 @@ const IndustryCategoriesSection = () => {
             <CategoryCard to={category.link} key={index}>
               <IconBackground bgColor={category.bgColor}>
                 <CategoryIcon>
-                  <img src={category.icon} alt={category.name} />
+                  <FontAwesomeIcon icon={category.icon} size="3x" />
                 </CategoryIcon>
               </IconBackground>
               <CategoryName>
@@ -239,7 +269,7 @@ const IndustryCategoriesSection = () => {
             <CategoryCard to={category.link} key={index}>
               <IconBackground bgColor={category.bgColor}>
                 <CategoryIcon>
-                  <img src={category.icon} alt={category.name} />
+                  <FontAwesomeIcon icon={category.icon} size="3x" />
                 </CategoryIcon>
               </IconBackground>
               <CategoryName>
