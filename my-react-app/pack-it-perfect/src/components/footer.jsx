@@ -280,7 +280,7 @@ const Footer = () => {
             <a href="#">Privacy policy</a>
           </li>
           <li>
-            <a href="#">Request Quote</a>
+            <a href="/get-quote"> Quote</a>
           </li>
           <li>
             <a href="#">Terms of Service</a>

@@ -116,7 +116,7 @@ const FeatureHighlights = () => {
     <FeaturesContainer>
       <div className="container">
         <FeaturesDescription>
-          One Step Custom Boxes is the go-to option for projects because of its
+          Pack It Perfect is the go-to option for projects because of its
           excellent customer service and reasonably priced, customizable
           packaging solutions.
         </FeaturesDescription>

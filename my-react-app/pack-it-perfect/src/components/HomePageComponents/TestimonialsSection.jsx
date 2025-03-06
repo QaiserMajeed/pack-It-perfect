@@ -369,10 +369,6 @@ const TestimonialsSection = () => {
             </NavButton>
           </NavigationButtons>
         </TestimonialsContainer>
-
-        <ViewAllLink>
-          <a href="/testimonials">View all reviews</a>
-        </ViewAllLink>
       </div>
     </SectionContainer>
   );

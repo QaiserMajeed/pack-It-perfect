@@ -3,7 +3,7 @@ const Products = [
     category: "Beauty-and-Cosmetics-Packaging",
     name: "Beauty and Cosmetics Packaging",
     decription:
-      "Do you want to get custom beauty and cosmetic boxes to enhance your marketing purposes and secure your products? At One Step Custom Boxes, we understand that the packaging is as essential as the product. Our custom beauty and cosmetic boxes are designed to enhance your brand awareness and product marketing. Not only this, but they will secure the products inside the boxes. The premium packaging will make the product different from the others; hence, customers will be attracted to it, regardless of the product.",
+      "Do you want to get custom beauty and cosmetic boxes to enhance your marketing purposes and secure your products? At Pack It Perfect, we understand that the packaging is as essential as the product. Our custom beauty and cosmetic boxes are designed to enhance your brand awareness and product marketing. Not only this, but they will secure the products inside the boxes. The premium packaging will make the product different from the others; hence, customers will be attracted to it, regardless of the product.",
     icon: "fas fa-spa",
     subProducts: [
       {
@@ -660,15 +660,401 @@ const Products = [
     icon: "fas fa-tshirt",
     description:
       "At Pack It Perfect Custom Boxes, apart from product protection, we understand that packaging is crucial in defining your brand's image. Our custom clothing boxes are designed to protect your products and make a lasting impression on your customers. Whether you're a boutique fashion brand, a large-scale retailer, or an independent designer, our custom packaging solutions will meet your needs.",
-    subProducts: [],
+    subProducts: [
+      {
+        title: "Plus Size Clothing Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Plus-Size-Clothing-Boxes.webp",
+        description:
+          "Specialized packaging solutions designed for plus-sized clothing items, ensuring proper presentation and protection.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Suit Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Suit-Boxes.webp",
+        description:
+          "Premium packaging designed specifically for suits, ensuring they remain wrinkle-free and properly presented.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
+        price: "£0.06",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Eco-Friendly Apparel Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Eco-Friendly-Apparel-Packaging.webp",
+        description:
+          "Sustainable packaging solutions for environmentally conscious clothing brands, made from recyclable materials.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Denim Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Denim-Packaging.webp",
+        description:
+          "Custom packaging solutions specifically designed for denim products, enhancing brand presentation.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.25",
+      },
+      {
+        title: "Fashion Showroom Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Fashion-Showroom-Packaging.webp",
+        description:
+          "Professional packaging solutions for fashion showrooms and exhibitions, designed to showcase clothing items effectively.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Lingerie Gift Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Lingerie-Gift-Boxes.webp",
+        description:
+          "Elegant and discreet packaging solutions for lingerie products, perfect for gifting occasions.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Hat Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Hat-Boxes.webp",
+        description:
+          "Specialized round or square boxes designed to protect and showcase hats and headwear products.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.22",
+      },
+      {
+        title: "Dress Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Dress-Boxes.webp",
+        description:
+          "Custom boxes designed specifically for dresses, ensuring they remain wrinkle-free and properly presented.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Sock Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Sock-Boxes.webp",
+        description:
+          "Custom packaging solutions for socks, designed to enhance product presentation and retail appeal.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.21",
+      },
+      {
+        title: "Garment Bags",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Garment-Bags.webp",
+        description:
+          "Protective bags designed for clothing items, ensuring they remain clean and wrinkle-free during storage and transport.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.26",
+      },
+    ],
   },
   {
     category: "Fast-Food-Packaging",
     name: "Fast Food Packaging",
     icon: "fas fa-hamburger",
     description:
-      "In the dynamic UK beauty market, we stand out with our extensive collection of bespoke cosmetics and packaging. Our meticulously designed packaging solutions will take your brand to new heights of notoriety. In addition to safeguarding your belongings, our exquisite wrapping will make them shine. Any advantage that might make your cosmetics product stand out in the highly competitive cosmetics sector is greatly appreciated.",
-    subProducts: [],
+      "At Pack It Perfect, we offer premium custom packaging solutions designed specifically for fast food businesses. Our food packaging combines functionality, sustainability, and branding to enhance your customers' takeout experience. From burger boxes to eco-friendly containers, our custom food packaging helps maintain food quality while reinforcing your brand identity.",
+    subProducts: [
+      {
+        title: "Meal Containers",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Meal-containers.webp",
+        description:
+          "Durable and compartmentalized containers designed for complete meal packaging, keeping different food items separated and fresh.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Cardboard Food Containers",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Cardboard-Food-Containers.webp",
+        description:
+          "Eco-friendly cardboard containers perfect for hot or cold food items, providing both insulation and sustainable packaging.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
+        price: "£0.08",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Carryout Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Carry-Out-boxes.webp",
+        description:
+          "Convenient boxes with handles designed for easy transport of takeaway food items from restaurants.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.22",
+      },
+      {
+        title: "Kraft Food Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Kraft-Food-Boxes.webp",
+        description:
+          "Natural kraft paper boxes that provide an eco-friendly, rustic look while maintaining food freshness and safety.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.25",
+      },
+      {
+        title: "Portable Food Container",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Portable-food-containers.webp",
+        description:
+          "Lightweight and secure containers designed for on-the-go meal consumption with spill-resistant features.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Take Away Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Take-Away-Boxes.webp",
+        description:
+          "Versatile packaging designed for various takeout food items, offering both functionality and customizable branding.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.25",
+      },
+      {
+        title: "Eco-Friendly Food Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Eco-friendly-food-Packaging.webp",
+        description:
+          "Sustainable packaging solutions made from biodegradable materials, perfect for environmentally conscious food businesses.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Fast Food Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Fast-food-packaging.webp",
+        description:
+          "General-purpose packaging designed specifically for fast-food restaurants with customizable branding options.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.22",
+      },
+      {
+        title: "To-go Containers",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/To-go-containers.webp",
+        description:
+          "Practical containers with secure lids designed to prevent leakage during transport of food items.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Takeout Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Takeout-boxes.webp",
+        description:
+          "Chinese-style takeout boxes with wire handles, perfect for Asian cuisine and various takeaway food options.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "French Fries Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/French-Fries-Boxes.webp",
+        description:
+          "Specialized boxes designed for french fries and other similar finger foods, featuring grease-resistant properties.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.21",
+      },
+      {
+        title: "Burger Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Burger-Boxes.webp",
+        description:
+          "Custom-designed boxes specifically for burgers, providing ventilation to prevent sogginess while maintaining heat.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Pizza Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Pizza-Boxes.webp",
+        description:
+          "Corrugated boxes designed specifically for pizzas, featuring heat retention and ventilation properties to maintain food quality.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.25",
+      },
+      {
+        title: "Food Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Food-Packaging.webp",
+        description:
+          "General food packaging solutions adaptable to various food items and restaurant requirements with custom branding options.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.25",
+      },
+    ],
   },
   // Find the "Jewelry Packaging" category in your Products array
   // and add these product entries to its subProducts array:
@@ -855,40 +1241,893 @@ const Products = [
     name: "Super Markets Packaging",
     icon: "fas fa-shopping-basket",
     description:
-      "In the dynamic UK beauty market, we stand out with our extensive collection of bespoke cosmetics and packaging. Our meticulously designed packaging solutions will take your brand to new heights of notoriety. In addition to safeguarding your belongings, our exquisite wrapping will make them shine. Any advantage that might make your cosmetics product stand out in the highly competitive cosmetics sector is greatly appreciated.",
-    subProducts: [],
+      "At Pack It Perfect, we provide high-quality custom packaging solutions designed specifically for supermarket and retail environments. Our packaging options are engineered to enhance product visibility, maintain freshness, and create a strong brand presence on store shelves. From eco-friendly alternatives to specialized display packaging, we offer versatile solutions that meet the demanding requirements of modern retail spaces.",
+    subProducts: [
+      {
+        title: "Recyclable Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Recyclable-Packaging.webp",
+        description:
+          "Environmentally friendly packaging solutions made from recyclable materials, perfect for sustainable retail brands.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Custom Jar Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Custom-Jar-boxes.webp",
+        description:
+          "Specialized packaging designed for glass jars, ensuring safe transport and attractive display in supermarket settings.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.20",
+      },
+      {
+        title: "Truck Front Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Truck-Front-Boxes.webp",
+        description:
+          "Durable packaging with truck-front design, ideal for transportation and shelf display of retail products.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Seal End Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Seal-End-Boxes.webp",
+        description:
+          "Secure packaging with sealed ends, providing protection and tamper-evident features for retail products.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
+        price: "£0.06",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Playing Card Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Playing-Card-Boxes.webp",
+        description:
+          "Custom-designed boxes for playing cards, ensuring product protection and attractive retail presentation.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Eco-friendly Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Eco-friendly-Packaging.webp",
+        description:
+          "Sustainable packaging solutions made from biodegradable and environmentally friendly materials.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.21",
+      },
+      {
+        title: "Display Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Display-Packaging.webp",
+        description:
+          "Specialized packaging designed to showcase products effectively on retail shelves and displays.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.22",
+      },
+      {
+        title: "Candle Jar Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Candle-Jar-Boxes.webp",
+        description:
+          "Custom packaging specifically designed for candle jars, providing protection and attractive retail presentation.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.21",
+      },
+      {
+        title: "Cigarette Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Cigarettes-Packaging.webp",
+        description:
+          "Regulatory-compliant packaging for cigarette products, designed for retail environments.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Sleeve and Tray Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Sleeve-Tray-Packaging.webp",
+        description:
+          "Two-piece packaging consisting of a sleeve and tray, ideal for premium product presentation in retail settings.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Gable Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Gable-Boxes.webp",
+        description:
+          "Handle-topped boxes perfect for carry-out items and retail products that require easy transportation.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Custom Bottle Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Custom-Bottle-Packaging-1.webp",
+        description:
+          "Specialized packaging designed for bottles, ensuring secure transport and attractive retail display.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Custom Golf Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Custom-Golf-Packaging-1.webp",
+        description:
+          "Custom boxes designed for golf equipment and accessories, perfect for specialty retail environments.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.22",
+      },
+      {
+        title: "Tissue Paper Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Tissue-Paper-Boxes.webp",
+        description:
+          "Specially designed boxes for tissue paper products, featuring convenient dispensing options for retail use.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.25",
+      },
+    ],
   },
   {
     category: "Electronics-Boxes",
     name: "Electronics Boxes",
     icon: "fas fa-laptop",
     description:
-      "In the dynamic UK beauty market, we stand out with our extensive collection of bespoke cosmetics and packaging. Our meticulously designed packaging solutions will take your brand to new heights of notoriety. In addition to safeguarding your belongings, our exquisite wrapping will make them shine. Any advantage that might make your cosmetics product stand out in the highly competitive cosmetics sector is greatly appreciated.",
-    subProducts: [],
+      "At Pack It Perfect, we provide specialized packaging solutions for electronic devices and components. Our custom electronics boxes are designed to protect delicate technology products during shipping and storage while showcasing your brand. From television packaging to headphone boxes, our solutions combine protection, presentation, and functionality for all types of electronic items.",
+    subProducts: [
+      {
+        title: "Wearable Device Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Wearable-Device-Packaging.webp",
+        description:
+          "Custom packaging designed for smartwatches, fitness trackers, and other wearable technology, providing protection and premium presentation.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "TV Box Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/TV-Box-Packaging.webp",
+        description:
+          "Heavy-duty packaging solutions for televisions, providing maximum protection during transit and storage.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Tablet Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Tablet-Packaging.webp",
+        description:
+          "Custom boxes designed specifically for tablets and e-readers, ensuring protection while highlighting product features.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Speaker Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Speaker-Packaging.webp",
+        description:
+          "Robust packaging for speakers of all sizes, providing cushioning and protection for these delicate audio devices.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Battery Packaging Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Battery-Packaging-1.webp",
+        description:
+          "Specialized packaging for batteries, incorporating safety features and compliance with transportation regulations.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.09",
+        oldPrice: "£0.25",
+      },
+      {
+        title: "Smart Home Device Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Smart-Home-Device-Packaging.webp",
+        description:
+          "Custom packaging for smart home products such as hubs, sensors, and controllers, highlighting technology and ease of use.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Phone Case Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Phone-Case-Packaging.webp",
+        description:
+          "Streamlined packaging for phone cases, often featuring windows to showcase the product and its design.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Headphone Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Headphone-Packaging.webp",
+        description:
+          "Specialized packaging for headphones and earbuds, often incorporating molded inserts for secure product placement.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.22",
+      },
+      {
+        title: "Gaming Console Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Gaming-Console-Packaging.webp",
+        description:
+          "Heavy-duty packaging for gaming consoles, ensuring protection while highlighting gaming features and accessories.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Drone Packaging Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Drone-Packaging.webp",
+        description:
+          "Specially designed packaging for drones and aerial devices, featuring compartmentalized storage for components and accessories.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.09",
+        oldPrice: "£0.25",
+      },
+      {
+        title: "Computer Component Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Computer-Component-Packaging.webp",
+        description:
+          "Anti-static and protective packaging for computer components such as processors, graphics cards, and motherboards.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Camera Gear Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Camera-Gear-Packaging.webp",
+        description:
+          "Premium packaging for cameras and accessories, often featuring foam inserts for protection and organization.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.25",
+      },
+    ],
   },
   {
     category: "Healthcare-Boxes",
     name: "Healthcare Boxes",
     icon: "fas fa-briefcase-medical",
     description:
-      "In the dynamic UK beauty market, we stand out with our extensive collection of bespoke cosmetics and packaging. Our meticulously designed packaging solutions will take your brand to new heights of notoriety. In addition to safeguarding your belongings, our exquisite wrapping will make them shine. Any advantage that might make your cosmetics product stand out in the highly competitive cosmetics sector is greatly appreciated.",
-    subProducts: [],
+      "At Pack It Perfect, we offer high-quality custom healthcare boxes designed to meet the specific needs of medical and healthcare products. Our packaging solutions ensure the safety, security, and professional presentation of pharmaceuticals, medical instruments, healthcare items, and personal care products.",
+    subProducts: [
+      {
+        title: "Diffuser Custom Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Diffuser-Custom-Packaging.webp",
+        description:
+          "Custom packaging for diffuser products, combining functionality with elegant design.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
+        price: "£0.09",
+        oldPrice: "£0.26",
+      },
+      {
+        title: "Pharmaceutical Corrugated Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Pharmaceutical-Corrugated-Boxes-1.webp",
+        description:
+          "Durable corrugated boxes specifically designed for pharmaceutical products, ensuring safety and compliance.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Instrument Box",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Instrument-Box.webp",
+        description:
+          "Specialized boxes for medical and healthcare instruments, providing protection and organization.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.21",
+      },
+      {
+        title: "Healthcare Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Healthcare-Packaging.webp",
+        description:
+          "General healthcare packaging solutions designed for various medical and health products.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Health Card Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Health-Card-Boxes.webp",
+        description:
+          "Custom boxes for health cards, medical information, and important healthcare documentation.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
+        price: "£0.08",
+        oldPrice: "£0.22",
+      },
+      {
+        title: "Gloves Sterilization Box",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Gloves-Sterilization-Box.webp",
+        description:
+          "Specialized boxes for storing and maintaining the sterility of medical gloves and similar items.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.21",
+      },
+      {
+        title: "Custom Soap Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Custom-Soap-Boxes.webp",
+        description:
+          "Attractive and protective packaging for soaps and personal hygiene products.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Custom Printed Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Custom-Printed-Boxes.webp",
+        description:
+          "Fully customizable printed boxes for various healthcare and medical products.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.21",
+      },
+    ],
   },
   {
     category: "Shoes-Packaging",
     name: "Shoes Packaging",
     icon: "fas fa-shoe-prints",
     description:
-      "In the dynamic UK beauty market, we stand out with our extensive collection of bespoke cosmetics and packaging. Our meticulously designed packaging solutions will take your brand to new heights of notoriety. In addition to safeguarding your belongings, our exquisite wrapping will make them shine. Any advantage that might make your cosmetics product stand out in the highly competitive cosmetics sector is greatly appreciated.",
-    subProducts: [],
+      "At Pack It Perfect, we offer premium custom packaging solutions specifically designed for footwear. Our shoe boxes combine durability, style, and functionality to showcase and protect your footwear products. From luxury leather shoe boxes to foldable options, our custom shoe packaging enhances brand perception and provides an excellent unboxing experience for your customers.",
+    subProducts: [
+      {
+        title: "Shoes Rigid Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Shoes-Rigid-Boxes.webp",
+        description:
+          "Premium rigid boxes designed for high-end footwear, providing superior protection and luxury presentation.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
+        price: "£0.07",
+        oldPrice: "£0.22",
+      },
+      {
+        title: "Leather Shoes Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Leather-Shoes-Boxes.webp",
+        description:
+          "Specialized packaging designed for leather footwear, ensuring proper protection and premium presentation.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Shoe Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Shoe-Boxes.webp",
+        description:
+          "Standard shoe boxes with customizable designs, suitable for various types of footwear products.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Short Shoes Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Short-Shoes-Boxes.webp",
+        description:
+          "Compact boxes designed for low-profile footwear such as flats, slippers, and children's shoes.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.21",
+      },
+      {
+        title: "Fordable Shoes Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Fordable-Shoes-Boxes.webp",
+        description:
+          "Collapsible shoe boxes that save storage space while maintaining structural integrity for product protection.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
+        price: "£0.07",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Double Layered Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Double-Layered-Boxes.webp",
+        description:
+          "Sturdy two-layer packaging ideal for premium footwear that requires extra protection and presentation.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Custom Shoes Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Custom-Shoes-boxes.webp",
+        description:
+          "Fully customizable shoe packaging with bespoke designs, sizes, and features to match brand requirements.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
+        price: "£0.09",
+        oldPrice: "£0.25",
+      },
+      {
+        title: "Custom Design Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Custom-Design-Boxes.webp",
+        description:
+          "Uniquely designed shoe boxes featuring distinctive shapes, graphics, and branding elements for standout packaging.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Custom Cardboard Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Custom-Cardboard-Boxes.webp",
+        description:
+          "Eco-friendly cardboard packaging solutions for shoes, combining durability with sustainability.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.21",
+      },
+      {
+        title: "Containers Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Containers-Boxes.webp",
+        description:
+          "Large-format container boxes designed for bulk shoe storage or shipping multiple pairs.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
+        price: "£0.06",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "2 Lid Custom Box",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/2-Lid-Custom-box.webp",
+        description:
+          "Innovative double-lid shoe boxes providing unique presentation and easy access to footwear.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.21",
+      },
+    ],
   },
   {
     category: "Medical-Devices-Boxes",
     name: "Medical Devices Boxes",
     icon: "fas fa-stethoscope",
     description:
-      "In the dynamic UK beauty market, we stand out with our extensive collection of bespoke cosmetics and packaging. Our meticulously designed packaging solutions will take your brand to new heights of notoriety. In addition to safeguarding your belongings, our exquisite wrapping will make them shine. Any advantage that might make your cosmetics product stand out in the highly competitive cosmetics sector is greatly appreciated.",
-    subProducts: [],
+      "At Pack It Perfect, we provide specialized packaging solutions for medical devices and pharmaceutical products. Our medical device boxes are designed to meet industry regulations while offering protection, security, and professional presentation for sensitive healthcare equipment and products. From pharmacy packaging to medicine boxes, our custom solutions ensure your medical products remain secure and compliant.",
+    subProducts: [
+      {
+        title: "Resistance Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Resistance-Boxes.webp",
+        description:
+          "Specialized packaging for medical resistance equipment and devices, providing protection and compliance with medical standards.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.25",
+      },
+      {
+        title: "Protection Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Protection-Packaging.webp",
+        description:
+          "Secure packaging designed to provide maximum protection for sensitive medical devices and equipment during shipping and storage.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.22",
+      },
+      {
+        title: "Pharmacy Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Pharmacy-Packaging.webp",
+        description:
+          "Custom packaging solutions for pharmacies and pharmaceutical products, ensuring safety, compliance, and professional presentation.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Pharmacy Display Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Pharmacy-Display-Boxes.webp",
+        description:
+          "Specialized packaging designed for pharmacy product displays, enhancing visibility while maintaining product integrity.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Medicine Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Medicine-Boxes.webp",
+        description:
+          "Custom packaging for pharmaceutical medicines and supplements, ensuring product integrity and compliance with regulations.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Eco-Friendly Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Eco-Friendly-Boxes.webp",
+        description:
+          "Sustainable packaging solutions for medical devices and products, combining environmental responsibility with medical-grade protection.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.21",
+      },
+      {
+        title: "Product Custom Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Product-Custom-Boxes.webp",
+        description:
+          "Tailored packaging solutions for various medical products, customized to fit specific dimensions and requirements.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Association Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Association-Packaging.webp",
+        description:
+          "Professional packaging solutions for medical associations and healthcare organizations, featuring organization branding and specialized protection.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.21",
+      },
+    ],
   },
   {
     category: "Supplements-Packaging",
@@ -896,23 +2135,525 @@ const Products = [
     icon: "fas fa-pills",
     description:
       "In the dynamic UK beauty market, we stand out with our extensive collection of bespoke cosmetics and packaging. Our meticulously designed packaging solutions will take your brand to new heights of notoriety. In addition to safeguarding your belongings, our exquisite wrapping will make them shine. Any advantage that might make your cosmetics product stand out in the highly competitive cosmetics sector is greatly appreciated.",
-    subProducts: [],
+    subProducts: [
+      {
+        title: "E-Liquid Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/E-Liquid-Boxes.webp",
+        description:
+          "Custom packaging solutions for e-liquid products, ensuring safety and brand visibility.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.21",
+      },
+      {
+        title: "Vitamin Bottle Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Vitamin-Bottle-Boxes.webp",
+        description:
+          "Specialized packaging for vitamin bottles, ensuring product protection and brand recognition.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
+        price: "£0.09",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Tube Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Tube-Boxes.webp",
+        description:
+          "Cylindrical packaging solutions for various supplement products requiring tube-shaped containers.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Sanitize Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Sanitize-boxes.webp",
+        description:
+          "Custom packaging for sanitizing products, ensuring product integrity and brand prominence.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.21",
+      },
+      {
+        title: "Packaging For Supplements",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Packaging-For-Supplements.webp",
+        description:
+          "General packaging solutions designed for various types of dietary and health supplements.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+        price: "£0.09",
+        oldPrice: "£0.21",
+      },
+      {
+        title: "Full Flap Auto Bottom Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Full-Flap-Auto-Bottom-Boxes.webp",
+        description:
+          "Sturdy boxes with auto-bottom construction and full flaps for secure supplement packaging.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.21",
+        oldPrice: null,
+      },
+      {
+        title: "Eye Drop Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Eye-Drop-Packaging.webp",
+        description:
+          "Specialized packaging for eye drop products, combining functionality with pharmaceutical-grade protection.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.21",
+      },
+      {
+        title: "Eco Friendly Supplement Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Eco-Friendly-Supplement-Packaging.webp",
+        description:
+          "Environmentally conscious packaging options for sustainable supplement brands.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.22",
+      },
+      {
+        title: "Essential Oil Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Essential-Oil-Packaging.webp",
+        description:
+          "Custom boxes designed specifically for essential oil products, ensuring protection and aesthetic appeal.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.21",
+      },
+    ],
   },
   {
     category: "Custom-Made-Boxes",
     name: "Custom Made Boxes",
     icon: "fas fa-box-open",
     description:
-      "At One Step Custom Boxes, we specialize in creating high-quality custom boxes tailored to your business's unique needs. Whether you’re looking for visually excellent packaging or boxes that perfectly fit your product dimensions, our expert team is here to bring your dream to life. We are not new in the business. We’ve established ourselves as a trusted name in the custom packaging industry for ten years.",
-    subProducts: [],
+      "At Pack It Perfect, we specialize in creating high-quality custom boxes tailored to your business's unique needs. Whether you're looking for visually excellent packaging or boxes that perfectly fit your product dimensions, our expert team is here to bring your dream to life. We are not new in the business. We've established ourselves as a trusted name in the custom packaging industry for ten years.",
+    subProducts: [
+      {
+        title: "Auto Lock Bottom Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Auto-Lock-Bottom-Boxes.webp",
+        description:
+          "Convenient self-assembling boxes with auto-locking bottoms, eliminating the need for tape or glue during assembly.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.22",
+      },
+      {
+        title: "Bakery Product Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Bakery-Product-Boxes.webp",
+        description:
+          "Specially designed boxes for bakery items like cupcakes, pastries, and cookies, offering both functionality and aesthetic appeal.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Belt Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Belt-Packaging.webp",
+        description:
+          "Premium custom packaging solutions for belts and accessories, enhancing product presentation and brand identity.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Cardboard Instrument Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Cardboard-Instrument-Boxes.webp",
+        description:
+          "Durable packaging designed to protect musical instruments and medical tools during transport and storage.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.20",
+      },
+      {
+        title: "Charity Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Charity-Boxes.webp",
+        description:
+          "Custom-designed collection boxes for charities and fundraising initiatives, available in various shapes, sizes, and designs.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.25",
+      },
+      {
+        title: "Cornflour Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Cornflower-Packaging-1.webp",
+        description:
+          "Specialized packaging for cornflour products, designed to maintain product freshness and enhance brand visibility.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.22",
+      },
+      {
+        title: "Cubes Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Cubes-Boxes.webp",
+        description:
+          "Premium custom cube-shaped boxes suitable for a wide range of products, offering unique presentation solutions.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Custom Jar Sleeve Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/custom-Jar-sleeve-Boxes.webp",
+        description:
+          "Specialized boxes designed to fit around jars, providing protection and enhanced presentation for jar products.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Custom Mailer Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Custom-Mailer-Boxes.webp",
+        description:
+          "Durable shipping boxes designed for e-commerce and retail brands, combining product protection with brand promotion.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.22",
+      },
+      {
+        title: "Donut Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Donut-Boxes.webp",
+        description:
+          "Custom boxes designed to keep donuts fresh while providing attractive presentation, available in various shapes and sizes.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.25",
+      },
+      {
+        title: "Header Card Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Header-card-Packaging.webp",
+        description:
+          "Specialized packaging featuring header cards for retail display, enhancing product information and promotional messaging.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+        price: "£0.09",
+        oldPrice: "£0.26",
+      },
+      {
+        title: "Personalized Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Personalized-boxes-1.webp",
+        description:
+          "Customized packaging solutions tailored to specific needs, offering unique branding and presentation options.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.22",
+      },
+    ],
   },
+  // In your Products array, find the "Gifts-and-Souvenirs-Boxes" category
+  // and update its subProducts array with these items:
+
   {
     category: "Gifts-and-Souvenirs-Boxes",
     name: "Gifts and Souvenirs Boxes",
     icon: "fas fa-gift",
     description:
-      "In the dynamic UK beauty market, we stand out with our extensive collection of bespoke cosmetics and packaging. Our meticulously designed packaging solutions will take your brand to new heights of notoriety. In addition to safeguarding your belongings, our exquisite wrapping will make them shine. Any advantage that might make your cosmetics product stand out in the highly competitive cosmetics sector is greatly appreciated.",
-    subProducts: [],
+      "At Pack It Perfect, we offer premium custom gift and souvenir packaging that makes every occasion special. Our custom gift boxes combine elegant design with sturdy construction to create memorable unboxing experiences. From luxurious sleeve and tray packaging to creative book-styled gift boxes, our solutions will enhance your gift presentation and leave a lasting impression.",
+    subProducts: [
+      {
+        title: "Sleeve and Tray Packaging",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Sleeve-and-Tray-Packaging-2.webp",
+        description:
+          "Elegant two-piece packaging solution with a sleeve that slides over a tray, perfect for premium gift presentations.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£21.00",
+      },
+      {
+        title: "Custom Styled Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Custom-Styled-Boxes.webp",
+        description:
+          "Uniquely designed gift boxes with custom styles to make your presents stand out on any occasion.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Presentation Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Presentation-Boxes.webp",
+        description:
+          "Premium boxes designed for professional and elegant product presentations and special gifts.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Thank You Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Thanks-you-Boxes.webp",
+        description:
+          "Special packaging designed to express gratitude, perfect for customer appreciation gifts and special occasions.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Retro Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Retro-Boxes.webp",
+        description:
+          "Vintage-inspired gift boxes with nostalgic designs, perfect for creating a sense of charm and history.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Custom Book-Styled Gift Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Book-Styled-Gift-Boxes.webp",
+        description:
+          "Creative packaging designed to resemble books, perfect for literary-themed gifts and special keepsakes.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.25",
+      },
+      {
+        title: "Treasure Chest Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Treasure-Chest-Boxes.webp",
+        description:
+          "Exciting chest-shaped boxes that create a sense of adventure and discovery for special gifts.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.08",
+        oldPrice: "£0.24",
+      },
+      {
+        title: "Custom Souvenirs Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Custom-Souvenirs-boxes.webp",
+        description:
+          "Specialized packaging for souvenirs and mementos, perfect for tourism businesses and special events.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Custom Gift Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Custom-Gift-Boxes.webp",
+        description:
+          "Versatile and customizable gift boxes available in various sizes, shapes, and designs to suit any occasion.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.06",
+        oldPrice: "£0.23",
+      },
+      {
+        title: "Auto Lock Display Lid Boxes",
+        image:
+          "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Auto-Lock-Display-Lid-Boxes.webp",
+        description:
+          "Functional gift boxes with self-locking lids that also serve as attractive product displays.",
+        socialLinks: {
+          facebook: "https://www.facebook.com/example",
+          instagram: "https://www.instagram.com/example",
+          twitter: "https://www.twitter.com/example",
+        },
+        stars:
+          "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+        price: "£0.07",
+        oldPrice: "£0.24",
+      },
+    ],
   },
   // In your Products array, find the "Custom Made Boxes" category
   // and add these product entries to its subProducts array:
@@ -922,7 +2663,7 @@ const Products = [
     name: "Custom Boxes",
     icon: "fas fa-box-open",
     description:
-      "At One Step Custom Boxes, we specialize in creating high-quality custom boxes tailored to your business's unique needs. Whether you're looking for visually excellent packaging or boxes that perfectly fit your product dimensions, our expert team is here to bring your dream to life. We are not new in the business. We've established ourselves as a trusted name in the custom packaging industry for ten years.",
+      "At Pack It Perfect, we specialize in creating high-quality custom boxes tailored to your business's unique needs. Whether you're looking for visually excellent packaging or boxes that perfectly fit your product dimensions, our expert team is here to bring your dream to life. We are not new in the business. We've established ourselves as a trusted name in the custom packaging industry for ten years.",
     subProducts: [
       {
         title: "Cardboard Food Containers",

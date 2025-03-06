@@ -5,6 +5,189 @@ import styled from "styled-components";
 
 // Styled Components
 // Styled Components
+const styleProducts = [
+  {
+    title: "Die Cut Fittings Box",
+    code: "DCF001",
+    image:
+      "https://onestepcustomboxes.co.uk/wp-content/uploads/2025/01/1719226858-300x300-1.png",
+    description:
+      "Precision-cut boxes with custom fittings for secure product placement, ensuring items stay in place during shipping and presentation.",
+    url: "https://onestepcustomboxes.co.uk/die-cut-fittings-box/",
+    socialLinks: {
+      facebook: "https://www.facebook.com/example",
+      instagram: "https://www.instagram.com/example",
+      twitter: "https://www.twitter.com/example",
+    },
+    stars:
+      "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+    price: "£0.07",
+    oldPrice: "£0.23",
+  },
+  {
+    title: "Grocery Bag Box",
+    code: "GBB002",
+    image:
+      "https://onestepcustomboxes.co.uk/wp-content/uploads/2025/01/1722331308-300x300-1.png",
+    description:
+      "Eco-friendly grocery bag boxes for retail and shopping needs, combining functionality with sustainable design.",
+    url: "https://onestepcustomboxes.co.uk/grocery-bag-box/",
+    socialLinks: {
+      facebook: "https://www.facebook.com/example",
+      instagram: "https://www.instagram.com/example",
+      twitter: "https://www.twitter.com/example",
+    },
+    stars:
+      "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
+    price: "£0.06",
+    oldPrice: "£0.21",
+  },
+  {
+    title: "Kraft Cupcake Box",
+    code: "KCB003",
+    image:
+      "https://onestepcustomboxes.co.uk/wp-content/uploads/2025/01/1722331391-300x300-1.png",
+    description:
+      "Charming kraft paper boxes designed specifically for cupcakes, combining rustic appeal with practical functionality.",
+    url: "https://onestepcustomboxes.co.uk/kraft-cupcake-box/",
+    socialLinks: {
+      facebook: "https://www.facebook.com/example",
+      instagram: "https://www.instagram.com/example",
+      twitter: "https://www.twitter.com/example",
+    },
+    stars:
+      "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+    price: "£0.08",
+    oldPrice: "£0.24",
+  },
+  {
+    title: "Custom Rakhi Box",
+    code: "CRB004",
+    image:
+      "https://onestepcustomboxes.co.uk/wp-content/uploads/2025/01/1722331047-300x300-1.png",
+    description:
+      "Beautiful custom boxes designed for Rakhi celebrations, perfect for gifting during this special cultural occasion.",
+    url: "https://onestepcustomboxes.co.uk/csutom-rakhi-box/",
+    socialLinks: {
+      facebook: "https://www.facebook.com/example",
+      instagram: "https://www.instagram.com/example",
+      twitter: "https://www.twitter.com/example",
+    },
+    stars:
+      "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+    price: "£0.07",
+    oldPrice: "£0.23",
+  },
+  {
+    title: "Tuck Flap Box",
+    code: "TFB005",
+    image:
+      "https://onestepcustomboxes.co.uk/wp-content/uploads/2025/01/1722331121-300x300-1.png",
+    description:
+      "Versatile tuck flap boxes suitable for a wide range of products, offering easy assembly and secure closure.",
+    url: "https://onestepcustomboxes.co.uk/tuck-flap-box/",
+    socialLinks: {
+      facebook: "https://www.facebook.com/example",
+      instagram: "https://www.instagram.com/example",
+      twitter: "https://www.twitter.com/example",
+    },
+    stars:
+      "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
+    price: "£0.06",
+    oldPrice: "£0.22",
+  },
+  {
+    title: "Custom Bottle Carrier Boxes",
+    code: "BCB006",
+    image:
+      "https://onestepcustomboxes.co.uk/wp-content/uploads/2025/01/1719226878-300x300-1.png",
+    description:
+      "Sturdy carrier boxes designed for safe transportation of bottles, featuring handles for easy carrying.",
+    url: "https://onestepcustomboxes.co.uk/custom-bottle-carrier-boxes/",
+    socialLinks: {
+      facebook: "https://www.facebook.com/example",
+      instagram: "https://www.instagram.com/example",
+      twitter: "https://www.twitter.com/example",
+    },
+    stars:
+      "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
+    price: "£0.08",
+    oldPrice: "£0.25",
+  },
+  {
+    title: "Gift Craft Box",
+    code: "GCB007",
+    image:
+      "https://onestepcustomboxes.co.uk/wp-content/uploads/2025/01/1722331209-300x300-1.png",
+    description:
+      "Elegant craft boxes perfect for gifts and special occasions, providing a premium unboxing experience.",
+    url: "https://onestepcustomboxes.co.uk/gift-craft-box/",
+    socialLinks: {
+      facebook: "https://www.facebook.com/example",
+      instagram: "https://www.instagram.com/example",
+      twitter: "https://www.twitter.com/example",
+    },
+    stars:
+      "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
+    price: "£0.07",
+    oldPrice: "£0.24",
+  },
+  {
+    title: "Quality Gift Boxes",
+    code: "QGB008",
+    image:
+      "https://onestepcustomboxes.co.uk/wp-content/uploads/2025/01/1722331450-300x300-1.png",
+    description:
+      "Premium quality gift boxes for special occasions and luxury items, crafted with attention to detail.",
+    url: "https://onestepcustomboxes.co.uk/quality-gift-boxes/",
+    socialLinks: {
+      facebook: "https://www.facebook.com/example",
+      instagram: "https://www.instagram.com/example",
+      twitter: "https://www.twitter.com/example",
+    },
+    stars:
+      "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
+    price: "£0.09",
+    oldPrice: "£0.26",
+  },
+];
+const ReviewCard = styled.div`
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+`;
+
+// Replace ReviewImage with ReviewIcon
+const ReviewIcon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #d6b996;
+  margin-bottom: 1rem;
+  height: 100px;
+`;
+
+// For FinishOptionImage update
+const FinishOptionCard = styled.div`
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+`;
+
+// Replace FinishOptionImage with FinishOptionIcon
+const FinishOptionIcon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  background-color: #f9f9f9;
+  font-size: 4rem;
+  color: #333;
+`;
+
 const PageContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
@@ -652,13 +835,7 @@ const ReviewsGrid = styled.div`
   }
 `;
 
-const ReviewCard = styled.div`
-  background-color: #f8f8f8;
-  border-radius: 8px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-`;
+
 
 const ReviewImage = styled.img`
   width: 100%;
@@ -700,11 +877,6 @@ const FinishOptionsGrid = styled.div`
   }
 `;
 
-const FinishOptionCard = styled.div`
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-`;
 
 const FinishOptionImage = styled.img`
   width: 100%;
@@ -1008,7 +1180,7 @@ const ProductDetails = () => {
           <ProductDescription>
             <p>
               {filterProducts.description ||
-                `As a leading name in the UK packaging industry, One Step Custom Boxes is committed to delivering sustainable, eco-friendly ${filterProducts.title}. We offer high-quality packaging solutions that not only protect your products but also elevate your brand's image. Our team of design specialists uses cutting-edge manufacturing methods to create stunning packaging solutions at cost-effective rates, ensuring you meet both your brand and sustainable goals.`}
+                `As a leading name in the UK packaging industry, Pack It Perfect is committed to delivering sustainable, eco-friendly ${filterProducts.title}. We offer high-quality packaging solutions that not only protect your products but also elevate your brand's image. Our team of design specialists uses cutting-edge manufacturing methods to create stunning packaging solutions at cost-effective rates, ensuring you meet both your brand and sustainable goals.`}
             </p>
           </ProductDescription>
 
@@ -1127,15 +1299,14 @@ const ProductDetails = () => {
             Style
           </TabButton>
         </TabNavigation>
-
         {/* Specification Tab */}
         <TabContent active={activeTab === "specification"}>
           <TabContentTitle>Reliable Production</TabContentTitle>
           <TabContentDescription>
-            Our One Step Custom Boxes team specializes in creating unique and
-            stunning packaging designs that will leave your customers in awe.
-            Their need could be anything from the material and size to printing
-            and finishing touches. Our flexible options can be tailored to match
+            Our Pack It Perfect team specializes in creating unique and stunning
+            packaging designs that will leave your customers in awe. Their need
+            could be anything from the material and size to printing and
+            finishing touches. Our flexible options can be tailored to match
             your brand's vision and graphic and also provide business
             eco-friendly solutions or premium finishes depending on what you
             need.
@@ -1189,7 +1360,6 @@ const ProductDetails = () => {
             </tbody>
           </SpecificationTable>
         </TabContent>
-
         {/* Product Details Tab */}
         <TabContent active={activeTab === "productDetails"}>
           <TabContentTitle>Product Specifications</TabContentTitle>
@@ -1269,7 +1439,6 @@ const ProductDetails = () => {
             </BrandsSection>
           </BrandsContainer>
         </TabContent>
-
         {/* Artwork Guidelines Tab */}
         <TabContent active={activeTab === "artwork"}>
           <ArtworkGuideContainer>
@@ -1364,7 +1533,6 @@ const ProductDetails = () => {
             </GuidelinesGrid>
           </ArtworkGuideContainer>
         </TabContent>
-
         {/* Order Process Tab */}
         <TabContent active={activeTab === "orderProcess"}>
           <TabContentTitle>Order Process</TabContentTitle>
@@ -1440,7 +1608,6 @@ const ProductDetails = () => {
             </ProcessItem>
           </ProcessGrid>
         </TabContent>
-
         {/* Material Tab */}
         <TabContent active={activeTab === "material"}>
           <TabContentTitle>Material Options</TabContentTitle>
@@ -1499,7 +1666,6 @@ const ProductDetails = () => {
             offer eco-friendly options for environmentally conscious brands.
           </p>
         </TabContent>
-
         {/* Style Tab */}
         <TabContent active={activeTab === "style"}>
           <TabContentTitle>Box Styles</TabContentTitle>
@@ -1509,43 +1675,16 @@ const ProductDetails = () => {
           </TabContentDescription>
 
           <BoxStyleGrid>
-            <BoxStyleItem>
-              <img src="/images/styles/K015C.jpg" alt="Box Style K015C" />
-              <BoxStyleCode>K015C</BoxStyleCode>
-            </BoxStyleItem>
-            <BoxStyleItem>
-              <img src="/images/styles/F001.jpg" alt="Box Style F001" />
-              <BoxStyleCode>F001</BoxStyleCode>
-            </BoxStyleItem>
-            <BoxStyleItem>
-              <img src="/images/styles/E056.jpg" alt="Box Style E056" />
-              <BoxStyleCode>E056</BoxStyleCode>
-            </BoxStyleItem>
-            <BoxStyleItem>
-              <img src="/images/styles/180330.jpg" alt="Box Style 180330" />
-              <BoxStyleCode>180330</BoxStyleCode>
-            </BoxStyleItem>
-            <BoxStyleItem>
-              <img src="/images/styles/K024.jpg" alt="Box Style K024" />
-              <BoxStyleCode>K024</BoxStyleCode>
-            </BoxStyleItem>
-            <BoxStyleItem>
-              <img src="/images/styles/K016.jpg" alt="Box Style K016" />
-              <BoxStyleCode>K016</BoxStyleCode>
-            </BoxStyleItem>
-            <BoxStyleItem>
-              <img src="/images/styles/H008A.jpg" alt="Box Style H008A" />
-              <BoxStyleCode>H008A</BoxStyleCode>
-            </BoxStyleItem>
-            <BoxStyleItem>
-              <img src="/images/styles/E055.jpg" alt="Box Style E055" />
-              <BoxStyleCode>E055</BoxStyleCode>
-            </BoxStyleItem>
+            {styleProducts.map((styleProduct, index) => (
+              <BoxStyleItem key={index}>
+                <img
+                  src={styleProduct.image}
+                  alt={`Box Style ${styleProduct.code}`}
+                />
+                <BoxStyleCode>{styleProduct.code}</BoxStyleCode>
+              </BoxStyleItem>
+            ))}
           </BoxStyleGrid>
-
-          <div style={{ textAlign: "center", margin: "2rem 0" }}>
-            <button className="btn btn-dark">READ MORE</button>
-          </div>
         </TabContent>
       </TabsContainer>
 
@@ -1558,7 +1697,7 @@ const ProductDetails = () => {
           have assisted many businesses in boosting their revenues. Our custom
           packaging boxes are used by leading brands across the UK, Europe, and
           North America to package their products. Here is what some of our
-          satisfied customers are saying about One Step Custom Boxes.
+          satisfied customers are saying about Pack It Perfect.
         </BrandsText>
         <BrandsLogos>
           <BrandLogo src="/images/brands/brand1.png" alt="Brand 1" />
@@ -1646,15 +1785,14 @@ const ProductDetails = () => {
         </FeatureBox>
       </FeatureBoxGrid>
 
-      {/* Reviews Section */}
+      {/* Reviews Section */}Ready to think outside the box?
       <ReviewsContainer>
         <SectionTitle>Reviews From Happy Customers!</SectionTitle>
         <ReviewsGrid>
           <ReviewCard>
-            <ReviewImage
-              src="/images/reviews/review1.jpg"
-              alt="Customer Review"
-            />
+            <ReviewIcon>
+              <i className="fas fa-smile-beam"></i>
+            </ReviewIcon>
             <ReviewText>
               "Incredible quality and attention to detail! The{" "}
               {filterProducts.title} exceeded our expectations and perfectly
@@ -1664,10 +1802,9 @@ const ProductDetails = () => {
             <ReviewerInfo>Sarah J. - Beauty Brand Owner</ReviewerInfo>
           </ReviewCard>
           <ReviewCard>
-            <ReviewImage
-              src="/images/reviews/review2.jpg"
-              alt="Customer Review"
-            />
+            <ReviewIcon>
+              <i className="fas fa-thumbs-up"></i>
+            </ReviewIcon>
             <ReviewText>
               "The team was extremely responsive and helpful throughout the
               design process. Our packaging looks professional and has
@@ -1677,23 +1814,21 @@ const ProductDetails = () => {
             <ReviewerInfo>Michael T. - Skincare Company</ReviewerInfo>
           </ReviewCard>
           <ReviewCard>
-            <ReviewImage
-              src="/images/reviews/review3.jpg"
-              alt="Customer Review"
-            />
+            <ReviewIcon>
+              <i className="fas fa-heart"></i>
+            </ReviewIcon>
             <ReviewText>
               "I needed eco-friendly packaging for my organic product line, and
-              One Step Custom Boxes delivered exactly what I was looking for.
-              Great quality and sustainable too!"
+              Pack It Perfect delivered exactly what I was looking for. Great
+              quality and sustainable too!"
             </ReviewText>
             <StarRating>★★★★★</StarRating>
             <ReviewerInfo>Emma L. - Organic Products</ReviewerInfo>
           </ReviewCard>
           <ReviewCard>
-            <ReviewImage
-              src="/images/reviews/review4.jpg"
-              alt="Customer Review"
-            />
+            <ReviewIcon>
+              <i className="fas fa-star"></i>
+            </ReviewIcon>
             <ReviewText>
               "Fast turnaround and excellent customer service. The boxes arrived
               on time and looked fantastic. Will definitely be ordering again
@@ -1710,10 +1845,9 @@ const ProductDetails = () => {
         <SectionTitle>Premium Finishing Options</SectionTitle>
         <FinishOptionsGrid>
           <FinishOptionCard>
-            <FinishOptionImage
-              src="/images/finishes/anti-scratch.jpg"
-              alt="Anti-scratch Lamination"
-            />
+            <FinishOptionIcon>
+              <i className="fas fa-shield-alt"></i>
+            </FinishOptionIcon>
             <FinishOptionInfo>
               <FinishOptionTitle>Anti-scratch Lamination</FinishOptionTitle>
               <FinishOptionDescription>
@@ -1723,10 +1857,9 @@ const ProductDetails = () => {
             </FinishOptionInfo>
           </FinishOptionCard>
           <FinishOptionCard>
-            <FinishOptionImage
-              src="/images/finishes/aqueous-coating.jpg"
-              alt="Aqueous Coating"
-            />
+            <FinishOptionIcon>
+              <i className="fas fa-tint"></i>
+            </FinishOptionIcon>
             <FinishOptionInfo>
               <FinishOptionTitle>Aqueous Coating</FinishOptionTitle>
               <FinishOptionDescription>
@@ -1736,10 +1869,9 @@ const ProductDetails = () => {
             </FinishOptionInfo>
           </FinishOptionCard>
           <FinishOptionCard>
-            <FinishOptionImage
-              src="/images/finishes/velvet-lamination.jpg"
-              alt="Velvet Lamination"
-            />
+            <FinishOptionIcon>
+              <i className="fas fa-mitten"></i>
+            </FinishOptionIcon>
             <FinishOptionInfo>
               <FinishOptionTitle>Velvet Lamination</FinishOptionTitle>
               <FinishOptionDescription>
@@ -1749,10 +1881,9 @@ const ProductDetails = () => {
             </FinishOptionInfo>
           </FinishOptionCard>
           <FinishOptionCard>
-            <FinishOptionImage
-              src="/images/finishes/matte-lamination.jpg"
-              alt="Matte Lamination"
-            />
+            <FinishOptionIcon>
+              <i className="fas fa-brush"></i>
+            </FinishOptionIcon>
             <FinishOptionInfo>
               <FinishOptionTitle>Matte Lamination</FinishOptionTitle>
               <FinishOptionDescription>
@@ -1771,7 +1902,7 @@ const ProductDetails = () => {
           <DiscountInput type="text" placeholder="Name" />
           <DiscountInput type="email" placeholder="Email" />
           <DiscountInput type="tel" placeholder="Phone" />
-          <DiscountButton>GET A QUOTE</DiscountButton>
+          <DiscountButton href="/get-a-qoute">GET A QUOTE</DiscountButton>
         </DiscountForm>
       </DiscountSection>
 
@@ -1798,17 +1929,6 @@ const ProductDetails = () => {
             ))}
         </RelatedProductsGrid>
       </RelatedProductsContainer>
-
-      {/* Final CTA Section */}
-      <CTASection>
-        <CTATitle>Ready to think outside the box? Let's get started!</CTATitle>
-        <CTAText>
-          Create a custom packaging solution that elevates your product and
-          delights your customers. Our team is ready to help bring your vision
-          to life.
-        </CTAText>
-        <CTAButton>GET A QUOTE</CTAButton>
-      </CTASection>
     </PageContainer>
   );
 };

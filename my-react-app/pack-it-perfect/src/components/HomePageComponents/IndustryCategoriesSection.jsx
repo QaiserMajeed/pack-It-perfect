@@ -279,10 +279,6 @@ const IndustryCategoriesSection = () => {
             </CategoryCard>
           ))}
         </CategoriesGrid>
-
-        <ViewAllLink>
-          <a href="/all-categories">View all products</a>
-        </ViewAllLink>
       </div>
     </SectionContainer>
   );

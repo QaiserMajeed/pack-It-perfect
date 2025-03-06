@@ -2,33 +2,61 @@ import React from "react";
 import styled from "styled-components";
 import { FaPhone } from "react-icons/fa";
 
-// Styled components
+// Styled components with responsive design
 const ContactSection = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 20px 0;
+  justify-content: flex-end;
+  height: 100%;
+
+  @media (max-width: 768px) {
+    padding: 10px 0;
+    justify-content: center;
+  }
 `;
 
 const PhoneContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @media (max-width: 576px) {
+    margin-bottom: 10px;
+  }
 `;
 
 const PhoneIconCircle = styled.div`
   background-color: #f5f5f5;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 15px;
+
+  @media (max-width: 992px) {
+    width: 36px;
+    height: 36px;
+  }
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
 `;
 
 const StyledPhoneIcon = styled(FaPhone)`
-  font-size: 24px;
+  font-size: 18px;
   color: #333;
+
+  @media (max-width: 992px) {
+    font-size: 16px;
+  }
 `;
 
 const PhoneText = styled.div`
@@ -37,34 +65,39 @@ const PhoneText = styled.div`
 `;
 
 const PhoneTitle = styled.div`
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: #000;
+
+  @media (max-width: 992px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
 `;
 
 const PhoneSubtitle = styled.div`
-  font-size: 16px;
+  font-size: 14px;
   color: #555;
-  margin-top: 4px;
-`;
+  margin-top: 2px;
 
-const QuoteSection = styled.div`
-  margin-top: 10px;
-`;
+  @media (max-width: 992px) {
+    font-size: 12px;
+  }
 
-const QuoteTitle = styled.h2`
-  font-size: 24px;
-  font-weight: 600;
-  color: #000;
-  margin: 0;
+  @media (max-width: 576px) {
+    display: none;
+  }
 `;
 
 // Component
 const TelephoneContact = () => {
-  const phoneNumber = "020 383 083 19";
+  const phoneNumber = "+44 07440189478";
 
   return (
-    <ContactSection>
+    <ContactSection className="align-self-end">
       <PhoneContainer>
         <PhoneIconCircle>
           <StyledPhoneIcon />
@@ -74,10 +107,6 @@ const TelephoneContact = () => {
           <PhoneSubtitle>Call us for free!</PhoneSubtitle>
         </PhoneText>
       </PhoneContainer>
-
-      <QuoteSection>
-        <QuoteTitle>Request a Quote</QuoteTitle>
-      </QuoteSection>
     </ContactSection>
   );
 };

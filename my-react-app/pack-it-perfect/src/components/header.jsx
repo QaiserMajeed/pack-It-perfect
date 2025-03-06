@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Products from "./Products";
 import "./Header.css";
-import QuoteRequestForm from "./QuoteRequestForm";
+import TelephoneContact from "./Telephone";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -53,11 +53,37 @@ const Header = () => {
       </div>
 
       {/* Main header */}
+      {/* Main header */}
       <div className="main-header">
         <div className="container">
           <div className="row align-items-center">
-            {/* Logo */}
-            <div className="col-6 col-md-3">
+            {/* Left space or additional content */}
+            <div className="col-4 col-md-4 d-flex align-items-center">
+              {/* Mobile buttons */}
+              <div className="mobile-actions d-flex d-md-none">
+                <button
+                  className={`menu-toggle ${mobileMenuOpen ? "active" : ""}`}
+                  onClick={toggleMobileMenu}
+                  aria-label="Menu"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "40px",
+                    height: "40px",
+                    backgroundColor: "#f0f0f0",
+                    borderRadius: "4px",
+                    border: "none",
+                    cursor: "pointer",
+                  }}
+                >
+                  <i className="fas fa-bars" style={{ fontSize: "20px" }}></i>
+                </button>
+              </div>
+            </div>
+
+            {/* Logo (in center) */}
+            <div className="col-4 col-md-4 text-center">
               <Link to="/" className="header-logo">
                 <img
                   src="/images/svgviewer-output (2).svg"
@@ -67,68 +93,9 @@ const Header = () => {
               </Link>
             </div>
 
-            {/* Search - visible on desktop */}
-            <div className="col-md-6 d-none d-md-block">
-              <div className="search-form">
-                <input
-                  type="text"
-                  placeholder="What are you looking for?"
-                  className="search-input"
-                />
-                <button type="submit" className="search-button">
-                  <i className="fas fa-search"></i>
-                </button>
-              </div>
-            </div>
-
-            {/* Contact and mobile toggle */}
-            <div className="col-6 col-md-3 d-flex justify-content-end">
-              <a
-                href="tel:02033320061"
-                className="header-phone d-none d-md-flex"
-              >
-                <i className="fas fa-phone-alt me-2"></i>
-                <span>02038308319</span>
-              </a>
-
-              {/* Mobile buttons */}
-              <div className="mobile-actions d-flex d-md-none">
-                <button
-                  className="search-toggle"
-                  onClick={toggleSearch}
-                  aria-label="Search"
-                >
-                  <i className="fas fa-search"></i>
-                </button>
-                <a href="tel:02033320061" className="mobile-call">
-                  <i className="fas fa-phone-alt"></i>
-                </a>
-                <button
-                  className={`menu-toggle ${mobileMenuOpen ? "active" : ""}`}
-                  onClick={toggleMobileMenu}
-                  aria-label="Menu"
-                ></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile search bar */}
-      <div className={`mobile-search ${searchActive ? "active" : ""}`}>
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <form className="search-form">
-                <input
-                  type="text"
-                  placeholder="What are you looking for?"
-                  className="search-input"
-                />
-                <button type="submit" className="search-button">
-                  <i className="fas fa-search"></i>
-                </button>
-              </form>
+            {/* Contact info (moved to right) */}
+            <div className="col-4 col-md-4 d-flex justify-content-end align-items-center">
+              <TelephoneContact />
             </div>
           </div>
         </div>
@@ -188,13 +155,13 @@ const Header = () => {
                               Contact our packaging specialists for custom
                               solutions tailored to your needs.
                             </p>
-                            <a href="#quote" className="cta-button">
+                            <a href="/get-a-quote" className="cta-button">
                               Get a Quote
                             </a>
                             <p className="mt-3 mb-0">
                               <strong>Call us:</strong>
                             </p>
-                            <p className="fw-bold">02038308319</p>
+                            <p className="fw-bold">+44 0744018948</p>
                           </div>
                         </div>
                       </div>
@@ -216,25 +183,12 @@ const Header = () => {
                 </li>
                 <li className="nav-item">
                   <a href="#" className="nav-link">
-                    By Tags
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="#" className="nav-link">
-                    By Sticker
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="#" className="nav-link">
                     Blog
                   </a>
                 </li>
                 <li className="nav-item">
-                  <Link
-                    to={`/category/packaging-by-style`}
-                    className="nav-link"
-                  >
-                    Request Quote
+                  <Link to={`/get-a-quote`} className="nav-link">
+                    Quote
                   </Link>
                 </li>
               </ul>
@@ -424,8 +378,8 @@ const Header = () => {
               <p className="mb-1">
                 <strong>Call us:</strong>
               </p>
-              <a href="tel:02033320061" className="mobile-phone">
-                02038308319
+              <a href="tel:+44 0744018948" className="mobile-phone">
+                +44 0744018948
               </a>
             </div>
           </div>

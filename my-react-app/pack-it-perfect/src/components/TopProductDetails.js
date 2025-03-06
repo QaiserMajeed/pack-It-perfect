@@ -115,7 +115,7 @@ const TopProductDetails = () => {
 
           {/* Product actions section */}
           <div className="product-actions mt-4">
-            <button
+            <button href="#/get-quote"
               className="btn me-3"
               style={{
                 backgroundColor: "rgb(0, 0, 90)",
@@ -123,7 +123,7 @@ const TopProductDetails = () => {
                 padding: "10px 20px",
               }}
             >
-              Request Quote
+               Quote
             </button>
             <button
               className="btn"

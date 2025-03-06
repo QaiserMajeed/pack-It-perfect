@@ -221,7 +221,7 @@ const CompanyBenefitsSection = () => {
       <div className="container">
         <SectionHeader>
           <SectionTitle>
-            REASONS WHY ONE STEP CUSTOM BOXES PACKAGING HAS
+            REASONS WHY Pack It Perfect PACKAGING HAS
           </SectionTitle>
           <SectionSubtitle>1,000'S OF SATISFIED CLIENTS!</SectionSubtitle>
           <SectionDescription>

@@ -22,6 +22,7 @@ import BestSellingProducts from "./components/HomePageComponents//BestSellingPro
 import TestimonialsSection from "./components/HomePageComponents//TestimonialsSection";
 import CompanyBenefitsSection from "./components/HomePageComponents//CompanyBenefitsSection";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
+import QouteForm from "../src/components/QuoteForm";
 
 
 
@@ -142,6 +143,7 @@ const HomePage = () => {
                 element={<ProductDetails />}
               />
               <Route path="/product/:product" element={<TopProductDetails />} />
+              <Route path="/get-a-quote" element={<QouteForm />} />
             </Routes>
           </section>
         </main>

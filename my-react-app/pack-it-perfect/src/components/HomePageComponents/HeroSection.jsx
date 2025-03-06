@@ -220,7 +220,7 @@ const HeroSection = () => {
               <FeatureItem>Produced In United Kingdom</FeatureItem>
               <FeatureItem>Delivery within 6 to 10 working days</FeatureItem>
             </FeaturesList>
-            <ActionButton href="#quote">Get A Free Quote</ActionButton>
+            <ActionButton href="/get-a-quote">Get A Free Quote</ActionButton>
             <RatingRow>
               <RatingText>
                 See what our clients are saying! With 4.5 Social Media Platforms

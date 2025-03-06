@@ -277,7 +277,6 @@ const BestSellingProducts = () => {
           <SectionTitle>
             BEST <SellingText>SELLING!</SellingText>
           </SectionTitle>
-          <ViewAllButton href="/products">View all products</ViewAllButton>
         </SectionHeader>
 
         <ProductsGrid>
