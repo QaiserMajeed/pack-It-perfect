@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/packagei/public_html/
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp -R build/* $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH
