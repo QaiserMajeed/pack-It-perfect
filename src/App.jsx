@@ -66,22 +66,33 @@ const LoadingFallback = () => (
 
 function App() {
   // Load Bootstrap JS
-  useEffect(() => {
-    // Import Bootstrap JS
-    const loadBootstrapJS = async () => {
-      try {
-        // Check if window and document exist (for SSR)
-        if (typeof window !== "undefined" && typeof document !== "undefined") {
-          // Import Bootstrap bundle with Popper
-          await import("bootstrap/dist/js/bootstrap.bundle.min.js");
-        }
-      } catch (error) {
-        console.error("Failed to load Bootstrap JS:", error);
+useEffect(() => {
+  // Import Bootstrap JS
+  const loadBootstrapJS = async () => {
+    try {
+      // Check if window and document exist (for SSR)
+      if (typeof window !== "undefined" && typeof document !== "undefined") {
+        // Import Bootstrap bundle with Popper
+        await import("bootstrap/dist/js/bootstrap.bundle.min.js");
       }
-    };
+    } catch (error) {
+      console.error("Failed to load Bootstrap JS:", error);
+    }
+  };
 
-    loadBootstrapJS();
-  }, []);
+  loadBootstrapJS();
+}, []);
+useEffect(() => {
+  // Load Bootstrap CSS
+  import("bootstrap/dist/css/bootstrap.min.css");
+
+  // Load Bootstrap JS (in browser environments only)
+  if (typeof window !== "undefined" && typeof document !== "undefined") {
+    import("bootstrap/dist/js/bootstrap.bundle.min.js").catch((error) =>
+      console.error("Failed to load Bootstrap JS:", error)
+    );
+  }
+}, []);
 
   // Simplified material and style slides arrays (keep the same as your original code)
 
