@@ -9,6 +9,8 @@ import {
   faTwitter,
   faPinterest,
 } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
+import Products from "./Products";
 
 // Styled Components
 const FooterContainer = styled.footer`
@@ -186,40 +188,77 @@ const PaymentIcons = styled.div`
   }
 `;
 
+// Get a selection of top categories and products for the footer
+const getTopCategories = (count = 5) => {
+  return Products.filter(
+    (category) => category.category !== "packaging-by-style"
+  ).slice(0, count);
+};
+
 const Footer = () => {
+  const topCategories = getTopCategories();
+  const year = new Date().getFullYear();
+
   return (
     <FooterContainer>
       <CompanyInfoColumn>
         <LogoContainer>
-          <a href="#">
-            <img src="/images/logo.svg" alt="Company Logo" />
-          </a>
+          <Link to="/">
+            <img src="/images/logo.svg" alt="Pack it Perfect Logo" />
+          </Link>
         </LogoContainer>
 
         <ContactInfo>
-          <p>Contact@Packitperfectcustomboxes.co.uk</p>
+          <a href="mailto:Contact@Packitperfectcustomboxes.co.uk">
+            Contact@Packitperfectcustomboxes.co.uk
+          </a>
           <TelephoneContact />
-          <p>
+          <address>
             128 City Road, London,
             <br />
             United Kingdom, EC1V 2NX
-          </p>
+          </address>
         </ContactInfo>
 
         <SocialIcons>
-          <a href="#" aria-label="Facebook">
+          <a
+            href="https://www.facebook.com/packageitperfect"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow Pack it Perfect on Facebook"
+          >
             <FontAwesomeIcon icon={faFacebook} />
           </a>
-          <a href="#" aria-label="Instagram">
+          <a
+            href="https://www.instagram.com/packageitperfect"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow Pack it Perfect on Instagram"
+          >
             <FontAwesomeIcon icon={faInstagram} />
           </a>
-          <a href="#" aria-label="LinkedIn">
+          <a
+            href="https://www.linkedin.com/company/packageitperfect"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Connect with Pack it Perfect on LinkedIn"
+          >
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
-          <a href="#" aria-label="Twitter">
+          <a
+            href="https://www.twitter.com/packageitperfect"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow Pack it Perfect on Twitter"
+          >
             <FontAwesomeIcon icon={faTwitter} />
           </a>
-          <a href="#" aria-label="Pinterest">
+          <a
+            href="https://www.pinterest.com/packageitperfect"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow Pack it Perfect on Pinterest"
+          >
             <FontAwesomeIcon icon={faPinterest} />
           </a>
         </SocialIcons>
@@ -229,73 +268,62 @@ const Footer = () => {
         <FooterHeading>Categories</FooterHeading>
         <FooterList>
           <li>
-            <a href="#">By Industry</a>
+            <Link to="/category/packaging-by-style">By Style</Link>
           </li>
           <li>
-            <a href="#">By Style</a>
-          </li>
-          <li>
-            <a href="#">By Material</a>
+            <Link to="/category/packaging-by-style">By Material</Link>
           </li>
         </FooterList>
       </FooterColumn>
 
       <FooterColumn>
-        <FooterHeading>Top Products</FooterHeading>
+        <FooterHeading>Popular Products</FooterHeading>
         <FooterList>
           <li>
-            <a href="#">Gifts and Souvenirs Boxes</a>
+            <Link to="/category/Gifts-and-Souvenirs-Boxes">Gift Boxes</Link>
           </li>
           <li>
-            <a href="#">Jewelry Packaging</a>
+            <Link to="/category/jewelry-packaging">Jewelry Packaging</Link>
           </li>
           <li>
-            <a href="#">Clothing and Apparel Boxes</a>
+            <Link to="/category/Clothing-and-Apparel-Boxes">
+              Clothing Boxes
+            </Link>
           </li>
           <li>
-            <a href="#">Food Packaging</a>
+            <Link to="/category/Fast-Food-Packaging">Food Packaging</Link>
           </li>
           <li>
-            <a href="#">Medical Devices Boxes</a>
+            <Link to="/category/Medical-Devices-Boxes">Medical Packaging</Link>
           </li>
           <li>
-            <a href="#">Custom Made Boxes</a>
+            <Link to="/category/Custom-Made-Boxes">Custom Made Boxes</Link>
           </li>
           <li>
-            <a href="#">Beauty & Cosmetics</a>
+            <Link to="/category/Beauty-and-Cosmetics-Packaging">
+              Cosmetics Packaging
+            </Link>
           </li>
           <li>
-            <a href="#">Beverages Packaging</a>
+            <Link to="/category/Beverage-Custom-Boxes">Beverage Packaging</Link>
           </li>
         </FooterList>
       </FooterColumn>
 
       <FooterColumn>
-        <FooterHeading>Support</FooterHeading>
+        <FooterHeading>Customer Support</FooterHeading>
         <FooterList>
           <li>
-            <a href="#">FAQ</a>
+            <Link to="/faq">Frequently Asked Questions</Link>
           </li>
           <li>
-            <a href="#">Privacy policy</a>
+            <Link to="/get-a-quote">Request a Quote</Link>
           </li>
           <li>
-            <a href="/get-quote"> Quote</a>
+            <Link to="/contact">Contact Us</Link>
           </li>
           <li>
-            <a href="#">Terms of Service</a>
-          </li>
-          <li>
-            <a href="#">Contact us</a>
-          </li>
-          <li>
-            <a href="#">Testimonial</a>
-          </li>
-          <li>
-            <a href="#">Artwork Guidelines</a>
-          </li>
-          <li>
-            <a href="#">FeedBack</a>
+            <Link to="/blog">Packaging Blog</Link>
           </li>
         </FooterList>
       </FooterColumn>
@@ -304,32 +332,50 @@ const Footer = () => {
         <FooterHeading>Success Stories</FooterHeading>
         <FooterList>
           <li>
-            <a href="#">Harrods</a>
+            <Link to="/case-study/harrods">Harrods</Link>
           </li>
           <li>
-            <a href="#">Royal Ascot</a>
+            <Link to="/case-study/royal-ascot">Royal Ascot</Link>
           </li>
         </FooterList>
 
         <NewsletterContainer>
           <FooterHeading>Newsletter</FooterHeading>
           <NewsletterContent>
-            <p>Subscribe to our newsletter.</p>
-            <input type="email" placeholder="Your email address" />
-            <button>Subscribe</button>
+            <p>
+              Subscribe to our newsletter for packaging tips and special offers.
+            </p>
+            <form onSubmit={(e) => e.preventDefault()}>
+              <input
+                type="email"
+                placeholder="Your email address"
+                aria-label="Email for newsletter subscription"
+                required
+              />
+              <button type="submit">Subscribe</button>
+            </form>
           </NewsletterContent>
         </NewsletterContainer>
       </FooterColumn>
 
       <BottomFooter>
         <Copyright>
-          © 2024 Pack it Perfect Custom Boxes. All rights reserved.
+          © {year} Pack it Perfect Custom Boxes. All rights reserved.
         </Copyright>
         <PaymentIcons>
-          <img src="/images/paymentimages/bacs.webp" alt="BACS" />
-          <img src="/images/paymentimages/paypal.png" alt="PayPal" />
-          <img src="/images/paymentimages/strip.png" alt="Stripe" />
-          <img src="/images/paymentimages/wise1.png" alt="Wise" />
+          <img
+            src="/images/paymentimages/bacs.webp"
+            alt="BACS Payment Accepted"
+          />
+          <img src="/images/paymentimages/paypal.png" alt="PayPal Accepted" />
+          <img
+            src="/images/paymentimages/strip.png"
+            alt="Stripe Payments Accepted"
+          />
+          <img
+            src="/images/paymentimages/wise1.png"
+            alt="Wise Transfers Accepted"
+          />
         </PaymentIcons>
       </BottomFooter>
     </FooterContainer>

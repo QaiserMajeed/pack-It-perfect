@@ -551,9 +551,9 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <a href="#" className="nav-link">
+                  <Link to={`/blog`} className="nav-link">
                     Blog
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
                   <Link to={`/get-a-quote`} className="nav-link">

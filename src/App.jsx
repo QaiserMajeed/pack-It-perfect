@@ -9,6 +9,11 @@ import MainContent from "./components/mainContent";
 import ProductCard from "./components/Productcard";
 import Products from "./components/Products";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
+import FAQPage from "./components/FAQPage";
+import BlogList from "./components/BlogList";
+import BlogDetail from "./components/BlogDetail";
+import ContactPage from "./components/ContactPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 // Lazy load non-critical components
 const ProductDetails = lazy(() => import("./components/ProductDetails"));
@@ -116,6 +121,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop /> {/* Add this line */}
       <div className="pack-it-perfect-app">
         <Header />
         <main>
@@ -161,6 +167,45 @@ function App() {
                       canonicalUrl="/get-a-quote"
                     />
                     <QouteForm />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/faq"
+                element={
+                  <Suspense fallback={<LoadingFallback />}>
+                    <SEO
+                      title="Frequently Asked Questions | Pack it Perfect"
+                      description="Find answers to common questions about our custom packaging services, design process, materials, shipping and more."
+                      canonicalUrl="/faq"
+                    />
+                    <FAQPage />
+                  </Suspense>
+                }
+              />
+
+              <Route
+                path="/blog"
+                element={
+                  <Suspense fallback={<LoadingFallback />}>
+                    <BlogList />
+                  </Suspense>
+                }
+              />
+
+              <Route
+                path="/blog/:slug"
+                element={
+                  <Suspense fallback={<LoadingFallback />}>
+                    <BlogDetail />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/contact"
+                element={
+                  <Suspense fallback={<LoadingFallback />}>
+                    <ContactPage />
                   </Suspense>
                 }
               />
