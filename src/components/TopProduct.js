@@ -6,7 +6,7 @@ const TopProducts = ({ products }) => {
       <div className="container">
         <br /><br />
         <h1 style={{ fontWeight: 'bold', display: 'flex', justifyContent: 'last baseline', marginBottom: '40px' }}>
-          Top <span style={{ color: 'rgb(0, 0, 90)', marginLeft: '10px' }}>Products</span>
+          Top <span style={{ color: '#000', marginLeft: '10px' }}>Products</span>
         </h1>
         <div className="row">
           {products.map((product, index) => (

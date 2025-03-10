@@ -62,7 +62,7 @@ const CarouselComponent = () => {
       <div className="row">
         <div className="col-md-6">
           <h1 className="fw-bold" style={{fontWeight:'bold'}}>
-            Choose Your <span className="ms-2" style={{color: 'rgb(0, 0, 90)'}}>Industry</span>
+            Choose Your <span className="ms-2" style={{color: '#000'}}>Industry</span>
           </h1>
         </div>
         <div className="col-md-6 d-flex justify-content-end align-items-center">
@@ -71,7 +71,7 @@ const CarouselComponent = () => {
             onClick={handlePrev}
             disabled={isPrevDisabled}
             className="btn rounded-circle me-2"
-            style={{ width: '50px', height: '50px',marginRight:'20px', backgroundColor: 'rgb(0, 0, 90)', color: 'white' }}
+            style={{ width: '50px', height: '50px',marginRight:'20px', backgroundColor: '#000', color: 'white' }}
           >
             &#8249;
           </button>
@@ -80,7 +80,7 @@ const CarouselComponent = () => {
             onClick={handleNext}
             disabled={isNextDisabled}
             className="btn rounded-circle"
-            style={{ width: '50px', height: '50px',backgroundColor: 'rgb(0, 0, 90)', color: 'white'}}
+            style={{ width: '50px', height: '50px',backgroundColor: '#000', color: 'white'}}
           >
             &#8250;
           </button>

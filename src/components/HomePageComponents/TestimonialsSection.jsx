@@ -168,7 +168,7 @@ const NavButton = styled.button`
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: ${(props) => (props.active ? "rgb(0, 0, 90)" : "#f0f0f0")};
+  background-color: ${(props) => (props.active ? "#000" : "#f0f0f0")};
   color: ${(props) => (props.active ? "white" : "#333")};
   border: none;
   margin: 0 0.5rem;
@@ -180,7 +180,7 @@ const NavButton = styled.button`
 
   &:hover {
     background-color: ${(props) =>
-      props.active ? "rgb(0, 0, 90)" : "#e0e0e0"};
+      props.active ? "#000" : "#e0e0e0"};
   }
 
   &:disabled {
@@ -202,7 +202,7 @@ const ViewAllLink = styled.div`
     align-items: center;
 
     &:hover {
-      color: rgb(0, 0, 90);
+      color: #000;
       text-decoration: underline;
     }
 

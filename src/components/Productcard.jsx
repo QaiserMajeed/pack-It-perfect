@@ -24,7 +24,7 @@ const RegularSpan = styled.span`
 `;
 
 const BrandSpan = styled.span`
-  color: rgb(0, 0, 90);
+  color: #000;
 `;
 
 const CategoryDescription = styled.div`
@@ -150,7 +150,7 @@ const ViewDetailsLink = styled.span`
   transition: color 0.3s ease;
 
   ${Card}:hover & {
-    color: rgb(0, 0, 90);
+    color: #000;
   }
 `;
 
@@ -247,7 +247,7 @@ const ProductCard = ({ categories }) => {
        canonicalUrl={location.pathname}
        ogImage={
          filteredCategories[0]?.subProducts?.[0]?.image ||
-         "/images/svgviewer-output (2).svg"
+         "/images/logo.svg"
        }
        schema={generateCategorySchema()}
      />

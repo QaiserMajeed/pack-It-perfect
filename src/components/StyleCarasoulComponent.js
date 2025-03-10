@@ -53,7 +53,7 @@ const StyleCarouselComponent = ({slides}) => {
             onClick={handlePrev}
             disabled={isPrevDisabled}
             className="btn rounded-circle me-2"
-            style={{ width: '50px', height: '50px' , backgroundColor: 'rgb(0, 0, 90)', color: 'white', fontWeight:'bolder'}}
+            style={{ width: '50px', height: '50px' , backgroundColor: '#000', color: 'white', fontWeight:'bolder'}}
           >
             &#8249;
           </button>
@@ -61,7 +61,7 @@ const StyleCarouselComponent = ({slides}) => {
             onClick={handleNext}
             disabled={isNextDisabled}
             className="btn rounded-circle"
-            style={{ width: '50px', height: '50px', marginLeft:'20px' ,backgroundColor: 'rgb(0, 0, 90)', color: 'white' , fontWeight:'bolder'}}
+            style={{ width: '50px', height: '50px', marginLeft:'20px' ,backgroundColor: '#000', color: 'white' , fontWeight:'bolder'}}
           >
             &#8250;
           </button>

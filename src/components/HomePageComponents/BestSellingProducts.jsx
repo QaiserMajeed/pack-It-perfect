@@ -69,7 +69,7 @@ const ViewAllButton = styled.a`
   align-items: center;
 
   &:hover {
-    color: rgb(0, 0, 90);
+    color: #000;
     text-decoration: underline;
   }
 

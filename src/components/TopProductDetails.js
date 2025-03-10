@@ -27,7 +27,7 @@ const TopProductDetails = () => {
           <p>Sorry, we couldn't find information about this product.</p>
           <button
             className="btn mt-3"
-            style={{ backgroundColor: "rgb(0, 0, 90)", color: "white" }}
+            style={{ backgroundColor: "#000", color: "white" }}
             onClick={() => navigate("/")}
           >
             Return to Home
@@ -53,7 +53,7 @@ const TopProductDetails = () => {
           </p>
           <button
             className="btn mt-3"
-            style={{ backgroundColor: "rgb(0, 0, 90)", color: "white" }}
+            style={{ backgroundColor: "#000", color: "white" }}
             onClick={() => navigate("/")}
           >
             Return to Home
@@ -118,7 +118,7 @@ const TopProductDetails = () => {
             <button href="#/get-quote"
               className="btn me-3"
               style={{
-                backgroundColor: "rgb(0, 0, 90)",
+                backgroundColor: "#000",
                 color: "white",
                 padding: "10px 20px",
               }}
@@ -128,8 +128,8 @@ const TopProductDetails = () => {
             <button
               className="btn"
               style={{
-                border: "1px solid rgb(0, 0, 90)",
-                color: "rgb(0, 0, 90)",
+                border: "1px solid #000",
+                color: "#000",
                 padding: "10px 20px",
               }}
               onClick={() => navigate("/")}

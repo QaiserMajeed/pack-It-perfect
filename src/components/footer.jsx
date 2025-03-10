@@ -78,7 +78,7 @@ const SocialIcons = styled.div`
     transition: color 0.3s ease;
 
     &:hover {
-      color: rgb(0, 0, 90);
+      color: #000;
     }
   }
 `;
@@ -105,7 +105,7 @@ const FooterList = styled.ul`
     transition: color 0.3s ease;
 
     &:hover {
-      color: rgb(0, 0, 90);
+      color: #000;
       text-decoration: underline;
     }
   }
@@ -131,7 +131,7 @@ const NewsletterContent = styled.div`
 
   button {
     padding: 8px 15px;
-    background-color: rgb(0, 0, 90);
+    background-color: #000;
     color: white;
     border: none;
     border-radius: 4px;
@@ -192,7 +192,7 @@ const Footer = () => {
       <CompanyInfoColumn>
         <LogoContainer>
           <a href="#">
-            <img src="/images/svgviewer-output (2).svg" alt="Company Logo" />
+            <img src="/images/logo.svg" alt="Company Logo" />
           </a>
         </LogoContainer>
 

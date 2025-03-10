@@ -207,7 +207,7 @@ const BreadcrumbNav = styled.div`
     text-decoration: none;
 
     &:hover {
-      color: rgb(0, 0, 90);
+      color: #000;
       text-decoration: underline;
     }
   }
@@ -289,7 +289,7 @@ const ShareButton = styled.a`
   text-decoration: none;
 
   &:hover {
-    background-color: rgb(0, 0, 90);
+    background-color: #000;
   }
 `;
 
@@ -355,7 +355,7 @@ const FormTextarea = styled.textarea`
 const QuoteButton = styled.button`
   width: 100%;
   padding: 1rem;
-  background-color: rgb(183, 54, 54);
+  background-color: #000;
   color: white;
   border: none;
   border-radius: 4px;
@@ -801,7 +801,7 @@ const FeatureIcon = styled.div`
   height: 60px;
   border-radius: 50%;
   background-color: ${(props) => props.iconBg || "rgb(0, 0, 90, 0.1)"};
-  color: rgb(0, 0, 90);
+  color: #000;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 `;
@@ -940,7 +940,7 @@ const DiscountInput = styled.input`
 
 const DiscountButton = styled.button`
   padding: 0.8rem 1.5rem;
-  background-color: rgb(183, 54, 54);
+  background-color: #000;
   color: white;
   border: none;
   border-radius: 4px;
@@ -1021,7 +1021,7 @@ const CTAText = styled.p`
 
 const CTAButton = styled.button`
   padding: 1rem 2rem;
-  background-color: rgb(0, 0, 90);
+  background-color: #000;
   color: white;
   border: none;
   border-radius: 4px;

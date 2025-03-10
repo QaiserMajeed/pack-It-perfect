@@ -295,7 +295,7 @@ const CustomBoxesForm = () => {
             <button
               type="button"
               id="uploadButton"
-              style={{ backgroundColor: "rgb(0, 0, 90)", color: "white" }}
+              style={{ backgroundColor: "#000", color: "white" }}
               onClick={() => document.getElementById("designUpload").click()}
             >
               <FaFileUpload /> Upload
@@ -319,7 +319,7 @@ const CustomBoxesForm = () => {
             type="submit"
             className="submit-button"
             style={{
-              backgroundColor: "rgb(0, 0, 90)",
+              backgroundColor: "#000",
               color: "white",
               marginTop: "20px",
             }}

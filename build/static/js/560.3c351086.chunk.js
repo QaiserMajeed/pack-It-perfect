@@ -34,7 +34,7 @@
   align-items: center;
 
   &:hover {
-    color: rgb(0, 0, 90);
+    color: #000;
     text-decoration: underline;
   }
 
@@ -117,4 +117,4 @@
   align-items: center;
   justify-content: center;
 `,w=()=>(0,s.jsx)(a,{children:(0,s.jsxs)("div",{className:"container",children:[(0,s.jsx)(n,{children:(0,s.jsxs)(c,{children:["BEST ",(0,s.jsx)(l,{children:"SELLING!"})]})}),(0,s.jsx)(d,{children:[{id:1,title:"Cigarette Packaging",image:"https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Cigarettes-Packaging-300x300.webp",price:"\xa30.07",regularPrice:"\xa30.23",link:"/custom-cigarettes-boxes",isNew:!0},{id:2,title:"Bakery Product Boxes",image:"https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Bakery-Product-Boxes-300x300.webp",price:"\xa30.06",regularPrice:"\xa30.23",link:"/bakery-product-boxes",isNew:!0},{id:3,title:"Custom Bangle Boxes",image:"https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Custom-Bangle-Boxes-300x300.webp",price:"\xa30.09",regularPrice:"\xa30.25",link:"/custom-bangle-boxes",isNew:!1},{id:4,title:"Custom Cardboard Boxes",image:"https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Custom-Cardboard-Boxes-300x300.webp",price:"\xa30.06",regularPrice:"\xa30.21",link:"/custom-cardboard-boxes",isNew:!1},{id:5,title:"Leather Shoes Boxes",image:"https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Leather-Shoes-Boxes-300x300.webp",price:"\xa30.06",regularPrice:"\xa30.23",link:"/custom-leather-shoes-boxes",isNew:!0},{id:6,title:"Carryout Boxes",image:"https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Carry-Out-boxes-300x300.webp",price:"\xa30.07",regularPrice:"\xa30.22",link:"/custom-carryout-packaging-boxes",isNew:!0},{id:7,title:"Recyclable Packaging",image:"https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Recyclable-Packaging-300x300.webp",price:"\xa30.07",regularPrice:"\xa30.23",link:"/recyclable-packaging",isNew:!1},{id:8,title:"Wine Bottle Packaging",image:"https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Wine-Bottle-Packaging-300x300.webp",price:"\xa30.06",regularPrice:"\xa30.22",link:"/custom-wine-bottle-boxes",isNew:!0}].slice(0,8).map((e=>(0,s.jsxs)(p,{to:e.link,children:[e.isNew&&(0,s.jsx)(m,{children:"NEW"}),(0,s.jsx)(x,{children:(0,s.jsx)(b,{bgColor:e.bgColor,children:(0,s.jsx)("img",{src:e.image,alt:e.title})})}),(0,s.jsxs)(g,{children:[(0,s.jsx)(u,{children:e.title}),(0,s.jsxs)(f,{children:[e.price,(0,s.jsx)(h,{children:e.regularPrice})]})]})]},e.id)))})]})})}}]);
-//# sourceMappingURL=560.4d7952ae.chunk.js.map
+//# sourceMappingURL=560.3c351086.chunk.js.map

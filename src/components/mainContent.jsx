@@ -23,7 +23,7 @@ const HeroTitle = styled.h1`
 `;
 
 const BrandSpan = styled.span`
-  color: rgb(0, 0, 90);
+  color: #000;
 `;
 
 const HeroDescription = styled.p`
@@ -36,7 +36,7 @@ const HeroDescription = styled.p`
 const QuoteButton = styled.a`
   display: inline-block;
   padding: 0.8rem 2rem;
-  background-color: rgb(0, 0, 90);
+  background-color: #000;
   color: white;
   font-weight: bold;
   text-decoration: none;
@@ -152,7 +152,7 @@ const IconCircle = styled.div`
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: rgb(0, 0, 90);
+  background-color: #000;
   color: white;
   display: flex;
   align-items: center;
@@ -235,7 +235,7 @@ const ProductButton = styled.button`
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgb(0, 0, 90);
+  background-color: #000;
   color: white;
   border: none;
   padding: 0.6rem 1rem;

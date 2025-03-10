@@ -81,7 +81,7 @@
     align-items: center;
 
     &:hover {
-      color: rgb(0, 0, 90);
+      color: #000;
       text-decoration: underline;
     }
 
@@ -91,4 +91,4 @@
     }
   }
 `,()=>{const e=[{name:"Cosmetics",icon:c.hGh,bgColor:"#FFD699",link:"/category/Beauty-and-Cosmetics-Packaging"},{name:"Food",icon:c.VNx,bgColor:"#ADE4FF",link:"/category/Fast-Food-Packaging"},{name:"Supplements",icon:c.Qz3,bgColor:"#FFB380",link:"/category/Supplements-Packaging"},{name:"Gifts",icon:c.C97,bgColor:"#FF99A6",link:"/category/Gifts-and-Souvenirs-Boxes"},{name:"Beverages",icon:c.$Fy,bgColor:"#FFEDB3",link:"/category/Beverage-Custom-Boxes"},{name:"Cannabis",icon:c.LM7,bgColor:"#B3E6CC",link:"/category/Cannabis-Custom-Packaging"},{name:"Clothing",icon:c.AdY,bgColor:"#CCE0FF",link:"/category/Clothing-and-Apparel-Boxes"},{name:"E-commerce",icon:c._Ro,bgColor:"#DDBDF1",link:"/category/E-Commerce-Packaging"},{name:"Electronics",icon:c.YBv,bgColor:"#99E6E6",link:"/category/Electronics-Boxes"},{name:"Shoes",icon:c.zmg,bgColor:"#A6D388",link:"/category/Shoes-Packaging"},{name:"Healthcare",icon:c._gR,bgColor:"#FFB3F0",link:"/category/Healthcare-Boxes"},{name:"Jewelry",icon:c.R70,bgColor:"#E6CCFF",link:"/category/jewelry-packaging"},{name:"Custom Made",icon:c.T3b,bgColor:"#B3B3CC",link:"/category/Custom-Made-Boxes"},{name:"Medical",icon:c.F5L,bgColor:"#99CCFF",link:"/category/Medical-Devices-Boxes"}];return(0,l.jsx)(s,{children:(0,l.jsxs)("div",{className:"container",children:[(0,l.jsx)(g,{children:"Popular Packaging Solutions in Your Industry!"}),(0,l.jsx)(m,{children:"Our service support at any point of your packaging journey to guarantee best packaging success."}),(0,l.jsx)(d,{children:e.slice(0,10).map(((e,o)=>(0,l.jsxs)(x,{to:e.link,children:[(0,l.jsx)(p,{bgColor:e.bgColor,children:(0,l.jsx)(h,{children:(0,l.jsx)(t.g,{icon:e.icon,size:"3x"})})}),(0,l.jsxs)(C,{children:[e.name,(0,l.jsx)(y,{children:"TM"})]})]},o)))}),(0,l.jsx)(d,{children:e.slice(10).map(((e,o)=>(0,l.jsxs)(x,{to:e.link,children:[(0,l.jsx)(p,{bgColor:e.bgColor,children:(0,l.jsx)(h,{children:(0,l.jsx)(t.g,{icon:e.icon,size:"3x"})})}),(0,l.jsxs)(C,{children:[e.name,(0,l.jsx)(y,{children:"TM"})]})]},o)))})]})})})}}]);
-//# sourceMappingURL=21.c3119353.chunk.js.map
+//# sourceMappingURL=21.0cd9c001.chunk.js.map

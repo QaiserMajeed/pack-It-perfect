@@ -62,7 +62,7 @@ const IconContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #1a54b2; /* Blue color to match your logo */
+  color: #000; /* Blue color to match your logo */
 
   img {
     max-width: 100%;

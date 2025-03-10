@@ -102,7 +102,7 @@ const Select = styled.select`
 `;
 
 const SubmitButton = styled.button`
-  background-color: #c04b4a;
+  background-color: #000;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -134,7 +134,7 @@ const FeatureCard = styled.div`
 
 const FeatureIcon = styled.div`
   font-size: 24px;
-  color: #c04b4a;
+  color: #000;
   margin-bottom: 15px;
 `;
 

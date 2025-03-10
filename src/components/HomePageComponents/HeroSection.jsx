@@ -47,7 +47,7 @@ const CategoryLabel = styled.div`
     display: inline-block;
     width: 6px;
     height: 6px;
-    background-color: rgb(0, 0, 90);
+    background-color: #000;
     border-radius: 50%;
     margin-right: 8px;
   }
@@ -70,7 +70,7 @@ const HeroTitle = styled.h1`
 `;
 
 const BrandedText = styled.span`
-  color: rgb(0, 0, 90);
+  color: #000;
 `;
 
 const HeroDescription = styled.p`
@@ -97,14 +97,14 @@ const FeatureItem = styled.li`
     content: "✓";
     position: absolute;
     left: 0;
-    color: rgb(0, 0, 90);
+    color: #000;
     font-weight: bold;
   }
 `;
 
 const ActionButton = styled.a`
   display: inline-block;
-  background-color: rgb(0, 0, 90);
+  background-color: #000;
   color: white;
   font-weight: bold;
   padding: 0.8rem 1.5rem;
