@@ -106,14 +106,7 @@ function App() {
           <BestSellingProducts />
           <CompanyBenefitsSection />
           <TestimonialsSection />
-          <FloatingWhatsApp
-            phoneNumber="+44 07440189478"
-            accountName="Nancy "
-            allowEsc
-            allowClickAway
-            notification
-            notificationSound
-          />
+         
         </Suspense>
       </>
     );
@@ -213,6 +206,14 @@ function App() {
           </section>
         </main>
         <Footer />
+        <FloatingWhatsApp
+          phoneNumber="+44 07440189478"
+          accountName="Nancy "
+          allowEsc
+          allowClickAway
+          notification
+          notificationSound
+        />
       </div>
     </Router>
   );

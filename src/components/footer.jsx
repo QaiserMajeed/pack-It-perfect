@@ -222,7 +222,7 @@ const Footer = () => {
 
         <SocialIcons>
           <a
-            href="https://www.facebook.com/packageitperfect"
+            href="https://www.facebook.com/profile.php?id=61574096784137"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Follow Pack it Perfect on Facebook"
@@ -230,7 +230,7 @@ const Footer = () => {
             <FontAwesomeIcon icon={faFacebook} />
           </a>
           <a
-            href="https://www.instagram.com/packageitperfect"
+            href="https://www.instagram.com/pack.itperfect"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Follow Pack it Perfect on Instagram"
@@ -244,22 +244,6 @@ const Footer = () => {
             aria-label="Connect with Pack it Perfect on LinkedIn"
           >
             <FontAwesomeIcon icon={faLinkedin} />
-          </a>
-          <a
-            href="https://www.twitter.com/packageitperfect"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Follow Pack it Perfect on Twitter"
-          >
-            <FontAwesomeIcon icon={faTwitter} />
-          </a>
-          <a
-            href="https://www.pinterest.com/packageitperfect"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Follow Pack it Perfect on Pinterest"
-          >
-            <FontAwesomeIcon icon={faPinterest} />
           </a>
         </SocialIcons>
       </CompanyInfoColumn>

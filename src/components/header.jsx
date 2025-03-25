@@ -666,7 +666,7 @@ const Header = () => {
               {/* Blog */}
               <MobileNavItem>
                 <a
-                  href="#"
+                  href="/blog"
                   style={{
                     display: "block",
                     textDecoration: "none",

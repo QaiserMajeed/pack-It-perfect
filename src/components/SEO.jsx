@@ -186,8 +186,8 @@ const organizationSchema = {
     addressCountry: "GB",
   },
   sameAs: [
-    "https://www.facebook.com/packageitperfect",
-    "https://www.instagram.com/packageitperfect",
+    "https://www.facebook.com/profile.php?id=61574096784137",
+    "https://www.instagram.com/pack.itperfect",
     "https://twitter.com/packageitperfect",
     "https://www.linkedin.com/company/packageitperfect",
   ],
