@@ -194,10 +194,10 @@ const Slide = styled.div`
 const HeroSection = () => {
   // Image paths for the slider
   const sliderImages = [
-    "/images/slide1.webp",
-    "/images/slide2.webp",
-    "/images/slide3.webp",
-    "/images/slide1.webp", // Repeated to ensure smooth transition
+    "/images/product-slides2-homepage/homepageslider/slide1.jpg",
+    "/images/product-slides2-homepage/homepageslider/slide2.jpg",
+    "/images/product-slides2-homepage/homepageslider/slide3.jpg",
+    "/images/product-slides2-homepage/homepageslider/slide1.jpg", // Repeated to ensure smooth transition
   ];
 
   return (
