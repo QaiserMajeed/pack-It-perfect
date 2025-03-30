@@ -1,11 +1,11 @@
-"use strict";(self.webpackChunkpack_it_perfect=self.webpackChunkpack_it_perfect||[]).push([[967],{967:(e,i,r)=>{r.r(i),r.d(i,{default:()=>k});r(43);var n=r(464),t=r(579);const a=n.Ay.div`
+"use strict";(self.webpackChunkpack_it_perfect=self.webpackChunkpack_it_perfect||[]).push([[967],{967:(e,i,r)=>{r.r(i),r.d(i,{default:()=>k});r(43);var n=r(464),o=r(579);const t=n.Ay.div`
   padding: 3rem 0;
   position: relative;
 
   @media (max-width: 768px) {
     padding: 2rem 0;
   }
-`,o=n.Ay.div`
+`,a=n.Ay.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -56,9 +56,9 @@
   @media (max-width: 576px) {
     font-size: 1.8rem;
   }
-`,c=n.Ay.span`
+`,m=n.Ay.span`
   color: #000;
-`,m=n.Ay.p`
+`,c=n.Ay.p`
   color: #555;
   font-size: 1rem;
   line-height: 1.6;
@@ -81,7 +81,7 @@
     color: #000;
     font-weight: bold;
   }
-`,x=n.Ay.a`
+`,g=n.Ay.a`
   display: inline-block;
   background-color: #000;
   color: white;
@@ -96,7 +96,7 @@
     background-color: rgba(0, 0, 90, 0.9);
     color: white;
   }
-`,g=n.Ay.div`
+`,x=n.Ay.div`
   display: flex;
   align-items: center;
   margin-top: 1.5rem;
@@ -106,10 +106,10 @@
   margin-right: 1rem;
 `,y=n.Ay.div`
   display: flex;
-`,b=n.Ay.span`
+`,u=n.Ay.span`
   color: #ff6600;
   margin-right: 0.2rem;
-`,w=n.Ay.div`
+`,j=n.Ay.div`
   flex: 1;
   position: relative;
   overflow: hidden;
@@ -119,7 +119,7 @@
   @media (max-width: 768px) {
     flex: 0 0 100%;
   }
-`,u=n.Ay.div`
+`,b=n.Ay.div`
   display: flex;
   width: 400%;
   animation: slideShow 10s linear infinite;
@@ -145,7 +145,7 @@
       transform: translateX(-75%);
     }
   }
-`,j=n.Ay.div`
+`,w=n.Ay.div`
   width: 25%;
 
   img {
@@ -153,5 +153,5 @@
     height: auto;
     display: block;
   }
-`,k=()=>(0,t.jsx)(a,{children:(0,t.jsx)("div",{className:"container",children:(0,t.jsxs)(o,{children:[(0,t.jsxs)(s,{children:[(0,t.jsx)(d,{children:(0,t.jsx)("span",{children:"CUSTOM PACKAGING BOXES"})}),(0,t.jsxs)(l,{children:["Your ",(0,t.jsx)(c,{children:"One-Stop"})," Destination For Custom Boxes and Packaging Needs!"]}),(0,t.jsx)(m,{children:"In The Dynamic UK Market, We Stand Out With Our Extensive Collection Of Bespoke Cosmetics And Packaging."}),(0,t.jsxs)(h,{children:[(0,t.jsx)(p,{children:"Produced In United Kingdom"}),(0,t.jsx)(p,{children:"Delivery within 6 to 10 working days"})]}),(0,t.jsx)(x,{href:"/get-a-quote",children:"Get A Free Quote"}),(0,t.jsxs)(g,{children:[(0,t.jsx)(f,{children:"See what our clients are saying! With 4.5 Social Media Platforms Rating :"}),(0,t.jsxs)(y,{children:[(0,t.jsx)(b,{children:"\u2605"}),(0,t.jsx)(b,{children:"\u2605"}),(0,t.jsx)(b,{children:"\u2605"}),(0,t.jsx)(b,{children:"\u2605"}),(0,t.jsx)(b,{style:{opacity:.5},children:"\u2605"})]})]})]}),(0,t.jsx)(w,{id:"hero-slider",children:(0,t.jsx)(u,{children:["/images/slide1.webp","/images/slide2.webp","/images/slide3.webp","/images/slide1.webp"].map(((e,i)=>(0,t.jsx)(j,{id:`slide${i+1}`,children:(0,t.jsx)("img",{src:e,alt:`Custom Packaging Slide ${i+1}`})},i)))})})]})})})}}]);
-//# sourceMappingURL=967.113756cb.chunk.js.map
+`,k=()=>(0,o.jsx)(t,{children:(0,o.jsx)("div",{className:"container",children:(0,o.jsxs)(a,{children:[(0,o.jsxs)(s,{children:[(0,o.jsx)(d,{children:(0,o.jsx)("span",{children:"CUSTOM PACKAGING BOXES"})}),(0,o.jsxs)(l,{children:["Your ",(0,o.jsx)(m,{children:"One-Stop"})," Destination For Custom Boxes and Packaging Needs!"]}),(0,o.jsx)(c,{children:"In The Dynamic UK Market, We Stand Out With Our Extensive Collection Of Bespoke Cosmetics And Packaging."}),(0,o.jsxs)(h,{children:[(0,o.jsx)(p,{children:"Produced In United Kingdom"}),(0,o.jsx)(p,{children:"Delivery within 6 to 10 working days"})]}),(0,o.jsx)(g,{href:"/get-a-quote",children:"Get A Free Quote"}),(0,o.jsxs)(x,{children:[(0,o.jsx)(f,{children:"See what our clients are saying! With 4.5 Social Media Platforms Rating :"}),(0,o.jsxs)(y,{children:[(0,o.jsx)(u,{children:"\u2605"}),(0,o.jsx)(u,{children:"\u2605"}),(0,o.jsx)(u,{children:"\u2605"}),(0,o.jsx)(u,{children:"\u2605"}),(0,o.jsx)(u,{style:{opacity:.5},children:"\u2605"})]})]})]}),(0,o.jsx)(j,{id:"hero-slider",children:(0,o.jsx)(b,{children:["/images/product-slides2-homepage/homepageslider/slide1.jpg","/images/product-slides2-homepage/homepageslider/slide2.jpg","/images/product-slides2-homepage/homepageslider/slide3.jpg","/images/product-slides2-homepage/homepageslider/slide1.jpg"].map(((e,i)=>(0,o.jsx)(w,{id:`slide${i+1}`,children:(0,o.jsx)("img",{src:e,alt:`Custom Packaging Slide ${i+1}`})},i)))})})]})})})}}]);
+//# sourceMappingURL=967.79926fa2.chunk.js.map
