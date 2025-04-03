@@ -15,6 +15,9 @@ import BlogDetail from "./components/BlogDetail";
 import ContactPage from "./components/ContactPage";
 import ScrollToTop from "./components/ScrollToTop";
 
+// Import the Google Tag Manager component
+import GoogleTagManager from "./components/GoogleTagManager";
+
 // Lazy load non-critical components
 const ProductDetails = lazy(() => import("./components/ProductDetails"));
 const TopProductDetails = lazy(() => import("./components/TopProductDetails"));
@@ -114,6 +117,8 @@ function App() {
 
   return (
     <Router>
+      {/* Add Google Tag Manager */}
+      <GoogleTagManager />
       <ScrollToTop /> {/* Add this line */}
       <div className="pack-it-perfect-app">
         <Header />
