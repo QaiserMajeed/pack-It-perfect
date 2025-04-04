@@ -14,6 +14,7 @@ import BlogList from "./components/BlogList";
 import BlogDetail from "./components/BlogDetail";
 import ContactPage from "./components/ContactPage";
 import ScrollToTop from "./components/ScrollToTop";
+import StickyCTAProvider from "./components/StickyCTAProvider";
 
 // Import the Google Tag Manager component
 import GoogleTagManager from "./components/GoogleTagManager";
@@ -219,6 +220,8 @@ function App() {
           notification
           notificationSound
         />
+        {/* Add the StickyCTAProvider here */}
+        <StickyCTAProvider />
       </div>
     </Router>
   );

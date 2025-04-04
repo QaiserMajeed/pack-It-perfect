@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 
 /**
- * Enhanced SEO Component
+ * Enhanced SEO Component - Combined version with existing schemas and new improvements
  *
  * @param {Object} props - Component props
  * @param {string} props.title - Page title
@@ -19,6 +19,7 @@ import { Helmet } from "react-helmet-async";
  * @param {string} props.publishedTime - For articles, when it was published
  * @param {string} props.modifiedTime - For articles, when it was modified
  * @param {Array} props.alternateLanguages - Alternate language versions
+ * @param {string} props.location - Geographic location (for local SEO)
  */
 const SEO = ({
   title,
@@ -35,6 +36,7 @@ const SEO = ({
   publishedTime = null,
   modifiedTime = null,
   alternateLanguages = [],
+  location = "United Kingdom",
 }) => {
   const siteUrl = "https://packageitperfect.com";
   const fullUrl = canonicalUrl
@@ -64,13 +66,49 @@ const SEO = ({
 
   // Default format for page title
   const pageTitle = title
-    ? `${title} | Pack it Perfect`
-    : "Pack it Perfect - Custom Packaging Solutions";
+    ? `${title} | Pack it Perfect - UK Custom Packaging`
+    : "Pack it Perfect - Custom Packaging Solutions UK";
 
-  // Default meta description if none provided
+  // Optimized meta description - keep under 155-160 characters
   const metaDescription =
-    description ||
-    "Premium custom packaging solutions for businesses. Eco-friendly, affordable custom boxes with free design assistance and fast delivery across UK.";
+    description && description.length <= 160
+      ? description
+      : description && description.length > 160
+      ? description.substring(0, 157) + "..."
+      : "Premium custom packaging solutions. Eco-friendly, affordable custom boxes with free design assistance and fast UK delivery.";
+
+  // Enhanced keywords with more specific, targeted phrases
+  const enhancedKeywords = keywords
+    ? `${keywords}, UK packaging, custom boxes UK, sustainable packaging`
+    : "custom packaging UK, bespoke packaging, eco-friendly packaging boxes, custom printed boxes, UK packaging solutions";
+
+  // PRESERVE EXISTING ORGANIZATION SCHEMA
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Pack it Perfect",
+    url: "https://packageitperfect.com/",
+    logo: "https://packageitperfect.com/images/logo.svg",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+44 07440189478",
+      contactType: "customer service",
+      availableLanguage: "English",
+    },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "128 City Road",
+      addressLocality: "London",
+      postalCode: "EC1V 2NX",
+      addressCountry: "GB",
+    },
+    sameAs: [
+      "https://www.facebook.com/profile.php?id=61574096784137",
+      "https://www.instagram.com/pack.itperfect",
+      "https://twitter.com/packageitperfect",
+      "https://www.linkedin.com/company/packageitperfect",
+    ],
+  };
 
   return (
     <Helmet>
@@ -78,7 +116,9 @@ const SEO = ({
       <html lang={language} />
       <title>{pageTitle}</title>
       <meta name="description" content={metaDescription} />
-      {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="keywords" content={enhancedKeywords} />
+      <meta name="geo.region" content="GB" />
+      <meta name="geo.placename" content="London" />
 
       {/* Robots directives */}
       {noindex ? (
@@ -151,11 +191,17 @@ const SEO = ({
         href="https://fonts.gstatic.com"
         crossOrigin="anonymous"
       />
+      <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 
       {/* Structured Data (JSON-LD) */}
       {schema && (
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
       )}
+
+      {/* Organization Schema - Using existing schema */}
+      <script type="application/ld+json">
+        {JSON.stringify(organizationSchema)}
+      </script>
 
       {/* Breadcrumb schema if provided */}
       {breadcrumbSchema && (
@@ -166,34 +212,8 @@ const SEO = ({
     </Helmet>
   );
 };
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Pack it Perfect",
-  url: "https://packageitperfect.com/",
-  logo: "https://packageitperfect.com/images/logo.svg",
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+44 07440189478",
-    contactType: "customer service",
-    availableLanguage: "English",
-  },
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "128 City Road",
-    addressLocality: "London",
-    postalCode: "EC1V 2NX",
-    addressCountry: "GB",
-  },
-  sameAs: [
-    "https://www.facebook.com/profile.php?id=61574096784137",
-    "https://www.instagram.com/pack.itperfect",
-    "https://twitter.com/packageitperfect",
-    "https://www.linkedin.com/company/packageitperfect",
-  ],
-};
 
-// Product Category Schema - For category pages
+// PRESERVE EXISTING PRODUCT CATEGORY SCHEMA GENERATOR
 const generateCategorySchema = (category) => {
   return {
     "@context": "https://schema.org",
@@ -228,7 +248,7 @@ const generateCategorySchema = (category) => {
   };
 };
 
-// Enhance product schema with more detailed information
+// PRESERVE EXISTING PRODUCT SCHEMA GENERATOR
 const generateProductSchema = (product, category) => {
   return {
     "@context": "https://schema.org/",
@@ -266,7 +286,7 @@ const generateProductSchema = (product, category) => {
   };
 };
 
-// BreadcrumbList Schema - Add to all pages
+// PRESERVE EXISTING BREADCRUMB SCHEMA GENERATOR
 const generateBreadcrumbSchema = (breadcrumbs) => {
   return {
     "@context": "https://schema.org",
@@ -281,3 +301,8 @@ const generateBreadcrumbSchema = (breadcrumbs) => {
 };
 
 export default SEO;
+export {
+  generateCategorySchema,
+  generateProductSchema,
+  generateBreadcrumbSchema,
+};
