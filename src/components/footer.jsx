@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import TelephoneContact from "./Telephone";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,6 +9,7 @@ import {
   faTwitter,
   faPinterest,
 } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import Products from "./Products";
 
@@ -122,28 +123,6 @@ const NewsletterContent = styled.div`
     font-size: 14px;
     margin-bottom: 10px;
   }
-
-  input {
-    padding: 8px;
-    width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 10px;
-  }
-
-  button {
-    padding: 8px 15px;
-    background-color: #000;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: rgba(0, 0, 120, 1);
-    }
-  }
 `;
 
 const BottomFooter = styled.div`
@@ -188,6 +167,68 @@ const PaymentIcons = styled.div`
   }
 `;
 
+// New styled components for form
+const NewsletterForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+`;
+
+const FormInput = styled.input`
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+
+  &:focus {
+    outline: none;
+    border-color: #000;
+  }
+`;
+
+const SubscribeButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #333;
+  }
+
+  &:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+  }
+`;
+
+const FormMessage = styled.div`
+  margin-top: 10px;
+  padding: 8px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 14px;
+
+  &.success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+
+  &.error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+`;
+
 // Get a selection of top categories and products for the footer
 const getTopCategories = (count = 5) => {
   return Products.filter(
@@ -199,6 +240,52 @@ const Footer = () => {
   const topCategories = getTopCategories();
   const year = new Date().getFullYear();
 
+  // State for form handling
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [formStatus, setFormStatus] = useState({
+    success: false,
+    error: false,
+    message: "",
+  });
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setFormStatus({ success: false, error: false, message: "" });
+
+    try {
+      const response = await fetch("https://formspree.io/f/xdkewqqb", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, name, formType: "newsletter" }),
+      });
+
+      if (response.ok) {
+        setFormStatus({
+          success: true,
+          error: false,
+          message: "Thank you for subscribing to our newsletter!",
+        });
+        setEmail("");
+        setName("");
+      } else {
+        throw new Error("Failed to submit form");
+      }
+    } catch (error) {
+      setFormStatus({
+        success: false,
+        error: true,
+        message: "There was an error submitting the form. Please try again.",
+      });
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
     <FooterContainer>
       <CompanyInfoColumn>
@@ -209,8 +296,8 @@ const Footer = () => {
         </LogoContainer>
 
         <ContactInfo>
-          <a href="mailto:Contact@Packitperfectcustomboxes.co.uk">
-            Contact@Packitperfectcustomboxes.co.uk
+          <a href="mailto:sales@packageitperfect.com">
+            sales@packageitperfect.com
           </a>
           <TelephoneContact />
           <address>
@@ -329,15 +416,37 @@ const Footer = () => {
             <p>
               Subscribe to our newsletter for packaging tips and special offers.
             </p>
-            <form onSubmit={(e) => e.preventDefault()}>
-              <input
+            <NewsletterForm onSubmit={handleSubscribe}>
+              <FormInput
+                type="text"
+                placeholder="Your name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                aria-label="Name for newsletter"
+              />
+              <FormInput
                 type="email"
                 placeholder="Your email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 aria-label="Email for newsletter subscription"
                 required
               />
-              <button type="submit">Subscribe</button>
-            </form>
+              <SubscribeButton type="submit" disabled={submitting}>
+                {submitting ? "Subscribing..." : "Subscribe"}
+                <FontAwesomeIcon icon={faPaperPlane} />
+              </SubscribeButton>
+              {formStatus.success && (
+                <FormMessage className="success">
+                  {formStatus.message}
+                </FormMessage>
+              )}
+              {formStatus.error && (
+                <FormMessage className="error">
+                  {formStatus.message}
+                </FormMessage>
+              )}
+            </NewsletterForm>
           </NewsletterContent>
         </NewsletterContainer>
       </FooterColumn>

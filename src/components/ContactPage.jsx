@@ -248,26 +248,52 @@ const ContactPage = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus({ submitting: true, success: false, error: false });
 
-    // Simulate form submission
-    setTimeout(() => {
-      // In a real implementation, you would send this data to your server
-      console.log("Form submitted:", formData);
-
-      // Reset form after successful submission
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: "",
+    try {
+      // Formspree endpoint - replace this with your form ID
+      const response = await fetch("https://formspree.io/f/xdkewqqb", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
 
-      setStatus({ submitting: false, success: true, error: false });
-    }, 1500);
+      if (response.ok) {
+        // Form submission successful
+        setStatus({
+          submitting: false,
+          success: true,
+          error: false,
+        });
+
+        // Reset form after successful submission
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        // Form submission failed
+        setStatus({
+          submitting: false,
+          success: false,
+          error: true,
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setStatus({
+        submitting: false,
+        success: false,
+        error: true,
+      });
+    }
   };
 
   return (
@@ -434,10 +460,10 @@ const ContactPage = () => {
                   <InfoLabel>Email Address</InfoLabel>
                   <InfoText>
                     <a
-                      href="mailto:Contact@PackitPerfectcustomboxes.co.uk"
+                      href="mailto:sales@packageitperfect.com"
                       style={{ color: "inherit", textDecoration: "none" }}
                     >
-                      Contact@PackitPerfectcustomboxes.co.uk
+                      sales@packageitperfect.com
                     </a>
                   </InfoText>
                 </InfoContent>
