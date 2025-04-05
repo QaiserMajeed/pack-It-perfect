@@ -548,7 +548,11 @@ const Header = () => {
                     Jars & Cups
                   </Link>
                 </li>
-
+                <li className="nav-item">
+                  <Link to="/blog" className="nav-link">
+                    Blog
+                  </Link>
+                </li>
                 <li className="nav-item">
                   <Link to={`/payment-plans`} className="nav-link">
                     Payment

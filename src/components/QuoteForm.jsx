@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faHeadset,
+  faGlobeAmericas,
+  faCreditCard,
+  faBoxes,
   faPrint,
   faBan,
   faRuler,
@@ -9,6 +13,7 @@ import {
   faBox,
   faTruck,
 } from "@fortawesome/free-solid-svg-icons";
+import ScrollToTop from "./../components/ScrollToTop";
 
 // Styled Components
 const FormContainer = styled.div`
@@ -150,6 +155,28 @@ const FeatureText = styled.p`
   color: #ccc;
 `;
 
+const SuccessMessage = styled.div`
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+`;
+
+const ErrorMessage = styled.div`
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+`;
+
+const FormStatusContainer = styled.div`
+  margin-bottom: 20px;
+`;
+
 const CtaSection = styled.div`
   background-color: #f5f5f5;
   padding: 60px 20px;
@@ -195,6 +222,7 @@ const CtaButton = styled.button`
 `;
 
 const QuoteRequestForm = () => {
+  // State for form data
   const [formData, setFormData] = useState({
     fullName: "",
     phoneNumber: "",
@@ -210,6 +238,14 @@ const QuoteRequestForm = () => {
     additionalMessage: "",
   });
 
+  // State for form submission status
+  const [formStatus, setFormStatus] = useState({
+    submitting: false,
+    success: false,
+    error: false,
+    message: "",
+  });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -218,11 +254,67 @@ const QuoteRequestForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted:", formData);
-    // You would typically send this data to your server
+    setFormStatus({
+      submitting: true,
+      success: false,
+      error: false,
+      message: "",
+    });
+
+    try {
+      // Replace this URL with your actual Formspree form ID
+      const response = await fetch("https://formspree.io/f/xdkewqqb", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        <ScrollToTop/> // Scroll to top after successful submission
+        // Show success message
+        setFormStatus({
+          submitting: false,
+          success: true,
+          error: false,
+          message:
+            "Thank you! Your quote request has been submitted successfully. We'll get back to you soon.",
+        });
+        // Reset form on successful submission
+        setFormData({
+          fullName: "",
+          phoneNumber: "",
+          email: "",
+          size: "",
+          materialType: "",
+          materialThickness: "",
+          coating: "None",
+          foiling: "None",
+          color: "",
+          quantity: "",
+          printingSides: "Single Side",
+          additionalMessage: "",
+        });
+      } else {
+        setFormStatus({
+          submitting: false,
+          success: false,
+          error: true,
+          message: "Oops! Something went wrong. Please try again later.",
+        });
+      }
+    } catch (error) {
+      setFormStatus({
+        submitting: false,
+        success: false,
+        error: true,
+        message: "Oops! Something went wrong. Please try again later.",
+      });
+      console.error("Form submission error:", error);
+    }
   };
 
   return (
@@ -232,6 +324,17 @@ const QuoteRequestForm = () => {
 
         <FormLayout>
           <FormSection>
+            {formStatus.success || formStatus.error ? (
+              <FormStatusContainer>
+                {formStatus.success && (
+                  <SuccessMessage>{formStatus.message}</SuccessMessage>
+                )}
+                {formStatus.error && (
+                  <ErrorMessage>{formStatus.message}</ErrorMessage>
+                )}
+              </FormStatusContainer>
+            ) : null}
+
             <form onSubmit={handleSubmit}>
               <FormGroup>
                 <Label htmlFor="fullName">Full Name</Label>
@@ -241,7 +344,7 @@ const QuoteRequestForm = () => {
                   name="fullName"
                   value={formData.fullName}
                   onChange={handleChange}
-                  required
+                  
                 />
               </FormGroup>
 
@@ -253,7 +356,7 @@ const QuoteRequestForm = () => {
                   name="phoneNumber"
                   value={formData.phoneNumber}
                   onChange={handleChange}
-                  required
+                  
                 />
               </FormGroup>
 
@@ -265,7 +368,7 @@ const QuoteRequestForm = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  required
+                  
                 />
               </FormGroup>
 
@@ -276,7 +379,7 @@ const QuoteRequestForm = () => {
                   name="size"
                   value={formData.size}
                   onChange={handleChange}
-                  required
+                  
                 >
                   <option value="">I need suggestion</option>
                   <option value="small">Small (under 15cm)</option>
@@ -293,7 +396,7 @@ const QuoteRequestForm = () => {
                   name="materialType"
                   value={formData.materialType}
                   onChange={handleChange}
-                  required
+                  
                 >
                   <option value="">Not Sure! I need advice</option>
                   <option value="cardboard">Cardboard</option>
@@ -310,7 +413,7 @@ const QuoteRequestForm = () => {
                   name="materialThickness"
                   value={formData.materialThickness}
                   onChange={handleChange}
-                  required
+                  
                 >
                   <option value="">Not Sure! I need advice</option>
                   <option value="300gsm">300 GSM</option>
@@ -371,7 +474,7 @@ const QuoteRequestForm = () => {
                   value={formData.quantity}
                   onChange={handleChange}
                   min="1"
-                  required
+                  
                 />
               </FormGroup>
 
@@ -401,7 +504,9 @@ const QuoteRequestForm = () => {
                 />
               </FormGroup>
 
-              <SubmitButton type="submit">Submit</SubmitButton>
+              <SubmitButton type="submit" disabled={formStatus.submitting}>
+                {formStatus.submitting ? "Submitting..." : "Submit"}
+              </SubmitButton>
             </form>
           </FormSection>
 
