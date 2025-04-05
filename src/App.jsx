@@ -15,6 +15,8 @@ import BlogDetail from "./components/BlogDetail";
 import ContactPage from "./components/ContactPage";
 import ScrollToTop from "./components/ScrollToTop";
 import StickyCTAProvider from "./components/StickyCTAProvider";
+import PaymentPlansPage from "./components/PaymentsPlans";
+import JarsCupsPage from "./components/JarsCupsPage";
 
 // Import the Google Tag Manager component
 import GoogleTagManager from "./components/GoogleTagManager";
@@ -138,6 +140,32 @@ function App() {
                       />
                     </Suspense>
                   </>
+                }
+              />
+              <Route
+                path="/payment-plans"
+                element={
+                  <Suspense fallback={<LoadingFallback />}>
+                    <SEO
+                      title="Flexible Payment Plans | Pay in Installments"
+                      description="Discover our flexible payment plans that allow you to pay for your custom packaging in installments. Easy monthly payments with no hidden fees."
+                      canonicalUrl="/payment-plans"
+                    />
+                    <PaymentPlansPage />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/jars-cups"
+                element={
+                  <Suspense fallback={<LoadingFallback />}>
+                    <SEO
+                      title="Custom Jars and Cups | Food and Beverage Packaging"
+                      description="Shop our range of customizable jars and cups for food, beverages, and cosmetics. Sustainable options available with premium custom printing."
+                      canonicalUrl="/jars-cups"
+                    />
+                    <JarsCupsPage />
+                  </Suspense>
                 }
               />
               <Route

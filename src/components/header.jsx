@@ -542,17 +542,16 @@ const Header = () => {
                     By Material
                   </a>
                 </li>
+
                 <li className="nav-item">
-                  <Link
-                    to={`/category/packaging-by-style`}
-                    className="nav-link"
-                  >
-                    By Style
+                  <Link to="/jars-cups" className="nav-link">
+                    Jars & Cups
                   </Link>
                 </li>
+
                 <li className="nav-item">
-                  <Link to={`/blog`} className="nav-link">
-                    Blog
+                  <Link to={`/payment-plans`} className="nav-link">
+                    Payment
                   </Link>
                 </li>
                 <li className="nav-item">
