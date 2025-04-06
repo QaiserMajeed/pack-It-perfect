@@ -530,6 +530,7 @@ const Header = () => {
                             <p className="mt-3 mb-0">
                               <strong>Call us:</strong>
                             </p>
+
                             <p className="fw-bold">+44 0744018948</p>
                           </div>
                         </div>
@@ -678,6 +679,35 @@ const Header = () => {
                 >
                   <MobileNavLink as="div">
                     <span>Blog</span>
+                  </MobileNavLink>
+                </a>
+              </MobileNavItem>
+
+              <MobileNavItem>
+                <a
+                  href="/jars-cups"
+                  style={{
+                    display: "block",
+                    textDecoration: "none",
+                  }}
+                  onClick={toggleMobileMenu}
+                >
+                  <MobileNavLink as="div">
+                    <span>Jars & Cups</span>
+                  </MobileNavLink>
+                </a>
+              </MobileNavItem>
+              <MobileNavItem>
+                <a
+                  href="/payment-plans"
+                  style={{
+                    display: "block",
+                    textDecoration: "none",
+                  }}
+                  onClick={toggleMobileMenu}
+                >
+                  <MobileNavLink as="div">
+                    <span>Payment Plan</span>
                   </MobileNavLink>
                 </a>
               </MobileNavItem>

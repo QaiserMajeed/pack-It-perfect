@@ -13,236 +13,262 @@ import { faEnvelope, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import Products from "./Products";
 
-// Styled Components
+// Styled Components - Updated with Atoms style
 const FooterContainer = styled.footer`
-  background-color: #a1a3a5;
-  color: black;
-  padding: 40px 20px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 100px;
+  background-color: #000000;
+  color: white;
+  padding: 60px 0 20px;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 `;
 
-const FooterColumn = styled.div`
-  min-width: 200px;
-  margin-right: 20px;
+const FooterWrapper = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 95%;
+`;
 
-  @media (max-width: 768px) {
-    flex: 0 0 calc(50% - 20px);
-    margin-bottom: 30px;
+const TopFooter = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 50px;
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (max-width: 576px) {
-    flex: 0 0 100%;
+    grid-template-columns: 1fr;
   }
 `;
 
-const CompanyInfoColumn = styled(FooterColumn)`
+const FooterColumn = styled.div`
+  min-width: 150px;
+`;
+
+const NewsletterColumn = styled(FooterColumn)`
+  grid-column: 1;
+  grid-row: 1;
+
+  @media (max-width: 992px) {
+    grid-column: span 2;
+  }
+
+  @media (max-width: 576px) {
+    grid-column: 1;
+  }
+`;
+
+const FooterHeading = styled.h3`
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
   margin-bottom: 20px;
+  text-transform: uppercase;
+`;
+
+const FooterList = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+    display: block;
+    padding: 2px 0;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+`;
+
+const SocialIcons = styled.div`
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 `;
 
 const LogoContainer = styled.div`
-  display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 
   a {
     display: block;
   }
 
   img {
-    height: 100px;
-    width: 200px;
-    object-fit: contain;
-    margin-left: -20px;
+    height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1);
   }
 `;
 
-const ContactInfo = styled.div`
-  display: flex;
-  flex-direction: column;
+const FooterText = styled.p`
+  color: #f0f0f0;
   font-size: 14px;
-  color: #666;
-
-  p {
-    margin: 5px 0;
-  }
+  line-height: 1.5;
+  margin-bottom: 20px;
 `;
 
-const SocialIcons = styled.div`
+const NewsletterForm = styled.form`
   display: flex;
   margin-top: 15px;
+  max-width: 400px;
+`;
 
-  a {
-    margin-right: 15px;
-    color: #333;
-    text-decoration: none;
-    font-size: 20px;
-    transition: color 0.3s ease;
+const EmailInput = styled.input`
+  flex-grow: 1;
+  padding: 12px 16px;
+  border: none;
+  background-color: #f0f0f0;
+  font-size: 14px;
+  border-radius: 0;
+  outline: none;
 
-    &:hover {
-      color: #000;
-    }
+  &::placeholder {
+    color: #999;
   }
 `;
 
-const FooterHeading = styled.h3`
-  color: #333;
-  font-size: 18px;
-  margin-bottom: 15px;
+const SubscribeButton = styled.button`
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 0 20px;
   font-weight: 600;
-`;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: background-color 0.2s;
 
-const FooterList = styled.ul`
-  list-style-type: none;
-  padding: 0;
-
-  li {
-    margin-bottom: 8px;
-  }
-
-  a {
-    color: #666;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: #000;
-      text-decoration: underline;
-    }
+  &:hover {
+    background-color: #f0f0f0;
   }
 `;
 
-const NewsletterContainer = styled.div`
-  margin-top: 20px;
-`;
-
-const NewsletterContent = styled.div`
-  p {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
+const Divider = styled.div`
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+  margin: 20px 0;
 `;
 
 const BottomFooter = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
 
   @media (max-width: 768px) {
     flex-direction: column;
+    gap: 20px;
     text-align: center;
   }
 `;
 
 const Copyright = styled.div`
-  font-size: 14px;
-  color: #666;
-
-  @media (max-width: 768px) {
-    margin-bottom: 15px;
-  }
+  font-size: 12px;
+  color: #999;
 `;
-
 const PaymentIcons = styled.div`
   display: flex;
+  gap: 15px;
   align-items: center;
 
   img {
     height: 30px;
-    margin-left: 15px;
+    width: auto;
+    object-fit: contain;
   }
 
   @media (max-width: 768px) {
-    justify-content: center;
+    margin-top: 15px;
+  }
+`;
+const BottomLinks = styled.div`
+  display: flex;
+  gap: 20px;
 
-    img {
-      margin: 0 7.5px;
+  a {
+    color: #999;
+    font-size: 12px;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: white;
     }
   }
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    gap: 10px;
+  }
 `;
 
-// New styled components for form
-const NewsletterForm = styled.form`
-  display: flex;
-  flex-direction: column;
+const ContactInfo = styled.div`
   margin-top: 10px;
-`;
-
-const FormInput = styled.input`
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
   font-size: 14px;
+  color: #f0f0f0;
 
-  &:focus {
-    outline: none;
-    border-color: #000;
-  }
-`;
-
-const SubscribeButton = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background-color: #000;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s;
-
-  &:hover {
-    background-color: #333;
+  p {
+    margin: 5px 0;
   }
 
-  &:disabled {
-    background-color: #999;
-    cursor: not-allowed;
+  a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.2s;
+    display: block;
+    margin-bottom: 5px;
+
+    &:hover {
+      color: white;
+    }
   }
 `;
 
 const FormMessage = styled.div`
   margin-top: 10px;
   padding: 8px;
-  text-align: center;
-  border-radius: 4px;
-  font-size: 14px;
+  font-size: 12px;
+  border-radius: 0;
 
   &.success {
-    background-color: #d4edda;
-    color: #155724;
+    background-color: #4caf50;
+    color: white;
   }
 
   &.error {
-    background-color: #f8d7da;
-    color: #721c24;
+    background-color: #f44336;
+    color: white;
   }
 `;
 
-// Get a selection of top categories and products for the footer
-const getTopCategories = (count = 5) => {
-  return Products.filter(
-    (category) => category.category !== "packaging-by-style"
-  ).slice(0, count);
-};
-
 const Footer = () => {
-  const topCategories = getTopCategories();
   const year = new Date().getFullYear();
-
-  // State for form handling
   const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [formStatus, setFormStatus] = useState({
     success: false,
@@ -261,7 +287,7 @@ const Footer = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, name, formType: "newsletter" }),
+        body: JSON.stringify({ email, formType: "newsletter" }),
       });
 
       if (response.ok) {
@@ -271,7 +297,6 @@ const Footer = () => {
           message: "Thank you for subscribing to our newsletter!",
         });
         setEmail("");
-        setName("");
       } else {
         throw new Error("Failed to submit form");
       }
@@ -288,189 +313,193 @@ const Footer = () => {
 
   return (
     <FooterContainer>
-      <CompanyInfoColumn>
-        <LogoContainer>
-          <Link to="/">
-            <img src="/images/logo.svg" alt="Pack it Perfect Logo" />
-          </Link>
-        </LogoContainer>
-
-        <ContactInfo>
-          <a href="mailto:sales@packageitperfect.com">
-            sales@packageitperfect.com
-          </a>
-          <TelephoneContact />
-          <address>
-            128 City Road, London,
-            <br />
-            United Kingdom, EC1V 2NX
-          </address>
-        </ContactInfo>
-
-        <SocialIcons>
-          <a
-            href="https://www.facebook.com/profile.php?id=61574096784137"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Follow Pack it Perfect on Facebook"
-          >
-            <FontAwesomeIcon icon={faFacebook} />
-          </a>
-          <a
-            href="https://www.instagram.com/pack.itperfect"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Follow Pack it Perfect on Instagram"
-          >
-            <FontAwesomeIcon icon={faInstagram} />
-          </a>
-          <a
-            href="https://www.linkedin.com/company/packageitperfect"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Connect with Pack it Perfect on LinkedIn"
-          >
-            <FontAwesomeIcon icon={faLinkedin} />
-          </a>
-        </SocialIcons>
-      </CompanyInfoColumn>
-
-      <FooterColumn>
-        <FooterHeading>Categories</FooterHeading>
-        <FooterList>
-          <li>
-            <Link to="/category/packaging-by-style">By Style</Link>
-          </li>
-          <li>
-            <Link to="/category/packaging-by-style">By Material</Link>
-          </li>
-        </FooterList>
-      </FooterColumn>
-
-      <FooterColumn>
-        <FooterHeading>Popular Products</FooterHeading>
-        <FooterList>
-          <li>
-            <Link to="/category/Gifts-and-Souvenirs-Boxes">Gift Boxes</Link>
-          </li>
-          <li>
-            <Link to="/category/jewelry-packaging">Jewelry Packaging</Link>
-          </li>
-          <li>
-            <Link to="/category/Clothing-and-Apparel-Boxes">
-              Clothing Boxes
-            </Link>
-          </li>
-          <li>
-            <Link to="/category/Fast-Food-Packaging">Food Packaging</Link>
-          </li>
-          <li>
-            <Link to="/category/Medical-Devices-Boxes">Medical Packaging</Link>
-          </li>
-          <li>
-            <Link to="/category/Custom-Made-Boxes">Custom Made Boxes</Link>
-          </li>
-          <li>
-            <Link to="/category/Beauty-and-Cosmetics-Packaging">
-              Cosmetics Packaging
-            </Link>
-          </li>
-          <li>
-            <Link to="/category/Beverage-Custom-Boxes">Beverage Packaging</Link>
-          </li>
-        </FooterList>
-      </FooterColumn>
-
-      <FooterColumn>
-        <FooterHeading>Customer Support</FooterHeading>
-        <FooterList>
-          <li>
-            <Link to="/faq">Frequently Asked Questions</Link>
-          </li>
-          <li>
-            <Link to="/get-a-quote">Request a Quote</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact Us</Link>
-          </li>
-          <li>
-            <Link to="/blog">Packaging Blog</Link>
-          </li>
-        </FooterList>
-      </FooterColumn>
-
-      <FooterColumn>
-        <FooterHeading>Success Stories</FooterHeading>
-        <FooterList>
-          <li>
-            <Link to="/case-study/harrods">Harrods</Link>
-          </li>
-          <li>
-            <Link to="/case-study/royal-ascot">Royal Ascot</Link>
-          </li>
-        </FooterList>
-
-        <NewsletterContainer>
-          <FooterHeading>Newsletter</FooterHeading>
-          <NewsletterContent>
-            <p>
-              Subscribe to our newsletter for packaging tips and special offers.
-            </p>
+      <FooterWrapper>
+        <TopFooter>
+          <NewsletterColumn>
+            <LogoContainer>
+              <Link to="/">
+                <img src="/images/logo.svg" alt="Pack it Perfect Logo" />
+              </Link>
+            </LogoContainer>
+            <FooterText>
+              Stay in the know on product releases, founder news, and all things
+              Pack it Perfect.
+            </FooterText>
             <NewsletterForm onSubmit={handleSubscribe}>
-              <FormInput
-                type="text"
-                placeholder="Your name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                aria-label="Name for newsletter"
-              />
-              <FormInput
+              <EmailInput
                 type="email"
-                placeholder="Your email address"
+                placeholder="Enter email here for updates"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                aria-label="Email for newsletter subscription"
                 required
               />
               <SubscribeButton type="submit" disabled={submitting}>
-                {submitting ? "Subscribing..." : "Subscribe"}
-                <FontAwesomeIcon icon={faPaperPlane} />
+                {submitting ? "..." : "|"}
               </SubscribeButton>
-              {formStatus.success && (
-                <FormMessage className="success">
-                  {formStatus.message}
-                </FormMessage>
-              )}
-              {formStatus.error && (
-                <FormMessage className="error">
-                  {formStatus.message}
-                </FormMessage>
-              )}
             </NewsletterForm>
-          </NewsletterContent>
-        </NewsletterContainer>
-      </FooterColumn>
+            {formStatus.success && (
+              <FormMessage className="success">
+                {formStatus.message}
+              </FormMessage>
+            )}
+            {formStatus.error && (
+              <FormMessage className="error">{formStatus.message}</FormMessage>
+            )}
 
-      <BottomFooter>
-        <Copyright>
-          © {year} Pack it Perfect Custom Boxes. All rights reserved.
-        </Copyright>
-        <PaymentIcons>
-          <img
-            src="/images/paymentimages/bacs.webp"
-            alt="BACS Payment Accepted"
-          />
-          <img src="/images/paymentimages/paypal.png" alt="PayPal Accepted" />
-          <img
-            src="/images/paymentimages/strip.png"
-            alt="Stripe Payments Accepted"
-          />
-          <img
-            src="/images/paymentimages/wise1.png"
-            alt="Wise Transfers Accepted"
-          />
-        </PaymentIcons>
-      </BottomFooter>
+            <ContactInfo>
+              <a href="mailto:sales@packageitperfect.com">
+                sales@packageitperfect.com
+              </a>
+              <a href="tel:+44 07440189478">+44 (0)744 0189 478</a>
+              <address>
+                128 City Road, London,
+                <br />
+                United Kingdom, EC1V 2NX
+              </address>
+            </ContactInfo>
+
+            <FooterHeading style={{ marginTop: "20px" }}>
+              Stay Connected
+            </FooterHeading>
+            <SocialIcons>
+              <a
+                href="https://www.facebook.com/profile.php?id=61574096784137"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Pack it Perfect on Facebook"
+              >
+                <FontAwesomeIcon icon={faFacebook} />
+              </a>
+              <a
+                href="https://www.instagram.com/pack.itperfect"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Pack it Perfect on Instagram"
+              >
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/packageitperfect"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Connect with Pack it Perfect on LinkedIn"
+              >
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+              <a
+                href="https://twitter.com/packageitperfect"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Pack it Perfect on Twitter"
+              >
+                <FontAwesomeIcon icon={faTwitter} />
+              </a>
+            </SocialIcons>
+          </NewsletterColumn>
+
+          <FooterColumn>
+            <FooterHeading>Categories</FooterHeading>
+            <FooterList>
+              <li>
+                <Link to="/category/packaging-by-style">By Style</Link>
+              </li>
+              <li>
+                <Link to="/category/packaging-by-style">By Material</Link>
+              </li>
+            </FooterList>
+          </FooterColumn>
+
+          <FooterColumn>
+            <FooterHeading>Popular Products</FooterHeading>
+            <FooterList>
+              <li>
+                <Link to="/category/Gifts-and-Souvenirs-Boxes">Gift Boxes</Link>
+              </li>
+              <li>
+                <Link to="/category/jewelry-packaging">Jewelry Packaging</Link>
+              </li>
+              <li>
+                <Link to="/category/Clothing-and-Apparel-Boxes">
+                  Clothing Boxes
+                </Link>
+              </li>
+              <li>
+                <Link to="/category/Fast-Food-Packaging">Food Packaging</Link>
+              </li>
+              <li>
+                <Link to="/category/Medical-Devices-Boxes">
+                  Medical Packaging
+                </Link>
+              </li>
+              <li>
+                <Link to="/category/Custom-Made-Boxes">Custom Made Boxes</Link>
+              </li>
+              <li>
+                <Link to="/category/Beauty-and-Cosmetics-Packaging">
+                  Cosmetics Packaging
+                </Link>
+              </li>
+              <li>
+                <Link to="/category/Beverage-Custom-Boxes">
+                  Beverage Packaging
+                </Link>
+              </li>
+            </FooterList>
+          </FooterColumn>
+
+          <FooterColumn>
+            <FooterHeading>Customer Support</FooterHeading>
+            <FooterList>
+              <li>
+                <Link to="/faq">Frequently Asked Questions</Link>
+              </li>
+              <li>
+                <Link to="/get-a-quote">Request a Quote</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact Us</Link>
+              </li>
+              <li>
+                <Link to="/blog">Packaging Blog</Link>
+              </li>
+            </FooterList>
+            <FooterHeading style={{ marginTop: "20px" }}>
+              Success Stories
+            </FooterHeading>
+            <FooterList>
+              <li>
+                <Link to="/case-study/harrods">Harrods</Link>
+              </li>
+              <li>
+                <Link to="/case-study/royal-ascot">Royal Ascot</Link>
+              </li>
+            </FooterList>
+          </FooterColumn>
+        </TopFooter>
+
+        <Divider />
+
+        <BottomFooter>
+          <Copyright>
+            © {year} Pack it Perfect Custom Boxes. All rights reserved.
+          </Copyright>
+          <PaymentIcons>
+            <img
+              src="/images/paymentimages/bacs.webp"
+              alt="BACS Payment Accepted"
+            />
+            <img src="/images/paymentimages/paypal.png" alt="PayPal Accepted" />
+            <img
+              src="/images/paymentimages/strip.png"
+              alt="Stripe Payments Accepted"
+            />
+            <img
+              src="/images/paymentimages/wise1.png"
+              alt="Wise Transfers Accepted"
+            />
+          </PaymentIcons>
+        </BottomFooter>
+      </FooterWrapper>
     </FooterContainer>
   );
 };
