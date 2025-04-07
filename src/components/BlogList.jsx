@@ -1,9 +1,9 @@
 // src/components/BlogList.jsx
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import SEO from './SEO';
-import OptimizedImage from './OptimizeImage'// Use the new optimized image component
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import SEO from "./SEO";
+import OptimizedImage from "./OptimizeImage"; // Use the new optimized image component
 
 const BlogContainer = styled.div`
   max-width: 1200px;
@@ -22,11 +22,11 @@ const BlogGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  
+
   @media (max-width: 992px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   @media (max-width: 576px) {
     grid-template-columns: 1fr;
   }
@@ -41,7 +41,7 @@ const BlogCard = styled(Link)`
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: #fff;
-  
+
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
@@ -98,13 +98,13 @@ const ReadMore = styled.span`
   font-weight: 600;
   font-size: 0.9rem;
   margin-top: 1rem;
-  
+
   &::after {
     content: "→";
     margin-left: 0.5rem;
     transition: transform 0.2s ease;
   }
-  
+
   ${BlogCard}:hover & {
     &::after {
       transform: translateX(5px);
@@ -116,87 +116,154 @@ const ReadMore = styled.span`
 const blogPosts = [
   {
     id: 1,
-    slug: 'sustainable-packaging-trends-2025',
-    title: 'Top Sustainable Packaging Trends for 2025',
-    category: 'Trends',
-    date: 'March 5, 2025',
-    excerpt: 'Discover the latest sustainable packaging innovations that are revolutionizing the industry and helping businesses reduce their environmental impact.',
-    image: '/images/blog/sustainable-packaging.webp',
-    altText: 'Eco-friendly packaging materials made from recycled paper',
+    slug: "sustainable-packaging-trends-2025",
+    title: "Top Sustainable Packaging Trends for 2025",
+    category: "Trends",
+    date: "March 5, 2025",
+    excerpt:
+      "Discover the latest sustainable packaging innovations that are revolutionizing the industry and helping businesses reduce their environmental impact.",
+    image: "/images/blog/sustainable-packaging.webp",
+    altText: "Eco-friendly packaging materials made from recycled paper",
   },
   {
     id: 2,
-    slug: 'custom-packaging-brand-identity',
-    title: 'How Custom Packaging Strengthens Brand Identity',
-    category: 'Branding',
-    date: 'February 28, 2025',
-    excerpt: 'Learn how thoughtfully designed custom packaging can enhance your brand recognition and create memorable unboxing experiences for your customers.',
-    image: '/images/blog/brand-identity-packaging.webp',
-    altText: 'Custom branded packaging box with logo design',
+    slug: "custom-packaging-brand-identity",
+    title: "How Custom Packaging Strengthens Brand Identity",
+    category: "Branding",
+    date: "February 28, 2025",
+    excerpt:
+      "Learn how thoughtfully designed custom packaging can enhance your brand recognition and create memorable unboxing experiences for your customers.",
+    image: "/images/blog/brand-identity-packaging.webp",
+    altText: "Custom branded packaging box with logo design",
   },
   {
     id: 3,
-    slug: 'e-commerce-packaging-solutions',
-    title: 'Optimizing E-commerce Packaging for Better Customer Experience',
-    category: 'E-commerce',
-    date: 'February 15, 2025',
-    excerpt: 'Explore strategies to improve your online stores packaging to enhance customer satisfaction while reducing shipping costs and environmental impact.',
-    image: '/images/blog/ecommerce-packaging.webp',
-    altText: 'E-commerce packaging box being prepared for shipping',
+    slug: "e-commerce-packaging-solutions",
+    title: "Optimizing E-commerce Packaging for Better Customer Experience",
+    category: "E-commerce",
+    date: "February 15, 2025",
+    excerpt:
+      "Explore strategies to improve your online stores packaging to enhance customer satisfaction while reducing shipping costs and environmental impact.",
+    image: "/images/blog/ecommerce-packaging.webp",
+    altText: "E-commerce packaging box being prepared for shipping",
   },
   {
     id: 4,
-    slug: 'luxury-packaging-design-guide',
-    title: 'The Ultimate Guide to Luxury Packaging Design',
-    category: 'Design',
-    date: 'February 8, 2025',
-    excerpt: 'Discover the key elements that make luxury packaging stand out and how to incorporate these principles into your premium product packaging.',
-    image: '/images/blog/luxury-packaging.webp',
-    altText: 'Elegant luxury packaging with gold foil detailing',
+    slug: "luxury-packaging-design-guide",
+    title: "The Ultimate Guide to Luxury Packaging Design",
+    category: "Design",
+    date: "February 8, 2025",
+    excerpt:
+      "Discover the key elements that make luxury packaging stand out and how to incorporate these principles into your premium product packaging.",
+    image: "/images/blog/luxury-packaging.webp",
+    altText: "Elegant luxury packaging with gold foil detailing",
   },
   {
     id: 5,
-    slug: 'food-packaging-safety-regulations',
-    title: 'Understanding UK Food Packaging Safety Regulations',
-    category: 'Compliance',
-    date: 'January 25, 2025',
-    excerpt: 'A comprehensive overview of current food packaging regulations in the UK and how to ensure your packaging meets all safety requirements.',
-    image: '/images/blog/food-packaging-safety.webp',
-    altText: 'Food-safe packaging with compliance labels',
+    slug: "food-packaging-safety-regulations",
+    title: "Understanding UK Food Packaging Safety Regulations",
+    category: "Compliance",
+    date: "January 25, 2025",
+    excerpt:
+      "A comprehensive overview of current food packaging regulations in the UK and how to ensure your packaging meets all safety requirements.",
+    image: "/images/blog/food-packaging-safety.webp",
+    altText: "Food-safe packaging with compliance labels",
   },
   {
     id: 6,
-    slug: 'packaging-cost-reduction-strategies',
-    title: 'Practical Strategies to Reduce Packaging Costs Without Sacrificing Quality',
-    category: 'Business',
-    date: 'January 12, 2025',
-    excerpt: 'Learn effective methods to optimize your packaging costs while maintaining high quality and customer satisfaction.',
-    image: '/images/blog/cost-effective-packaging.webp',
-    altText: 'Cost-effective packaging solutions for businesses',
+    slug: "packaging-cost-reduction-strategies",
+    title:
+      "Practical Strategies to Reduce Packaging Costs Without Sacrificing Quality",
+    category: "Business",
+    date: "January 12, 2025",
+    excerpt:
+      "Learn effective methods to optimize your packaging costs while maintaining high quality and customer satisfaction.",
+    image: "/images/blog/cost-effective-packaging.webp",
+    altText: "Cost-effective packaging solutions for businesses",
+  },
+  {
+    id: 7,
+    slug: "packaging-roi-calculator",
+    title:
+      "Packaging ROI Calculator: How to Measure the Impact of Your Packaging Investment",
+    category: "Business",
+    date: "April 2, 2025",
+    excerpt:
+      "Learn how to calculate the return on investment for your packaging solutions and make data-driven decisions that boost sales while controlling costs.",
+    image: "/images/blog/packaging-roi-calculator.webp",
+    altText: "Business person calculating ROI on packaging investment",
+  },
+  {
+    id: 8,
+    slug: "packaging-design-psychology",
+    title:
+      "The Psychology of Packaging Design: How Colors, Shapes, and Materials Influence Consumer Behavior",
+    category: "Design",
+    date: "March 25, 2025",
+    excerpt:
+      "Explore how packaging design elements trigger psychological responses that influence purchasing decisions and brand perception.",
+    image: "/images/blog/packaging-psychology.webp",
+    altText: "Various packaging designs showing different colors and shapes",
+  },
+  {
+    id: 9,
+    slug: "small-business-packaging-guide",
+    title:
+      "The Complete Small Business Packaging Guide: Professional Solutions on a Limited Budget",
+    category: "Business",
+    date: "March 18, 2025",
+    excerpt:
+      "Discover how small businesses and startups can create impactful, professional packaging without breaking the bank, with practical tips and affordable solutions.",
+    image: "/images/blog/small-business-packaging.webp",
+    altText: "Small business owner preparing product packaging",
+  },
+  {
+    id: 10,
+    slug: "packaging-automation-solutions",
+    title:
+      "Packaging Automation Solutions: When, Why, and How to Streamline Your Packaging Process",
+    category: "Operations",
+    date: "March 10, 2025",
+    excerpt:
+      "Discover how packaging automation can increase efficiency, reduce costs, and improve consistency for growing businesses, with practical implementation advice.",
+    image: "/images/blog/packaging-automation.webp",
+    altText: "Automated packaging line in a modern facility",
+  },
+  {
+    id: 11,
+    slug: "packaging-localization-global-markets",
+    title: "Packaging Localization: Adapting Your Packaging for Global Markets",
+    category: "International",
+    date: "March 1, 2025",
+    excerpt:
+      "Learn how to effectively adapt your packaging for international markets, navigate regulatory requirements, and respect cultural nuances while maintaining brand consistency.",
+    image: "/images/blog/global-packaging.webp",
+    altText:
+      "Product packaging in multiple languages for international markets",
   },
 ];
 
 const BlogList = () => {
   return (
     <BlogContainer>
-      <SEO 
+      <SEO
         title="Packaging Insights & Tips | Pack it Perfect Blog"
         description="Discover the latest trends, tips, and best practices in custom packaging. Learn how to enhance your brand with innovative packaging solutions."
         keywords="packaging blog, custom packaging tips, sustainable packaging, packaging design, packaging trends"
         canonicalUrl="/blog"
         ogType="website"
         breadcrumbs={[
-          { name: 'Home', url: '/' },
-          { name: 'Blog', url: '/blog' }
+          { name: "Home", url: "/" },
+          { name: "Blog", url: "/blog" },
         ]}
       />
-      
+
       <PageTitle>Packaging Insights & Tips</PageTitle>
-      
+
       <BlogGrid>
-        {blogPosts.map(post => (
+        {blogPosts.map((post) => (
           <BlogCard key={post.id} to={`/blog/${post.slug}`}>
-            <OptimizedImage 
+            <OptimizedImage
               src={post.image}
               alt={post.altText}
               height="220px"
