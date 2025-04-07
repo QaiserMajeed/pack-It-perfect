@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Products from "./Products";
 import TelephoneContact from "./Telephone";
 
-// Styled Components
+// Atoms-inspired Styled Components
 const StyledHeader = styled.header`
   font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -14,16 +14,17 @@ const StyledHeader = styled.header`
 const AnnouncementBar = styled.div`
   background-color: #000;
   color: #fff;
-  padding: 12px 0;
+  padding: 11px 0;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.02em;
+  text-align: center;
 `;
 
 const MainHeader = styled.div`
-  padding: 16px 0;
+  padding: 20px 0;
   background-color: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 `;
 
 const MenuToggle = styled.button`
@@ -42,7 +43,7 @@ const MenuToggle = styled.button`
   span:before,
   span:after {
     width: 24px;
-    height: 2px;
+    height: 1.5px;
     background-color: #000;
     position: absolute;
     transition: all 0.3s ease;
@@ -61,74 +62,36 @@ const MenuToggle = styled.button`
   span:after {
     bottom: -6px;
   }
+
+  @media (min-width: 992px) {
+    display: none;
+  }
 `;
 
 const HeaderLogo = styled(Link)`
+  margin-left: 0;
+
+  @media (min-width: 992px) {
+    margin-left: 0;
+  }
+
   img {
-    padding-top: 1rem;
-    height: 45px;
+    height: 40px;
     width: 300px;
   }
 `;
 
-const IconButton = styled.button`
-  background: none;
-  border: none;
-  padding: 0;
-  margin-left: 16px;
-  color: #000;
-  font-size: 18px;
-  cursor: pointer;
-`;
-
-const CartIcon = styled(Link)`
-  margin-left: 16px;
-  color: #000;
-  font-size: 18px;
-  text-decoration: none;
-`;
-
-const SearchBar = styled.div`
-  position: absolute;
-  top: ${(props) => (props.active ? "106px" : "-100px")};
-  left: 0;
-  right: 0;
-  background: #fff;
-  padding: 16px 0;
-  transition: top 0.3s ease;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-
-  form {
-    display: flex;
-    align-items: center;
-  }
-
-  input[type="text"] {
-    flex: 1;
-    border: none;
-    padding: 12px 16px;
-    background: #f7f7f7;
-    border-radius: 24px;
-    font-size: 14px;
-    outline: none;
-  }
-
-  button {
-    background: none;
-    border: none;
-    padding: 0 16px;
-    font-size: 16px;
-    color: #666;
-    cursor: pointer;
-  }
+const NavContainer = styled.div`
+  display: flex;
+  justify-content: space-around<;
+  align-items: center;
+  width: 100%;
 `;
 
 const DesktopNav = styled.nav`
-  background-color: white;
-  border-top: 1px solid #f0f0f0;
-  border-bottom: 1px solid #f0f0f0;
   display: none;
+  position: relative;
+  z-index: 1000;
 
   @media (min-width: 992px) {
     display: block;
@@ -139,45 +102,44 @@ const DesktopNav = styled.nav`
     list-style: none;
     margin: 0;
     padding: 0;
+    gap: 30px;
+    margin-right: 1rem;
   }
 
   .nav-item {
-    flex: 1;
-    text-align: center;
-    padding-left: 1.4rem;
-    font-size: larger;
+    position: relative;
   }
 
   .nav-link {
     display: block;
-    padding: 15px;
-    color: #333;
-    font-weight: 600;
+    color: #000;
+    font-weight: 500;
+    font-size: 15px;
     text-decoration: none;
-    transition: color 0.2s;
+    transition: opacity 0.2s;
+    padding: 15px 0;
 
     &:hover {
-      color: #000;
+      opacity: 0.7;
     }
   }
 
   .dropdown {
-    position: static;
-  }
-
-  .dropdown-toggle::after {
-    content: "" !important;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-left: 5px;
+    position: relative;
   }
 
   .dropdown-menu {
     display: none;
     position: absolute;
     left: 0;
-    width: 100%;
+    width: 100vw;
     background-color: white;
+    z-index: 1000;
+    border-radius: 0;
+    border: none;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 20px 0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -192,7 +154,8 @@ const DesktopNav = styled.nav`
     align-items: center;
     color: #333;
     text-decoration: none;
-    border-radius: 4px;
+    padding: 12px 16px;
+    border-radius: 6px;
     transition: all 0.2s ease;
 
     &:hover {
@@ -213,7 +176,7 @@ const DesktopNav = styled.nav`
 
     i {
       color: #000;
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 
@@ -222,29 +185,48 @@ const DesktopNav = styled.nav`
 
     h4 {
       color: #000;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      font-weight: 600;
+      font-size: 16px;
     }
 
     p {
       font-size: 14px;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      color: #555;
     }
 
     .cta-button {
       display: inline-block;
       background-color: #000;
       color: white;
-      padding: 10px 20px;
-      border-radius: 4px;
+      padding: 12px 24px;
+      border-radius: 30px;
       text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.2s ease;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s;
 
       &:hover {
-        background-color: rgba(0, 0, 102, 0.9);
+        opacity: 0.8;
         color: white;
       }
     }
+  }
+`;
+
+const UtilityNav = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  a {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
   }
 `;
 
@@ -264,7 +246,7 @@ const MobileBackdrop = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
 `;
 
 const MobileMenu = styled.div`
@@ -272,7 +254,7 @@ const MobileMenu = styled.div`
   top: 0;
   left: 0;
   width: 85%;
-  max-width: 380px;
+  max-width: 360px;
   height: 100%;
   background: #fff;
   padding: 0;
@@ -285,7 +267,7 @@ const MobileMenuHeader = styled.div`
   padding: 20px;
   display: flex;
   justify-content: flex-end;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 `;
 
 const MobileCloseButton = styled.button`
@@ -308,7 +290,7 @@ const MobileNav = styled.ul`
 `;
 
 const MobileNavItem = styled.li`
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 `;
 
 const MobileNavLink = styled.div`
@@ -357,7 +339,7 @@ const MobileSubmenuLink = styled(Link)`
 
 const MobileMenuFooter = styled.div`
   padding: 20px;
-  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
 `;
 
 const PrimaryButton = styled(Link)`
@@ -366,15 +348,16 @@ const PrimaryButton = styled(Link)`
   background-color: #000;
   color: #fff;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
-  padding: 14px 20px;
-  border-radius: 4px;
+  padding: 16px 20px;
+  border-radius: 30px;
   text-decoration: none;
-  transition: background-color 0.2s ease;
+  transition: opacity 0.2s ease;
 
   &:hover {
-    background-color: #333;
+    background-color: #000;
+    opacity: 0.8;
     color: #fff;
   }
 `;
@@ -382,7 +365,7 @@ const PrimaryButton = styled(Link)`
 const MobileContact = styled.div`
   text-align: center;
   font-size: 14px;
-  margin-top: 15px;
+  margin-top: 20px;
 `;
 
 const MobilePhone = styled.a`
@@ -431,21 +414,18 @@ const Header = () => {
     <StyledHeader>
       {/* Announcement bar */}
       <AnnouncementBar>
-        <div className="container">
-          <div className="row">
-            <div className="col-12 text-center">
-              <p className="mb-0">Free shipping on all UK orders £300+</p>
-            </div>
-          </div>
-        </div>
+        <div className="container">Free shipping on all UK orders £300+</div>
       </AnnouncementBar>
 
       {/* Main header */}
       <MainHeader>
         <div className="container">
-          <div className="row align-items-center">
-            {/* Menu toggle button */}
-            <div className="col-3 d-flex align-items-center">
+          <NavContainer>
+            {/* Logo (on left) */}
+            <div
+              className="d-flex align-items-center"
+              style={{ justifyContent: "flex-start" }}
+            >
               <MenuToggle
                 className={mobileMenuOpen ? "active" : ""}
                 onClick={toggleMobileMenu}
@@ -453,122 +433,109 @@ const Header = () => {
               >
                 <span className="menu-icon"></span>
               </MenuToggle>
-            </div>
-
-            {/* Logo (in center) */}
-            <div className="col-6 justify-content-center d-flex text-center">
               <HeaderLogo to="/">
-                <img src="/images/logo.svg" alt="Pack it Perfect" />
+                <img  src="/images/logo.svg" alt="Pack it Perfect" />
               </HeaderLogo>
             </div>
 
-            {/* Right icons */}
-            <div className="col-3 d-flex justify-content-end">
-              <TelephoneContact />
-            </div>
-          </div>
-        </div>
-      </MainHeader>
-
-      {/* Desktop Navigation */}
-      <DesktopNav>
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <ul className="nav-menu">
-                <li className="nav-item">
-                  <Link to="/" className="nav-link">
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item dropdown">
-                  <a href="#" className="nav-link dropdown-toggle">
-                    By Industry
-                  </a>
-                  <div className="dropdown-menu">
-                    <div className="container">
-                      <div className="row">
-                        {/* Main categories area - takes 9 columns */}
-                        <div className="col-md-9">
-                          {/* Categories grid */}
-                          <div className="row">
-                            {Products.map((category, index) => (
-                              <div key={index} className="col-md-4 mb-3">
-                                {category.category !== "packaging-by-style" && (
-                                  <Link
-                                    to={`/category/${category.category}`}
-                                    className="category-item"
-                                  >
-                                    <span className="category-icon">
-                                      <i
-                                        className={
-                                          category.icon || "fas fa-box"
-                                        }
-                                      ></i>
-                                    </span>
-                                    <span className="category-name">
-                                      {category.name}
-                                    </span>
-                                  </Link>
-                                )}
-                              </div>
-                            ))}
+            {/* Desktop Navigation (on right) */}
+            <div className="d-flex align-items-center">
+              <DesktopNav>
+                <ul className="nav-menu">
+                  <li className="nav-item">
+                    <Link to="/" className="nav-link">
+                      Home
+                    </Link>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <a href="#" className="nav-link dropdown-toggle">
+                      By Industry
+                    </a>
+                    <div className="dropdown-menu">
+                      <div className="container">
+                        <div className="row" style={{"padding-left":"20rem"}}  >
+                          {/* Main categories area - takes 9 columns */}
+                          <div className="col-md-9">
+                            {/* Categories grid */}
+                            <div className="row">
+                              {Products.map((category, index) => (
+                                <div key={index} className="col-md-4">
+                                  {category.category !==
+                                    "packaging-by-style" && (
+                                    <Link
+                                      to={`/category/${category.category}`}
+                                      className="category-item"
+                                    >
+                                      <span className="category-icon">
+                                        <i
+                                          className={
+                                            category.icon || "fas fa-box"
+                                          }
+                                        ></i>
+                                      </span>
+                                      <span className="category-name">
+                                        {category.name}
+                                      </span>
+                                    </Link>
+                                  )}
+                                </div>
+                              ))}
+                            </div>
                           </div>
-                        </div>
 
-                        {/* Help section - takes 3 columns */}
-                        <div className="col-md-3">
-                          <div className="help-section">
-                            <h4>Need Help?</h4>
-                            <p>
-                              Contact our packaging specialists for custom
-                              solutions tailored to your needs.
-                            </p>
-                            <a href="/get-a-quote" className="cta-button">
-                              Get a Quote
-                            </a>
-                            <p className="mt-3 mb-0">
-                              <strong>Call us:</strong>
-                            </p>
-
-                            <p className="fw-bold">+44 0744018948</p>
+                          {/* Help section - takes 3 columns */}
+                          <div className="col-md-3">
+                            <div className="help-section">
+                              <h4>Need Help?</h4>
+                              <p>
+                                Contact our packaging specialists for custom
+                                solutions tailored to your needs.
+                              </p>
+                              <a href="/get-a-quote" className="cta-button">
+                                Get a Quote
+                              </a>
+                              <p className="mt-3 mb-0">
+                                <strong>Call us:</strong>
+                              </p>
+                              <p className="fw-bold">+44 0744018948</p>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </li>
-                <li className="nav-item">
-                  <a href="/category/packaging-by-style" className="nav-link">
-                    By Material
-                  </a>
-                </li>
-
-                <li className="nav-item">
-                  <Link to="/jars-cups" className="nav-link">
-                    Jars & Cups
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/blog" className="nav-link">
-                    Blog
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to={`/payment-plans`} className="nav-link">
-                    Payment
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to={`/get-a-quote`} className="nav-link">
-                    Quote
-                  </Link>
-                </li>
-              </ul>
+                  </li>
+                  <li className="nav-item">
+                    <a href="/category/packaging-by-style" className="nav-link">
+                      By Material
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="/jars-cups" className="nav-link">
+                      Jars & Cups
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="/blog" className="nav-link">
+                      Blog
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to={`/payment-plans`} className="nav-link">
+                      Payment
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to={`/get-a-quote`} className="nav-link">
+                      Quote
+                    </Link>
+                  </li>
+                </ul>
+              </DesktopNav>
+              <TelephoneContact />
             </div>
-          </div>
+          </NavContainer>
         </div>
-      </DesktopNav>
+      </MainHeader>
 
       {/* Mobile Navigation */}
       <MobileMenuWrapper active={mobileMenuOpen}>
@@ -651,10 +618,10 @@ const Header = () => {
                 </Link>
               </MobileNavItem>
 
-              {/* By Style */}
+              {/* Jars & Cups */}
               <MobileNavItem>
-                <Link
-                  to="/category/packaging-by-style"
+                <a
+                  href="/jars-cups"
                   style={{
                     display: "block",
                     textDecoration: "none",
@@ -662,9 +629,9 @@ const Header = () => {
                   onClick={toggleMobileMenu}
                 >
                   <MobileNavLink as="div">
-                    <span>By Style</span>
+                    <span>Jars & Cups</span>
                   </MobileNavLink>
-                </Link>
+                </a>
               </MobileNavItem>
 
               {/* Blog */}
@@ -683,20 +650,7 @@ const Header = () => {
                 </a>
               </MobileNavItem>
 
-              <MobileNavItem>
-                <a
-                  href="/jars-cups"
-                  style={{
-                    display: "block",
-                    textDecoration: "none",
-                  }}
-                  onClick={toggleMobileMenu}
-                >
-                  <MobileNavLink as="div">
-                    <span>Jars & Cups</span>
-                  </MobileNavLink>
-                </a>
-              </MobileNavItem>
+              {/* Payment Plan */}
               <MobileNavItem>
                 <a
                   href="/payment-plans"

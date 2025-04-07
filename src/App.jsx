@@ -44,6 +44,9 @@ const CompanyBenefitsSection = lazy(() =>
 );
 const QouteForm = lazy(() => import("./components/QuoteForm"));
 
+const CaseStudy = lazy(() => import("./components/CaseStudy"));
+const CaseStudies = lazy(() => import("./components/CaseStudies"));
+
 // Loading fallback
 const LoadingFallback = () => (
   <div
@@ -225,6 +228,28 @@ function App() {
                 element={
                   <Suspense fallback={<LoadingFallback />}>
                     <BlogDetail />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/case-studies"
+                element={
+                  <Suspense fallback={<LoadingFallback />}>
+                    <SEO
+                      title="Case Studies | Our Custom Packaging Success Stories"
+                      description="Explore our custom packaging case studies to see how we've helped brands elevate their packaging with bespoke, sustainable solutions."
+                      canonicalUrl="/case-studies"
+                    />
+                    <CaseStudies />
+                  </Suspense>
+                }
+              />
+
+              <Route
+                path="/case-study/:slug"
+                element={
+                  <Suspense fallback={<LoadingFallback />}>
+                    <CaseStudy />
                   </Suspense>
                 }
               />
