@@ -97,7 +97,10 @@ const TelephoneContact = () => {
   const phoneNumber = "+44 07440189478";
 
   return (
-    <ContactSection className="align-self-end">
+    <ContactSection
+      style={{ "margin-left": "auto" }}
+      className="align-self-end"
+    >
       <PhoneContainer>
         <PhoneIconCircle>
           <StyledPhoneIcon />

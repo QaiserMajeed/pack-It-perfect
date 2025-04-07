@@ -1,9 +1,9 @@
 "use strict";(self.webpackChunkpack_it_perfect=self.webpackChunkpack_it_perfect||[]).push([[967],{967:(e,i,r)=>{r.r(i),r.d(i,{default:()=>k});r(43);var n=r(464),o=r(579);const t=n.Ay.div`
-  padding: 3rem 0;
+  padding: 1rem 0;
   position: relative;
 
   @media (max-width: 768px) {
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
 `,a=n.Ay.div`
   display: flex;
@@ -154,4 +154,4 @@
     display: block;
   }
 `,k=()=>(0,o.jsx)(t,{children:(0,o.jsx)("div",{className:"container",children:(0,o.jsxs)(a,{children:[(0,o.jsxs)(s,{children:[(0,o.jsx)(d,{children:(0,o.jsx)("span",{children:"CUSTOM PACKAGING BOXES"})}),(0,o.jsxs)(l,{children:["Your ",(0,o.jsx)(m,{children:"One-Stop"})," Destination For Custom Boxes and Packaging Needs!"]}),(0,o.jsx)(c,{children:"In The Dynamic UK Market, We Stand Out With Our Extensive Collection Of Bespoke Cosmetics And Packaging."}),(0,o.jsxs)(h,{children:[(0,o.jsx)(p,{children:"Produced In United Kingdom"}),(0,o.jsx)(p,{children:"Delivery within 6 to 10 working days"})]}),(0,o.jsx)(g,{href:"/get-a-quote",children:"Get A Free Quote"}),(0,o.jsxs)(x,{children:[(0,o.jsx)(f,{children:"See what our clients are saying! With 4.5 Social Media Platforms Rating :"}),(0,o.jsxs)(y,{children:[(0,o.jsx)(u,{children:"\u2605"}),(0,o.jsx)(u,{children:"\u2605"}),(0,o.jsx)(u,{children:"\u2605"}),(0,o.jsx)(u,{children:"\u2605"}),(0,o.jsx)(u,{style:{opacity:.5},children:"\u2605"})]})]})]}),(0,o.jsx)(j,{id:"hero-slider",children:(0,o.jsx)(b,{children:["/images/product-slides2-homepage/homepageslider/slide1.jpg","/images/product-slides2-homepage/homepageslider/slide2.jpg","/images/product-slides2-homepage/homepageslider/slide3.jpg","/images/product-slides2-homepage/homepageslider/slide1.jpg"].map(((e,i)=>(0,o.jsx)(w,{id:`slide${i+1}`,children:(0,o.jsx)("img",{src:e,alt:`Custom Packaging Slide ${i+1}`})},i)))})})]})})})}}]);
-//# sourceMappingURL=967.79926fa2.chunk.js.map
+//# sourceMappingURL=967.e80c718b.chunk.js.map

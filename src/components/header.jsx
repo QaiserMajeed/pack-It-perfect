@@ -14,15 +14,14 @@ const StyledHeader = styled.header`
 const AnnouncementBar = styled.div`
   background-color: #000;
   color: #fff;
-  padding: 11px 0;
-  font-size: 13px;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 200;
   letter-spacing: 0.02em;
   text-align: center;
 `;
 
 const MainHeader = styled.div`
-  padding: 20px 0;
+  padding: 20px 0 0 0;
   background-color: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 `;
@@ -113,8 +112,8 @@ const DesktopNav = styled.nav`
   .nav-link {
     display: block;
     color: #000;
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: 350;
+    font-size: 13px;
     text-decoration: none;
     transition: opacity 0.2s;
     padding: 15px 0;
@@ -178,6 +177,16 @@ const DesktopNav = styled.nav`
       color: #000;
       font-size: 16px;
     }
+  }
+  .category-icon i {
+    color: #000;
+    font-size: 18px;
+  }
+
+  /* Category name */
+  .category-name {
+    font-weight: 300;
+    text-align: left;
   }
 
   .help-section {
@@ -434,7 +443,7 @@ const Header = () => {
                 <span className="menu-icon"></span>
               </MenuToggle>
               <HeaderLogo to="/">
-                <img  src="/images/logo.svg" alt="Pack it Perfect" />
+                <img src="/images/logo.svg" alt="Pack it Perfect" />
               </HeaderLogo>
             </div>
 
@@ -453,7 +462,10 @@ const Header = () => {
                     </a>
                     <div className="dropdown-menu">
                       <div className="container">
-                        <div className="row" style={{"padding-left":"20rem"}}  >
+                        <div
+                          className="row"
+                          style={{ "padding-left": "20rem" }}
+                        >
                           {/* Main categories area - takes 9 columns */}
                           <div className="col-md-9">
                             {/* Categories grid */}
@@ -531,8 +543,8 @@ const Header = () => {
                   </li>
                 </ul>
               </DesktopNav>
-              <TelephoneContact />
             </div>
+            <TelephoneContact />
           </NavContainer>
         </div>
       </MainHeader>
@@ -692,8 +704,8 @@ const Header = () => {
               <p className="mb-1">
                 <strong>Call us:</strong>
               </p>
-              <MobilePhone href="tel:+44 0744018948">
-                +44 0744018948
+              <MobilePhone>
+                <a href="tel:+44 07440189478">+44 0744018948</a>
               </MobilePhone>
             </MobileContact>
           </MobileMenuFooter>

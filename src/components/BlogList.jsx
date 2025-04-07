@@ -122,7 +122,7 @@ const blogPosts = [
     date: "March 5, 2025",
     excerpt:
       "Discover the latest sustainable packaging innovations that are revolutionizing the industry and helping businesses reduce their environmental impact.",
-    image: "/images/blog/sustainable-packaging.webp",
+    image: "/images/blog/sustainable-packaging.png",
     altText: "Eco-friendly packaging materials made from recycled paper",
   },
   {
@@ -133,7 +133,7 @@ const blogPosts = [
     date: "February 28, 2025",
     excerpt:
       "Learn how thoughtfully designed custom packaging can enhance your brand recognition and create memorable unboxing experiences for your customers.",
-    image: "/images/blog/brand-identity-packaging.webp",
+    image: "/images/blog/custom-packaging-brand-identity.png",
     altText: "Custom branded packaging box with logo design",
   },
   {
@@ -144,7 +144,7 @@ const blogPosts = [
     date: "February 15, 2025",
     excerpt:
       "Explore strategies to improve your online stores packaging to enhance customer satisfaction while reducing shipping costs and environmental impact.",
-    image: "/images/blog/ecommerce-packaging.webp",
+    image: "/images/blog/ecommerce-packaging.jpg",
     altText: "E-commerce packaging box being prepared for shipping",
   },
   {
@@ -155,7 +155,7 @@ const blogPosts = [
     date: "February 8, 2025",
     excerpt:
       "Discover the key elements that make luxury packaging stand out and how to incorporate these principles into your premium product packaging.",
-    image: "/images/blog/luxury-packaging.webp",
+    image: "/images/blog/luxury-packaging.jpg",
     altText: "Elegant luxury packaging with gold foil detailing",
   },
   {
@@ -166,7 +166,7 @@ const blogPosts = [
     date: "January 25, 2025",
     excerpt:
       "A comprehensive overview of current food packaging regulations in the UK and how to ensure your packaging meets all safety requirements.",
-    image: "/images/blog/food-packaging-safety.webp",
+    image: "/images/blog/food-packaging-safety.jpg",
     altText: "Food-safe packaging with compliance labels",
   },
   {

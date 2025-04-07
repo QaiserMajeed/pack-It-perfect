@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const HeroSectionWrapper = styled.div`
-  padding: 3rem 0;
+  padding: 1rem 0;
   position: relative;
 
   @media (max-width: 768px) {
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
 `;
 
