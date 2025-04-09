@@ -131,17 +131,14 @@ const DesktopNav = styled.nav`
     display: none;
     position: absolute;
     left: 0;
-    width: 100vw;
+    width: 80vw;
     background-color: white;
     z-index: 1000;
-    border-radius: 0;
-    border: none;
     top: 100%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-30%);
     padding: 20px 0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
   }
 
   .dropdown:hover .dropdown-menu {
@@ -462,10 +459,7 @@ const Header = () => {
                     </a>
                     <div className="dropdown-menu">
                       <div className="container">
-                        <div
-                          className="row"
-                          style={{ "padding-left": "20rem" }}
-                        >
+                        <div className="row">
                           {/* Main categories area - takes 9 columns */}
                           <div className="col-md-9">
                             {/* Categories grid */}
