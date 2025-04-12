@@ -281,7 +281,7 @@ const BestSellingProducts = () => {
 
         <ProductsGrid>
           {products.slice(0, 8).map((product) => (
-            <ProductCard to={product.link} key={product.id}>
+            <ProductCard  key={product.id}>
               {product.isNew && <NewTag>NEW</NewTag>}
               <ProductImage>
                 <IconBackground bgColor={product.bgColor}>
