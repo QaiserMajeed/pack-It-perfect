@@ -1,8 +1,8 @@
 import React, { useEffect, lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SEO from "./components/SEO"; // Import SEO component
-import Header from "./components/header";
-import Footer from "./components/footer";
+const Header = React.lazy(() => import("./components/header"));
+const Footer = React.lazy(() => import("./components/footer"));
 import "./App.css";
 // Import only essential components
 import MainContent from "./components/mainContent";

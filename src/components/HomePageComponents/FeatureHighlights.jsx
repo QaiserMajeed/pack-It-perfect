@@ -83,7 +83,7 @@ const FeatureDescription = styled.p`
   margin: 0;
 `;
 
-const FeatureHighlights = () => {
+const FeatureHighlights = React.memo(function FeatureHighlights() {
   const features = [
     {
       icon: faSterlingSign,
@@ -135,6 +135,6 @@ const FeatureHighlights = () => {
       </div>
     </FeaturesContainer>
   );
-};
+});
 
 export default FeatureHighlights;

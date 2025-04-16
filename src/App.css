@@ -4,8 +4,21 @@
 }
 /* Global Typography for website - add to your global CSS file */
 
-/* Import Inter font with all needed weights */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+/* Import Inter font with display swap for better performance */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap&display=swap');
+
+/* Add content-visibility for better rendering performance */
+.pack-it-perfect-app {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 5000px;
+}
+
+/* Use hardware acceleration where beneficial */
+.transform-gpu {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+}
 
 /* Base typography settings */
 :root {

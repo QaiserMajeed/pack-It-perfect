@@ -37,7 +37,11 @@ const ImageWrapper = styled.div`
   `}
 `;
 
-const StyledImage = styled(LazyLoadImage)`
+const StyledImage = styled(LazyLoadImage).attrs({
+  loading: "lazy",
+  decoding: "async",
+  fetchpriority: "auto"
+})`
   width: 100%;
   height: ${(props) => (props.objectFit === "contain" ? "auto" : "100%")};
   object-fit: ${(props) => props.objectFit || "cover"};
