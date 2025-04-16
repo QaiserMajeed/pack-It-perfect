@@ -78,8 +78,6 @@ const LoadingFallback = () => (
   </div>
 );
 
-import { DarkModeProvider } from './context/DarkModeContext';
-
 function App() {
   // Load Bootstrap JS
   useEffect(() => {
@@ -124,8 +122,7 @@ function App() {
   };
 
   return (
-    <DarkModeProvider>
-      <Router>
+    <Router>
       {/* Add Google Tag Manager */}
       <GoogleTagManager />
       <ScrollToTop /> {/* Add this line */}
@@ -280,7 +277,6 @@ function App() {
         <StickyCTAProvider />
       </div>
     </Router>
-    </DarkModeProvider>
   );
 }
 

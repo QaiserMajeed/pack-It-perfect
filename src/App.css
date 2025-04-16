@@ -7,31 +7,6 @@
 /* Import Inter font with all needed weights */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-/* Dark mode CSS variables */
-:root {
-  /* Light mode colors */
-  --bg-color: #ffffff;
-  --text-color: #333333;
-  --nav-bg: #ffffff;
-  --border-color: rgba(0, 0, 0, 0.04);
-  
-  /* Dark mode variables will be applied when .dark-mode class is present */
-}
-
-body.dark-mode {
-  --bg-color: #1a1a1a;
-  --text-color: #ffffff;
-  --nav-bg: #2d2d2d;
-  --border-color: rgba(255, 255, 255, 0.04);
-}
-
-/* Apply variables */
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
 /* Base typography settings */
 :root {
   /* Font family */
