@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { useDarkMode } from "../context/DarkModeContext";
 import Products from "./Products";
 import TelephoneContact from "./Telephone";
 
@@ -381,8 +382,20 @@ const MobilePhone = styled.a`
   text-decoration: none;
 `;
 
+const DarkModeToggle = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+`;
+
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
   const [expandedCategory, setExpandedCategory] = useState(null);
   const [searchActive, setSearchActive] = useState(false);
 
@@ -538,6 +551,9 @@ const Header = () => {
                 </ul>
               </DesktopNav>
             </div>
+            <DarkModeToggle onClick={toggleDarkMode} aria-label="Toggle dark mode">
+              <i className={`fas ${isDarkMode ? 'fa-sun' : 'fa-moon'}`}></i>
+            </DarkModeToggle>
             <TelephoneContact />
           </NavContainer>
         </div>
