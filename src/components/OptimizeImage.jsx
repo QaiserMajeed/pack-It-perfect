@@ -37,11 +37,21 @@ const ImageWrapper = styled.div`
   `}
 `;
 
-const StyledImage = styled(LazyLoadImage).attrs({
+const generateAltText = (src) => {
+  const filename = src.split('/').pop().split('.')[0];
+  return filename
+    .replace(/([A-Z])/g, ' $1')
+    .replace(/-/g, ' ')
+    .trim();
+};
+
+const StyledImage = styled(LazyLoadImage).attrs(props => ({
   loading: "lazy",
   decoding: "async",
-  fetchpriority: "auto"
-})`
+  fetchpriority: props.priority || "auto",
+  alt: props.alt || generateAltText(props.src),
+  title: props.title || generateAltText(props.src)
+}))`
   width: 100%;
   height: ${(props) => (props.objectFit === "contain" ? "auto" : "100%")};
   object-fit: ${(props) => props.objectFit || "cover"};

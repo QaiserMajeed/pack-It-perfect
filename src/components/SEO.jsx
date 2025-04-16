@@ -70,12 +70,22 @@ const SEO = ({
     : "Pack it Perfect - Custom Packaging Solutions UK";
 
   // Optimized meta description - keep under 155-160 characters
-  const metaDescription =
-    description && description.length <= 160
-      ? description
-      : description && description.length > 160
-      ? description.substring(0, 157) + "..."
-      : "Premium custom packaging solutions. Eco-friendly, affordable custom boxes with free design assistance and fast UK delivery.";
+  const getMetaDescription = (path) => {
+  if (path.includes('/products')) {
+    return "Browse our premium custom packaging solutions. Eco-friendly materials, competitive prices, and fast UK delivery.";
+  } else if (path.includes('/contact')) {
+    return "Get in touch for custom packaging solutions. Free design assistance and quotes for your business needs.";
+  } else if (path.includes('/blog')) {
+    return "Expert insights on packaging trends, sustainability, and industry best practices. Stay updated with Pack it Perfect.";
+  }
+  return description && description.length <= 160
+    ? description
+    : description && description.length > 160
+    ? description.substring(0, 157) + "..."
+    : "Premium custom packaging solutions. Eco-friendly, affordable custom boxes with free design assistance and fast UK delivery.";
+};
+
+const metaDescription = getMetaDescription(canonicalUrl);
 
   // Enhanced keywords with more specific, targeted phrases
   const enhancedKeywords = keywords

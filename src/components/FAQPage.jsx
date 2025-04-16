@@ -344,6 +344,9 @@ const FAQPage = () => {
         canonicalUrl="/faq"
         schema={createFAQSchema(faqData)}
       />
+      {/* Added preload tags - requires specifying actual resources */}
+      <link rel="preload" href="/path/to/critical.css" as="style" />
+      <link rel="preload" href="/path/to/critical.js" as="script" />
 
       <PageTitle>Frequently Asked Questions</PageTitle>
       <PageDescription>
@@ -403,6 +406,7 @@ const FAQPage = () => {
         </p>
         <ContactButton href="/get-a-quote">Contact Us</ContactButton>
       </ContactSection>
+      <script type="application/ld+json">{JSON.stringify(createFAQSchema(faqData))}</script>
     </FAQContainer>
   );
 };
