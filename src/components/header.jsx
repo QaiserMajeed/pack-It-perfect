@@ -82,10 +82,16 @@ const HeaderLogo = styled(Link)`
 
 const NavContainer = styled.div`
   display: flex;
-  justify-content: space-around<;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
+  .test {
+    @media (max-width: 560px) {
+      width: 55%;
+    }
+  }
 `;
+
 
 const DesktopNav = styled.nav`
   display: none;
@@ -429,8 +435,8 @@ const Header = () => {
           <NavContainer>
             {/* Logo (on left) */}
             <div
-              className="d-flex align-items-center"
-              style={{ justifyContent: "flex-start", width: "55%" }}
+              className="d-flex align-items-center test"
+              style={{ justifyContent: "flex-start" }}
             >
               <MenuToggle
                 className={mobileMenuOpen ? "active" : ""}

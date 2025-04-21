@@ -108,7 +108,9 @@ function App() {
           keywords="custom packaging, packaging boxes UK, eco-friendly packaging, custom boxes"
           canonicalUrl="/"
         />
+
         <Suspense fallback={<LoadingFallback />}>
+         
           <HeroSection />
           <FeatureHighlights />
           <IndustryCategoriesSection />
@@ -122,8 +124,17 @@ function App() {
 
   return (
     <Router>
-      {/* Add Google Tag Manager */}
-      <GoogleTagManager />
+      <FloatingWhatsApp
+        phoneNumber="+44 07440189478"
+        accountName="Nancy "
+        allowEsc
+        allowClickAway
+        notification
+        notificationSound
+        style={{ zIndex: 100000 }}
+        zindex={100000}
+        chatMessage="Hello! How can we assist you today?"
+      />
       <ScrollToTop /> {/* Add this line */}
       <div className="pack-it-perfect-app">
         <Header />
@@ -264,16 +275,6 @@ function App() {
           </section>
         </main>
         <Footer />
-        <FloatingWhatsApp
-          phoneNumber="+44 07440189478"
-          accountName="Nancy "
-          allowEsc
-          allowClickAway
-          notification
-          notificationSound
-        />
-        {/* Add the StickyCTAProvider here */}
-        <StickyCTAProvider />
       </div>
     </Router>
   );
