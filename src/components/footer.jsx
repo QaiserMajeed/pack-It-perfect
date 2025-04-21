@@ -379,7 +379,7 @@ const Footer = () => {
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
               <a
-                href="https://www.linkedin.com/company/packageitperfect"
+                href="https://www.linkedin.com/company/package-it-perfect"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Connect with Pack it Perfect on LinkedIn"

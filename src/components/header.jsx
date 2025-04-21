@@ -370,12 +370,12 @@ const PrimaryButton = styled(Link)`
 
 const MobileContact = styled.div`
   text-align: center;
-  font-size: 14px;
+  font-size: 10px;
   margin-top: 20px;
 `;
 
 const MobilePhone = styled.a`
-  font-size: 16px;
+  font-size: 10px;
   font-weight: 600;
   color: #000;
   text-decoration: none;
@@ -430,7 +430,7 @@ const Header = () => {
             {/* Logo (on left) */}
             <div
               className="d-flex align-items-center"
-              style={{ justifyContent: "flex-start" }}
+              style={{ justifyContent: "flex-start", width: "55%" }}
             >
               <MenuToggle
                 className={mobileMenuOpen ? "active" : ""}
