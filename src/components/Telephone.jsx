@@ -94,7 +94,7 @@ const PhoneSubtitle = styled.div`
 
 // Component
 const TelephoneContact = () => {
-  const phoneNumber = "+44 07440189478";
+  const phoneNumber = "+44 07459 682266";
 
   return (
     <ContactSection

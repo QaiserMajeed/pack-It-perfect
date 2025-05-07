@@ -312,7 +312,7 @@ const ContactPage = () => {
           url: "https://packageitperfect.com/contact",
           contactPoint: {
             "@type": "ContactPoint",
-            telephone: "+44 07440189478",
+            telephone: "+44 07459 682266",
             contactType: "customer service",
             areaServed: "UK",
             availableLanguage: "English",
@@ -443,10 +443,10 @@ const ContactPage = () => {
                   <InfoLabel>Phone Number</InfoLabel>
                   <InfoText>
                     <a
-                      href="tel:+44 07440189478"
+                      href="tel:+44 07459 682266"
                       style={{ color: "inherit", textDecoration: "none" }}
                     >
-                      +44 07440189478
+                      +44 07459 682266
                     </a>
                   </InfoText>
                 </InfoContent>

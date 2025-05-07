@@ -125,7 +125,7 @@ function App() {
   return (
     <Router>
       <FloatingWhatsApp
-        phoneNumber="+44 07440189478"
+        phoneNumber="+44 07459 682266"
         accountName="Nancy "
         allowEsc
         allowClickAway

@@ -101,7 +101,7 @@ const metaDescription = getMetaDescription(canonicalUrl);
     logo: "https://packageitperfect.com/images/logo.svg",
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+44 07440189478",
+      telephone: "+44 07459 682266",
       contactType: "customer service",
       availableLanguage: "English",
     },
