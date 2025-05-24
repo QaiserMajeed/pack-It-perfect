@@ -674,8 +674,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.24",
+        price: "0.08",
+        oldPrice: "0.24",
       },
       {
         title: "Suit Boxes",
@@ -690,8 +690,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
-        price: "£0.06",
-        oldPrice: "£0.24",
+        price: "0.06",
+        oldPrice: "0.24",
       },
       {
         title: "Eco-Friendly Apparel Packaging",
@@ -706,8 +706,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.23",
+        price: "0.07",
+        oldPrice: "0.23",
       },
       {
         title: "Denim Packaging",
@@ -722,8 +722,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.25",
+        price: "0.08",
+        oldPrice: "0.25",
       },
       {
         title: "Fashion Showroom Packaging",
@@ -738,8 +738,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.23",
+        price: "0.07",
+        oldPrice: "0.23",
       },
       {
         title: "Lingerie Gift Boxes",
@@ -754,8 +754,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.24",
+        price: "0.06",
+        oldPrice: "0.24",
       },
       {
         title: "Hat Boxes",
@@ -770,8 +770,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.22",
+        price: "0.06",
+        oldPrice: "0.22",
       },
       {
         title: "Dress Boxes",
@@ -786,8 +786,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.23",
+        price: "0.07",
+        oldPrice: "0.23",
       },
       {
         title: "Sock Boxes",
@@ -802,8 +802,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.21",
+        price: "0.06",
+        oldPrice: "0.21",
       },
       {
         title: "Garment Bags",
@@ -818,8 +818,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.26",
+        price: "0.08",
+        oldPrice: "0.26",
       },
     ],
   },
@@ -843,8 +843,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.23",
+        price: "0.06",
+        oldPrice: "0.23",
       },
       {
         title: "Cardboard Food Containers",
@@ -859,8 +859,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
-        price: "£0.08",
-        oldPrice: "£0.23",
+        price: "0.08",
+        oldPrice: "0.23",
       },
       {
         title: "Carryout Boxes",
@@ -875,8 +875,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.22",
+        price: "0.07",
+        oldPrice: "0.22",
       },
       {
         title: "Kraft Food Boxes",
@@ -891,8 +891,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.25",
+        price: "0.06",
+        oldPrice: "0.25",
       },
       {
         title: "Portable Food Container",
@@ -907,8 +907,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.24",
+        price: "0.07",
+        oldPrice: "0.24",
       },
       {
         title: "Take Away Boxes",
@@ -923,8 +923,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.25",
+        price: "0.08",
+        oldPrice: "0.25",
       },
       {
         title: "Eco-Friendly Food Packaging",
@@ -939,8 +939,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.24",
+        price: "0.07",
+        oldPrice: "0.24",
       },
       {
         title: "Fast Food Packaging",
@@ -955,8 +955,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.22",
+        price: "0.06",
+        oldPrice: "0.22",
       },
       {
         title: "To-go Containers",
@@ -971,8 +971,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.24",
+        price: "0.07",
+        oldPrice: "0.24",
       },
       {
         title: "Takeout Boxes",
@@ -987,8 +987,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.23",
+        price: "0.08",
+        oldPrice: "0.23",
       },
       {
         title: "French Fries Boxes",
@@ -1003,8 +1003,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.21",
+        price: "0.06",
+        oldPrice: "0.21",
       },
       {
         title: "Burger Boxes",
@@ -1019,8 +1019,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.24",
+        price: "0.06",
+        oldPrice: "0.24",
       },
       {
         title: "Pizza Boxes",
@@ -1035,8 +1035,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.25",
+        price: "0.08",
+        oldPrice: "0.25",
       },
       {
         title: "Food Packaging",
@@ -1051,8 +1051,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.25",
+        price: "0.07",
+        oldPrice: "0.25",
       },
     ],
   },
@@ -1256,8 +1256,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.23",
+        price: "0.07",
+        oldPrice: "0.23",
       },
       {
         title: "Custom Jar Boxes",
@@ -1272,8 +1272,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.20",
+        price: "0.06",
+        oldPrice: "0.20",
       },
       {
         title: "Truck Front Boxes",
@@ -1288,8 +1288,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.24",
+        price: "0.08",
+        oldPrice: "0.24",
       },
       {
         title: "Seal End Boxes",
@@ -1304,8 +1304,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
-        price: "£0.06",
-        oldPrice: "£0.23",
+        price: "0.06",
+        oldPrice: "0.23",
       },
       {
         title: "Playing Card Boxes",
@@ -1320,8 +1320,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.24",
+        price: "0.08",
+        oldPrice: "0.24",
       },
       {
         title: "Eco-friendly Packaging",
@@ -1336,8 +1336,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.21",
+        price: "0.08",
+        oldPrice: "0.21",
       },
       {
         title: "Display Packaging",
@@ -1352,8 +1352,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.22",
+        price: "0.06",
+        oldPrice: "0.22",
       },
       {
         title: "Candle Jar Boxes",
@@ -1368,8 +1368,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.21",
+        price: "0.07",
+        oldPrice: "0.21",
       },
       {
         title: "Cigarette Packaging",
@@ -1384,8 +1384,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.23",
+        price: "0.07",
+        oldPrice: "0.23",
       },
       {
         title: "Sleeve and Tray Packaging",
@@ -1400,8 +1400,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.24",
+        price: "0.07",
+        oldPrice: "0.24",
       },
       {
         title: "Gable Boxes",
@@ -1416,8 +1416,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.23",
+        price: "0.06",
+        oldPrice: "0.23",
       },
       {
         title: "Custom Bottle Packaging",
@@ -1432,8 +1432,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.24",
+        price: "0.08",
+        oldPrice: "0.24",
       },
       {
         title: "Custom Golf Packaging",
@@ -1448,8 +1448,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.22",
+        price: "0.07",
+        oldPrice: "0.22",
       },
       {
         title: "Tissue Paper Boxes",
@@ -1464,8 +1464,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.25",
+        price: "0.07",
+        oldPrice: "0.25",
       },
     ],
   },
@@ -1489,8 +1489,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.24",
+        price: "0.06",
+        oldPrice: "0.24",
       },
       {
         title: "TV Box Packaging",
@@ -1505,8 +1505,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.24",
+        price: "0.07",
+        oldPrice: "0.24",
       },
       {
         title: "Tablet Packaging",
@@ -1521,8 +1521,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.23",
+        price: "0.06",
+        oldPrice: "0.23",
       },
       {
         title: "Speaker Packaging",
@@ -1537,8 +1537,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.24",
+        price: "0.08",
+        oldPrice: "0.24",
       },
       {
         title: "Battery Packaging Boxes",
@@ -1553,8 +1553,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.09",
-        oldPrice: "£0.25",
+        price: "0.09",
+        oldPrice: "0.25",
       },
       {
         title: "Smart Home Device Packaging",
@@ -1569,8 +1569,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.24",
+        price: "0.07",
+        oldPrice: "0.24",
       },
       {
         title: "Phone Case Packaging",
@@ -1585,8 +1585,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.24",
+        price: "0.08",
+        oldPrice: "0.24",
       },
       {
         title: "Headphone Packaging",
@@ -1601,8 +1601,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.22",
+        price: "0.07",
+        oldPrice: "0.22",
       },
       {
         title: "Gaming Console Packaging",
@@ -1617,8 +1617,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.24",
+        price: "0.07",
+        oldPrice: "0.24",
       },
       {
         title: "Drone Packaging Boxes",
@@ -1633,8 +1633,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.09",
-        oldPrice: "£0.25",
+        price: "0.09",
+        oldPrice: "0.25",
       },
       {
         title: "Computer Component Packaging",
@@ -1649,8 +1649,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.23",
+        price: "0.08",
+        oldPrice: "0.23",
       },
       {
         title: "Camera Gear Packaging",
@@ -1665,8 +1665,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.25",
+        price: "0.06",
+        oldPrice: "0.25",
       },
     ],
   },
@@ -1690,8 +1690,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
-        price: "£0.09",
-        oldPrice: "£0.26",
+        price: "0.09",
+        oldPrice: "0.26",
       },
       {
         title: "Pharmaceutical Corrugated Boxes",
@@ -1706,8 +1706,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.24",
+        price: "0.08",
+        oldPrice: "0.24",
       },
       {
         title: "Instrument Box",
@@ -1722,8 +1722,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.21",
+        price: "0.06",
+        oldPrice: "0.21",
       },
       {
         title: "Healthcare Packaging",
@@ -1738,8 +1738,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.24",
+        price: "0.07",
+        oldPrice: "0.24",
       },
       {
         title: "Health Card Boxes",
@@ -1754,8 +1754,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
-        price: "£0.08",
-        oldPrice: "£0.22",
+        price: "0.08",
+        oldPrice: "0.22",
       },
       {
         title: "Gloves Sterilization Box",
@@ -1770,8 +1770,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.21",
+        price: "0.06",
+        oldPrice: "0.21",
       },
       {
         title: "Custom Soap Boxes",
@@ -1786,8 +1786,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.24",
+        price: "0.07",
+        oldPrice: "0.24",
       },
       {
         title: "Custom Printed Boxes",
@@ -1802,8 +1802,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.21",
+        price: "0.07",
+        oldPrice: "0.21",
       },
     ],
   },
@@ -1827,8 +1827,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
-        price: "£0.07",
-        oldPrice: "£0.22",
+        price: "0.07",
+        oldPrice: "0.22",
       },
       {
         title: "Leather Shoes Boxes",
@@ -1843,8 +1843,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.23",
+        price: "0.06",
+        oldPrice: "0.23",
       },
       {
         title: "Shoe Boxes",
@@ -1859,8 +1859,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.23",
+        price: "0.07",
+        oldPrice: "0.23",
       },
       {
         title: "Short Shoes Boxes",
@@ -1875,8 +1875,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.21",
+        price: "0.06",
+        oldPrice: "0.21",
       },
       {
         title: "Fordable Shoes Boxes",
@@ -1891,8 +1891,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
-        price: "£0.07",
-        oldPrice: "£0.23",
+        price: "0.07",
+        oldPrice: "0.23",
       },
       {
         title: "Double Layered Boxes",
@@ -1907,8 +1907,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.24",
+        price: "0.08",
+        oldPrice: "0.24",
       },
       {
         title: "Custom Shoes Boxes",
@@ -1923,8 +1923,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
-        price: "£0.09",
-        oldPrice: "£0.25",
+        price: "0.09",
+        oldPrice: "0.25",
       },
       {
         title: "Custom Design Boxes",
@@ -1939,8 +1939,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.23",
+        price: "0.07",
+        oldPrice: "0.23",
       },
       {
         title: "Custom Cardboard Boxes",
@@ -1955,8 +1955,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.21",
+        price: "0.06",
+        oldPrice: "0.21",
       },
       {
         title: "Containers Boxes",
@@ -1971,8 +1971,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
-        price: "£0.06",
-        oldPrice: "£0.23",
+        price: "0.06",
+        oldPrice: "0.23",
       },
       {
         title: "2 Lid Custom Box",
@@ -1987,8 +1987,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.21",
+        price: "0.06",
+        oldPrice: "0.21",
       },
     ],
   },
@@ -2012,8 +2012,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.25",
+        price: "0.07",
+        oldPrice: "0.25",
       },
       {
         title: "Protection Packaging",
@@ -2028,8 +2028,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.22",
+        price: "0.08",
+        oldPrice: "0.22",
       },
       {
         title: "Pharmacy Packaging",
@@ -2044,8 +2044,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.23",
+        price: "0.08",
+        oldPrice: "0.23",
       },
       {
         title: "Pharmacy Display Boxes",
@@ -2060,8 +2060,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.23",
+        price: "0.07",
+        oldPrice: "0.23",
       },
       {
         title: "Medicine Boxes",
@@ -2076,8 +2076,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.24",
+        price: "0.08",
+        oldPrice: "0.24",
       },
       {
         title: "Eco-Friendly Boxes",
@@ -2092,8 +2092,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.21",
+        price: "0.07",
+        oldPrice: "0.21",
       },
       {
         title: "Product Custom Boxes",
@@ -2108,8 +2108,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.23",
+        price: "0.06",
+        oldPrice: "0.23",
       },
       {
         title: "Association Packaging",
@@ -2124,8 +2124,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.21",
+        price: "0.07",
+        oldPrice: "0.21",
       },
     ],
   },
@@ -2149,8 +2149,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.21",
+        price: "0.06",
+        oldPrice: "0.21",
       },
       {
         title: "Vitamin Bottle Boxes",
@@ -2165,8 +2165,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i>",
-        price: "£0.09",
-        oldPrice: "£0.24",
+        price: "0.09",
+        oldPrice: "0.24",
       },
       {
         title: "Tube Boxes",
@@ -2181,8 +2181,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.24",
+        price: "0.08",
+        oldPrice: "0.24",
       },
       {
         title: "Sanitize Boxes",
@@ -2197,8 +2197,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.21",
+        price: "0.06",
+        oldPrice: "0.21",
       },
       {
         title: "Packaging For Supplements",
@@ -2213,8 +2213,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
-        price: "£0.09",
-        oldPrice: "£0.21",
+        price: "0.09",
+        oldPrice: "0.21",
       },
       {
         title: "Full Flap Auto Bottom Boxes",
@@ -2229,7 +2229,7 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.21",
+        price: "0.21",
         oldPrice: null,
       },
       {
@@ -2245,8 +2245,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.21",
+        price: "0.06",
+        oldPrice: "0.21",
       },
       {
         title: "Eco Friendly Supplement Packaging",
@@ -2261,8 +2261,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.22",
+        price: "0.08",
+        oldPrice: "0.22",
       },
       {
         title: "Essential Oil Packaging",
@@ -2277,8 +2277,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.21",
+        price: "0.06",
+        oldPrice: "0.21",
       },
     ],
   },
@@ -2302,8 +2302,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.22",
+        price: "0.07",
+        oldPrice: "0.22",
       },
       {
         title: "Bakery Product Boxes",
@@ -2318,8 +2318,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.23",
+        price: "0.06",
+        oldPrice: "0.23",
       },
       {
         title: "Belt Packaging",
@@ -2334,8 +2334,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.23",
+        price: "0.07",
+        oldPrice: "0.23",
       },
       {
         title: "Cardboard Instrument Boxes",
@@ -2350,8 +2350,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.20",
+        price: "0.07",
+        oldPrice: "0.20",
       },
       {
         title: "Charity Boxes",
@@ -2366,8 +2366,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.25",
+        price: "0.08",
+        oldPrice: "0.25",
       },
       {
         title: "Cornflour Packaging",
@@ -2382,8 +2382,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.22",
+        price: "0.07",
+        oldPrice: "0.22",
       },
       {
         title: "Cubes Boxes",
@@ -2398,8 +2398,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.24",
+        price: "0.07",
+        oldPrice: "0.24",
       },
       {
         title: "Custom Jar Sleeve Boxes",
@@ -2414,8 +2414,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.24",
+        price: "0.07",
+        oldPrice: "0.24",
       },
       {
         title: "Custom Mailer Boxes",
@@ -2430,8 +2430,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.22",
+        price: "0.07",
+        oldPrice: "0.22",
       },
       {
         title: "Donut Boxes",
@@ -2446,8 +2446,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star-half-alt'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.25",
+        price: "0.06",
+        oldPrice: "0.25",
       },
       {
         title: "Header Card Packaging",
@@ -2462,8 +2462,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
-        price: "£0.09",
-        oldPrice: "£0.26",
+        price: "0.09",
+        oldPrice: "0.26",
       },
       {
         title: "Personalized Boxes",
@@ -2478,8 +2478,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.22",
+        price: "0.06",
+        oldPrice: "0.22",
       },
     ],
   },
@@ -2506,8 +2506,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£21.00",
+        price: "0.06",
+        oldPrice: "21.00",
       },
       {
         title: "Custom Styled Boxes",
@@ -2522,8 +2522,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.23",
+        price: "0.07",
+        oldPrice: "0.23",
       },
       {
         title: "Presentation Boxes",
@@ -2538,8 +2538,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.24",
+        price: "0.08",
+        oldPrice: "0.24",
       },
       {
         title: "Thank You Boxes",
@@ -2554,8 +2554,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.23",
+        price: "0.06",
+        oldPrice: "0.23",
       },
       {
         title: "Retro Boxes",
@@ -2570,8 +2570,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.24",
+        price: "0.07",
+        oldPrice: "0.24",
       },
       {
         title: "Custom Book-Styled Gift Boxes",
@@ -2586,8 +2586,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.25",
+        price: "0.07",
+        oldPrice: "0.25",
       },
       {
         title: "Treasure Chest Boxes",
@@ -2602,8 +2602,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.08",
-        oldPrice: "£0.24",
+        price: "0.08",
+        oldPrice: "0.24",
       },
       {
         title: "Custom Souvenirs Boxes",
@@ -2618,8 +2618,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.23",
+        price: "0.06",
+        oldPrice: "0.23",
       },
       {
         title: "Custom Gift Boxes",
@@ -2634,8 +2634,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.06",
-        oldPrice: "£0.23",
+        price: "0.06",
+        oldPrice: "0.23",
       },
       {
         title: "Auto Lock Display Lid Boxes",
@@ -2650,8 +2650,8 @@ const Products = [
         },
         stars:
           "<i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='fas fa-star'></i><i class='far fa-star'></i>",
-        price: "£0.07",
-        oldPrice: "£0.24",
+        price: "0.07",
+        oldPrice: "0.24",
       },
     ],
   },

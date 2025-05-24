@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { FaPhone } from "react-icons/fa";
-
+import { useTranslation } from "react-i18next";
+import { useCountryContent } from "../hooks/useCountryContent";
 // Styled components with responsive design
 const ContactSection = styled.div`
   display: flex;
@@ -95,7 +96,8 @@ const PhoneSubtitle = styled.div`
 // Component
 const TelephoneContact = () => {
   const phoneNumber = "+44 07459 682266";
-
+  const { t } = useTranslation();
+  const { getPhoneNumber } = useCountryContent();
   return (
     <ContactSection
       style={{ "margin-left": "auto" }}
@@ -106,8 +108,8 @@ const TelephoneContact = () => {
           <StyledPhoneIcon />
         </PhoneIconCircle>
         <PhoneText>
-          <PhoneTitle>Call: {phoneNumber}</PhoneTitle>
-          <PhoneSubtitle>Call us for free!</PhoneSubtitle>
+          <PhoneTitle>{t("header.phone")}</PhoneTitle>
+          <PhoneSubtitle>{t("header.phoneSubtext")}</PhoneSubtitle>
         </PhoneText>
       </PhoneContainer>
     </ContactSection>

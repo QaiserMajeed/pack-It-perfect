@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
+import { useCountryContent } from "../hooks/useCountryContent";
 import Products from "./Products";
 import TelephoneContact from "./Telephone";
+import LocaleSelector from "./LocaleSelector";
 
 // Atoms-inspired Styled Components
 const StyledHeader = styled.header`
@@ -91,7 +94,6 @@ const NavContainer = styled.div`
     }
   }
 `;
-
 
 const DesktopNav = styled.nav`
   display: none;
@@ -226,19 +228,6 @@ const DesktopNav = styled.nav`
         color: white;
       }
     }
-  }
-`;
-
-const UtilityNav = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 20px;
-
-  a {
-    color: #000;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
   }
 `;
 
@@ -387,10 +376,20 @@ const MobilePhone = styled.a`
   text-decoration: none;
 `;
 
+const LocaleSelectorWrapper = styled.div`
+  margin-left: 16px;
+
+  @media (max-width: 992px) {
+    display: none; // Hide in mobile menu, show in footer instead
+  }
+`;
+
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [expandedCategory, setExpandedCategory] = useState(null);
   const [searchActive, setSearchActive] = useState(false);
+  const { t } = useTranslation();
+  const { getPhoneNumber } = useCountryContent();
 
   // Close menu when resizing to desktop
   useEffect(() => {
@@ -426,7 +425,7 @@ const Header = () => {
     <StyledHeader>
       {/* Announcement bar */}
       <AnnouncementBar>
-        <div className="container">Free shipping on all UK orders £300+</div>
+        <div className="container">{t("header.announcement")}</div>
       </AnnouncementBar>
 
       {/* Main header */}
@@ -543,6 +542,9 @@ const Header = () => {
                   </li>
                 </ul>
               </DesktopNav>
+              <LocaleSelectorWrapper>
+                <LocaleSelector />
+              </LocaleSelectorWrapper>
             </div>
             <TelephoneContact />
           </NavContainer>
@@ -698,16 +700,26 @@ const Header = () => {
 
           <MobileMenuFooter>
             <PrimaryButton to="/get-a-quote" onClick={toggleMobileMenu}>
-              Get a Quote
+              {t("hero.cta")}
             </PrimaryButton>
             <MobileContact>
               <p className="mb-1">
                 <strong>Call us:</strong>
               </p>
               <MobilePhone>
-                <a href="tel:+44 07459 682266">+44 0744018948</a>
+                <a href={`tel:${getPhoneNumber()}`}>{getPhoneNumber()}</a>
               </MobilePhone>
             </MobileContact>
+            {/* Add locale selector to mobile menu */}
+            <div
+              style={{
+                marginTop: "20px",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <LocaleSelector />
+            </div>
           </MobileMenuFooter>
         </MobileMenu>
       </MobileMenuWrapper>

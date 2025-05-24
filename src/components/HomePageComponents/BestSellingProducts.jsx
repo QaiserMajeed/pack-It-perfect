@@ -24,6 +24,7 @@ import {
   faWineGlass,
   faCubes,
 } from "@fortawesome/free-solid-svg-icons";
+import { useCurrency } from "../../hooks/useCurrency";
 
 const SectionContainer = styled.div`
   padding: 4rem 0;
@@ -187,14 +188,15 @@ const getProductColor = (id) => {
 };
 
 const BestSellingProducts = () => {
+  const { formatPrice } = useCurrency();
  const products = [
    {
      id: 1,
      title: "Cigarette Packaging",
      image:
        "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Cigarettes-Packaging-300x300.webp",
-     price: "£0.07",
-     regularPrice: "£0.23",
+     price: "0.07",
+     regularPrice: "0.23",
      link: "/custom-cigarettes-boxes",
      isNew: true,
    },
@@ -203,8 +205,8 @@ const BestSellingProducts = () => {
      title: "Bakery Product Boxes",
      image:
        "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Bakery-Product-Boxes-300x300.webp",
-     price: "£0.06",
-     regularPrice: "£0.23",
+     price: "0.06",
+     regularPrice: "0.23",
      link: "/bakery-product-boxes",
      isNew: true,
    },
@@ -213,8 +215,8 @@ const BestSellingProducts = () => {
      title: "Custom Bangle Boxes",
      image:
        "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Custom-Bangle-Boxes-300x300.webp",
-     price: "£0.09",
-     regularPrice: "£0.25",
+     price: "0.09",
+     regularPrice: "0.25",
      link: "/custom-bangle-boxes",
      isNew: false,
    },
@@ -223,8 +225,8 @@ const BestSellingProducts = () => {
      title: "Custom Cardboard Boxes",
      image:
        "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Custom-Cardboard-Boxes-300x300.webp",
-     price: "£0.06",
-     regularPrice: "£0.21",
+     price: "0.06",
+     regularPrice: "0.21",
      link: "/custom-cardboard-boxes",
      isNew: false,
    },
@@ -233,8 +235,8 @@ const BestSellingProducts = () => {
      title: "Leather Shoes Boxes",
      image:
        "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Leather-Shoes-Boxes-300x300.webp",
-     price: "£0.06",
-     regularPrice: "£0.23",
+     price: "0.06",
+     regularPrice: "0.23",
      link: "/custom-leather-shoes-boxes",
      isNew: true,
    },
@@ -243,8 +245,8 @@ const BestSellingProducts = () => {
      title: "Carryout Boxes",
      image:
        "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Carry-Out-boxes-300x300.webp",
-     price: "£0.07",
-     regularPrice: "£0.22",
+     price: "0.07",
+     regularPrice: "0.22",
      link: "/custom-carryout-packaging-boxes",
      isNew: true,
    },
@@ -253,8 +255,8 @@ const BestSellingProducts = () => {
      title: "Recyclable Packaging",
      image:
        "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Recyclable-Packaging-300x300.webp",
-     price: "£0.07",
-     regularPrice: "£0.23",
+     price: "0.07",
+     regularPrice: "0.23",
      link: "/recyclable-packaging",
      isNew: false,
    },
@@ -263,8 +265,8 @@ const BestSellingProducts = () => {
      title: "Wine Bottle Packaging",
      image:
        "https://onestepcustomboxes.co.uk/wp-content/uploads/2024/11/Wine-Bottle-Packaging-300x300.webp",
-     price: "£0.06",
-     regularPrice: "£0.22",
+     price: "0.06",
+     regularPrice: "0.22",
      link: "/custom-wine-bottle-boxes",
      isNew: true,
    },
@@ -281,7 +283,7 @@ const BestSellingProducts = () => {
 
         <ProductsGrid>
           {products.slice(0, 8).map((product) => (
-            <ProductCard  key={product.id}>
+            <ProductCard key={product.id}>
               {product.isNew && <NewTag>NEW</NewTag>}
               <ProductImage>
                 <IconBackground bgColor={product.bgColor}>
@@ -291,8 +293,10 @@ const BestSellingProducts = () => {
               <ProductInfo>
                 <ProductTitle>{product.title}</ProductTitle>
                 <ProductPrice>
-                  {product.price}
-                  <RegularPrice>{product.regularPrice}</RegularPrice>
+                  {formatPrice(product.price)}
+                  <RegularPrice>
+                    {formatPrice(product.regularPrice)}
+                  </RegularPrice>
                 </ProductPrice>
               </ProductInfo>
             </ProductCard>

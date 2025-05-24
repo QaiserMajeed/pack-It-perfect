@@ -1,6 +1,11 @@
+// src/components/footer.jsx - Updated with i18n support
 import React, { useState } from "react";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
+import { useCountryContent } from "../hooks/useCountryContent";
+import { useCurrency } from "../hooks/useCurrency";
 import TelephoneContact from "./Telephone";
+import LocaleSelector from "./LocaleSelector";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -13,7 +18,7 @@ import { faEnvelope, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import Products from "./Products";
 
-// Styled Components - Updated with Atoms style
+// Styled Components - Keep existing styles
 const FooterContainer = styled.footer`
   background-color: #000000;
   color: white;
@@ -191,6 +196,7 @@ const Copyright = styled.div`
   font-size: 12px;
   color: #999;
 `;
+
 const PaymentIcons = styled.div`
   display: flex;
   gap: 15px;
@@ -206,6 +212,7 @@ const PaymentIcons = styled.div`
     margin-top: 15px;
   }
 `;
+
 const BottomLinks = styled.div`
   display: flex;
   gap: 20px;
@@ -266,8 +273,28 @@ const FormMessage = styled.div`
   }
 `;
 
+const LocaleSelectorWrapper = styled.div`
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 992px) {
+    display: none; // Hide on desktop as it's in header
+  }
+`;
+
+
+
 const Footer = () => {
   const year = new Date().getFullYear();
+  const { t } = useTranslation();
+  const {
+    getCountryName,
+    getPhoneNumber,
+    getCompanyAddress,
+  } = useCountryContent();
+  const { formatPrice, getCurrencySymbol } = useCurrency();
+
   const [email, setEmail] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [formStatus, setFormStatus] = useState({
@@ -287,14 +314,22 @@ const Footer = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, formType: "newsletter" }),
+        body: JSON.stringify({
+          email,
+          formType: "newsletter",
+          country: getCountryName(),
+          locale: t("common.country"),
+        }),
       });
 
       if (response.ok) {
         setFormStatus({
           success: true,
           error: false,
-          message: "Thank you for subscribing to our newsletter!",
+          message: t(
+            "footer.subscribeSuccess",
+            "Thank you for subscribing to our newsletter!"
+          ),
         });
         setEmail("");
       } else {
@@ -304,7 +339,10 @@ const Footer = () => {
       setFormStatus({
         success: false,
         error: true,
-        message: "There was an error submitting the form. Please try again.",
+        message: t(
+          "footer.subscribeError",
+          "There was an error submitting the form. Please try again."
+        ),
       });
     } finally {
       setSubmitting(false);
@@ -321,14 +359,11 @@ const Footer = () => {
                 <img src="/images/logo.svg" alt="Pack it Perfect Logo" />
               </Link>
             </LogoContainer>
-            <FooterText>
-              Stay in the know on product releases, founder news, and all things
-              Pack it Perfect.
-            </FooterText>
+            <FooterText>{t("footer.description")}</FooterText>
             <NewsletterForm onSubmit={handleSubscribe}>
               <EmailInput
                 type="email"
-                placeholder="Enter email here for updates"
+                placeholder={t("footer.newsletter")}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -350,16 +385,13 @@ const Footer = () => {
               <a href="mailto:sales@packageitperfect.com">
                 sales@packageitperfect.com
               </a>
-              <a href="tel:+44 07459 682266">+44 (0)7459 682266</a>
-              <address>
-                128 City Road, London,
-                <br />
-                United Kingdom, EC1V 2NX
-              </address>
+              <a href={`tel:${getPhoneNumber()}`}>{getPhoneNumber()}</a>
+              <address>{getCompanyAddress()}</address>
             </ContactInfo>
+            
 
             <FooterHeading style={{ marginTop: "20px" }}>
-              Stay Connected
+              {t("footer.stayConnected", "Stay Connected")}
             </FooterHeading>
             <SocialIcons>
               <a
@@ -395,76 +427,103 @@ const Footer = () => {
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
             </SocialIcons>
+
+            {/* Mobile Locale Selector */}
+            <LocaleSelectorWrapper>
+              <LocaleSelector />
+            </LocaleSelectorWrapper>
           </NewsletterColumn>
 
           <FooterColumn>
-            <FooterHeading>Categories</FooterHeading>
+            <FooterHeading>
+              {t("footer.categories", "Categories")}
+            </FooterHeading>
             <FooterList>
               <li>
-                <Link to="/category/packaging-by-style">By Style</Link>
+                <Link to="/category/packaging-by-style">
+                  {t("footer.byStyle", "By Style")}
+                </Link>
               </li>
               <li>
-                <Link to="/category/packaging-by-style">By Material</Link>
+                <Link to="/category/packaging-by-style">
+                  {t("footer.byMaterial", "By Material")}
+                </Link>
               </li>
             </FooterList>
           </FooterColumn>
 
           <FooterColumn>
-            <FooterHeading>Popular Products</FooterHeading>
+            <FooterHeading>
+              {t("footer.popularProducts", "Popular Products")}
+            </FooterHeading>
             <FooterList>
               <li>
-                <Link to="/category/Gifts-and-Souvenirs-Boxes">Gift Boxes</Link>
+                <Link to="/category/Gifts-and-Souvenirs-Boxes">
+                  {t("footer.giftBoxes", "Gift Boxes")}
+                </Link>
               </li>
               <li>
-                <Link to="/category/jewelry-packaging">Jewelry Packaging</Link>
+                <Link to="/category/jewelry-packaging">
+                  {t("footer.jewelryPackaging", "Jewelry Packaging")}
+                </Link>
               </li>
               <li>
                 <Link to="/category/Clothing-and-Apparel-Boxes">
-                  Clothing Boxes
+                  {t("footer.clothingBoxes", "Clothing Boxes")}
                 </Link>
               </li>
               <li>
-                <Link to="/category/Fast-Food-Packaging">Food Packaging</Link>
+                <Link to="/category/Fast-Food-Packaging">
+                  {t("footer.foodPackaging", "Food Packaging")}
+                </Link>
               </li>
               <li>
                 <Link to="/category/Medical-Devices-Boxes">
-                  Medical Packaging
+                  {t("footer.medicalPackaging", "Medical Packaging")}
                 </Link>
               </li>
               <li>
-                <Link to="/category/Custom-Made-Boxes">Custom Made Boxes</Link>
+                <Link to="/category/Custom-Made-Boxes">
+                  {t("footer.customBoxes", "Custom Made Boxes")}
+                </Link>
               </li>
               <li>
                 <Link to="/category/Beauty-and-Cosmetics-Packaging">
-                  Cosmetics Packaging
+                  {t("footer.cosmeticsPackaging", "Cosmetics Packaging")}
                 </Link>
               </li>
               <li>
                 <Link to="/category/Beverage-Custom-Boxes">
-                  Beverage Packaging
+                  {t("footer.beveragePackaging", "Beverage Packaging")}
                 </Link>
               </li>
             </FooterList>
           </FooterColumn>
 
           <FooterColumn>
-            <FooterHeading>Customer Support</FooterHeading>
+            <FooterHeading>
+              {t("footer.customerSupport", "Customer Support")}
+            </FooterHeading>
             <FooterList>
               <li>
-                <Link to="/faq">Frequently Asked Questions</Link>
+                <Link to="/faq">
+                  {t("footer.faq", "Frequently Asked Questions")}
+                </Link>
               </li>
               <li>
-                <Link to="/get-a-quote">Request a Quote</Link>
+                <Link to="/get-a-quote">
+                  {t("footer.requestQuote", "Request a Quote")}
+                </Link>
               </li>
               <li>
-                <Link to="/contact">Contact Us</Link>
+                <Link to="/contact">{t("footer.contactUs", "Contact Us")}</Link>
               </li>
               <li>
-                <Link to="/blog">Packaging Blog</Link>
+                <Link to="/blog">{t("footer.blog", "Packaging Blog")}</Link>
               </li>
             </FooterList>
             <FooterHeading style={{ marginTop: "20px" }}>
-              Success Stories
+              {t("footer.successStories", "Success Stories")}
             </FooterHeading>
             <FooterList>
               <li>
@@ -480,9 +539,7 @@ const Footer = () => {
         <Divider />
 
         <BottomFooter>
-          <Copyright>
-            © {year} Pack it Perfect Custom Boxes. All rights reserved.
-          </Copyright>
+          <Copyright>{t("footer.copyright")}</Copyright>
           <PaymentIcons>
             <img
               src="/images/paymentimages/bacs.webp"

@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
+import { useLocalization } from "../../hooks/useLocalization";
 
 const HeroSectionWrapper = styled.div`
   padding: 1rem 0;
@@ -192,6 +194,7 @@ const Slide = styled.div`
 `;
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   // Image paths for the slider
   const sliderImages = [
     "/images/product-slides2-homepage/homepageslider/slide1.jpg",
@@ -208,24 +211,15 @@ const HeroSection = () => {
             <CategoryLabel>
               <span>CUSTOM PACKAGING BOXES</span>
             </CategoryLabel>
-            <HeroTitle>
-              Your <BrandedText>One-Stop</BrandedText> Destination For Custom
-              Boxes and Packaging Needs!
-            </HeroTitle>
-            <HeroDescription>
-              In The Dynamic UK Market, We Stand Out With Our Extensive
-              Collection Of Bespoke Cosmetics And Packaging.
-            </HeroDescription>
+            <HeroTitle>{t("hero.title")}</HeroTitle>
+            <HeroDescription>{t("hero.subtitle")}</HeroDescription>
             <FeaturesList>
-              <FeatureItem>Produced In United Kingdom</FeatureItem>
-              <FeatureItem>Delivery within 6 to 10 working days</FeatureItem>
+              <FeatureItem>{t("hero.features.produced")}</FeatureItem>
+              <FeatureItem>{t("hero.features.delivery")}</FeatureItem>
             </FeaturesList>
-            <ActionButton href="/get-a-quote">Get A Free Quote</ActionButton>
+            <ActionButton href="/get-a-quote">{t("hero.cta")}</ActionButton>
             <RatingRow>
-              <RatingText>
-                See what our clients are saying! With 4.5 Social Media Platforms
-                Rating :
-              </RatingText>
+              <RatingText>{t("hero.rating")}</RatingText>
               <RatingStars>
                 <Star>★</Star>
                 <Star>★</Star>

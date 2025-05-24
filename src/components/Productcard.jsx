@@ -4,6 +4,7 @@ import SEO from "./SEO";
 import { useParams, Link, useLocation } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { useCurrency } from "../hooks/useCurrency";
 
 // Styled Components - Updated to match screenshot design
 const Container = styled.div`
@@ -87,20 +88,6 @@ const CardImgContainer = styled.div`
     background-color: ${(props) => props.bgColor || "#F5E7C1"};
     z-index: 0;
     border-radius: 8px;
-  }
-`;
-
-const ProductImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  position: relative;
-  z-index: 1;
-  padding: 20px;
-  transition: transform 0.3s ease;
-
-  ${Card}:hover & {
-    transform: scale(1.05);
   }
 `;
 
@@ -292,8 +279,8 @@ const ProductCard = ({ categories }) => {
                        <CategoryTag>Beauty & Cosmetics</CategoryTag>
                        <CardTitle>{product.title}</CardTitle>
                        <Price>
-                         <RegularPrice>£0.07</RegularPrice>
-                         <OriginalPrice>£0.23</OriginalPrice>
+                         {/* <RegularPrice>{}</RegularPrice>
+                         <OriginalPrice>£0.23</OriginalPrice> */}
                        </Price>
                        <ViewDetailsLink>View More</ViewDetailsLink>
                        <BrandInfo>Brand & Company</BrandInfo>

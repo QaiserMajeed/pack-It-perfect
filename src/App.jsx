@@ -1,9 +1,13 @@
+// src/App.jsx - Updated with i18n integration
 import React, { useEffect, lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import SEO from "./components/SEO"; // Import SEO component
+import { useLocalization } from "./hooks/useLocalization";
+import SEO from "./components/SEO";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import "./App.css";
+import "./i18n/config"; // Initialize i18n
+
 // Import only essential components
 import MainContent from "./components/mainContent";
 import ProductCard from "./components/Productcard";
@@ -17,9 +21,6 @@ import ScrollToTop from "./components/ScrollToTop";
 import StickyCTAProvider from "./components/StickyCTAProvider";
 import PaymentPlansPage from "./components/PaymentsPlans";
 import JarsCupsPage from "./components/JarsCupsPage";
-
-// Import the Google Tag Manager component
-import GoogleTagManager from "./components/GoogleTagManager";
 
 // Lazy load non-critical components
 const ProductDetails = lazy(() => import("./components/ProductDetails"));
@@ -42,12 +43,11 @@ const TestimonialsSection = lazy(() =>
 const CompanyBenefitsSection = lazy(() =>
   import("./components/HomePageComponents/CompanyBenefitsSection")
 );
-const QouteForm = lazy(() => import("./components/QuoteForm"));
-
+const QuoteForm = lazy(() => import("./components/QuoteForm"));
 const CaseStudy = lazy(() => import("./components/CaseStudy"));
 const CaseStudies = lazy(() => import("./components/CaseStudies"));
 
-// Loading fallback
+// Loading fallback component
 const LoadingFallback = () => (
   <div
     className="loading-container"
@@ -78,15 +78,43 @@ const LoadingFallback = () => (
   </div>
 );
 
+// Loading screen for initial localization
+const LocalizationLoader = () => (
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "100vh",
+      flexDirection: "column",
+      gap: "20px",
+    }}
+  >
+    <div
+      className="spinner"
+      style={{
+        width: "50px",
+        height: "50px",
+        border: "5px solid #f3f3f3",
+        borderTop: "5px solid #000",
+        borderRadius: "50%",
+        animation: "spin 1s linear infinite",
+      }}
+    ></div>
+    <p style={{ color: "#666", fontSize: "16px" }}>
+      Detecting your location...
+    </p>
+  </div>
+);
+
 function App() {
+  const { isLoading, currentLocale, t, getCurrencyConfig } = useLocalization();
+
   // Load Bootstrap JS
   useEffect(() => {
-    // Import Bootstrap JS
     const loadBootstrapJS = async () => {
       try {
-        // Check if window and document exist (for SSR)
         if (typeof window !== "undefined" && typeof document !== "undefined") {
-          // Import Bootstrap bundle with Popper
           await import("bootstrap/dist/js/bootstrap.bundle.min.js");
         }
       } catch (error) {
@@ -97,7 +125,10 @@ function App() {
     loadBootstrapJS();
   }, []);
 
-  // Simplified material and style slides arrays (keep the same as your original code)
+  // Show loading screen while detecting location
+  if (isLoading) {
+    return <LocalizationLoader />;
+  }
 
   const HomePage = () => {
     return (
@@ -110,7 +141,6 @@ function App() {
         />
 
         <Suspense fallback={<LoadingFallback />}>
-         
           <HeroSection />
           <FeatureHighlights />
           <IndustryCategoriesSection />
@@ -122,20 +152,81 @@ function App() {
     );
   };
 
+  const RouteWrapper = ({ component: Component, componentProps = {} }) => {
+    const getMetaForRoute = () => {
+      const path = window.location.pathname;
+
+      if (path.includes("/category/")) {
+        const categoryName = path.split("/category/")[1].split("/")[0];
+        const readableCategoryName = categoryName.replace(/-/g, " ");
+
+        return {
+          title: `${readableCategoryName} Packaging Solutions`,
+          description: `Explore our custom ${readableCategoryName.toLowerCase()} packaging options. Eco-friendly materials, premium quality, and fast delivery.`,
+          canonicalUrl: path,
+        };
+      }
+
+      if (path.includes("/product/")) {
+        const productName = path.split("/product/")[1];
+        const readableProductName = productName.replace(/-/g, " ");
+
+        const schema = {
+          "@context": "https://schema.org/",
+          "@type": "Product",
+          name: readableProductName,
+          description: `Premium quality custom ${readableProductName.toLowerCase()} packaging solutions for your business.`,
+          brand: {
+            "@type": "Brand",
+            name: "Pack it Perfect",
+          },
+          offers: {
+            "@type": "Offer",
+            url: `https://packageitperfect.com/${path}`,
+            priceCurrency: getCurrencyConfig().code,
+            availability: "https://schema.org/InStock",
+          },
+        };
+
+        return {
+          title: `${readableProductName} | Custom Packaging Solutions`,
+          description: `Premium quality custom ${readableProductName.toLowerCase()} packaging. Eco-friendly options, free design assistance, and fast delivery.`,
+          canonicalUrl: path,
+          schema: schema,
+        };
+      }
+
+      return {};
+    };
+
+    const meta = getMetaForRoute();
+
+    return (
+      <>
+        <SEO {...meta} />
+        <Component {...componentProps} />
+      </>
+    );
+  };
+
   return (
     <Router>
       <FloatingWhatsApp
         phoneNumber="+44 07459 682266"
-        accountName="Nancy "
+        accountName="Nancy"
         allowEsc
         allowClickAway
         notification
         notificationSound
         style={{ zIndex: 100000 }}
         zindex={100000}
-        chatMessage="Hello! How can we assist you today?"
+        chatMessage={
+          t
+            ? t("contact.chatMessage", "Hello! How can we assist you today?")
+            : "Hello! How can we assist you today?"
+        }
       />
-      <ScrollToTop /> {/* Add this line */}
+      <ScrollToTop />
       <div className="pack-it-perfect-app">
         <Header />
         <main>
@@ -145,14 +236,12 @@ function App() {
               <Route
                 path="/category/:categoryName"
                 element={
-                  <>
-                    <Suspense fallback={<LoadingFallback />}>
-                      <RouteWrapper
-                        component={ProductCard}
-                        componentProps={{ categories: Products }}
-                      />
-                    </Suspense>
-                  </>
+                  <Suspense fallback={<LoadingFallback />}>
+                    <RouteWrapper
+                      component={ProductCard}
+                      componentProps={{ categories: Products }}
+                    />
+                  </Suspense>
                 }
               />
               <Route
@@ -206,7 +295,7 @@ function App() {
                       description="Request a free quote for your custom packaging needs. Fast turnaround times, no die and plate charges, and eco-friendly options available."
                       canonicalUrl="/get-a-quote"
                     />
-                    <QouteForm />
+                    <QuoteForm />
                   </Suspense>
                 }
               />
@@ -223,7 +312,6 @@ function App() {
                   </Suspense>
                 }
               />
-
               <Route
                 path="/blog"
                 element={
@@ -232,7 +320,6 @@ function App() {
                   </Suspense>
                 }
               />
-
               <Route
                 path="/blog/:slug"
                 element={
@@ -254,7 +341,6 @@ function App() {
                   </Suspense>
                 }
               />
-
               <Route
                 path="/case-study/:slug"
                 element={
@@ -279,69 +365,5 @@ function App() {
     </Router>
   );
 }
-
-// RouteWrapper component to handle SEO for dynamic routes
-const RouteWrapper = ({ component: Component, componentProps = {} }) => {
-  // This is a simplified version - in a real implementation, you would extract
-  // the actual metadata from the route parameters and component data
-
-  const getMetaForRoute = () => {
-    const path = window.location.pathname;
-
-    // Example SEO setup for category pages
-    if (path.includes("/category/")) {
-      const categoryName = path.split("/category/")[1].split("/")[0];
-      const readableCategoryName = categoryName.replace(/-/g, " ");
-
-      return {
-        title: `${readableCategoryName} Packaging Solutions`,
-        description: `Explore our custom ${readableCategoryName.toLowerCase()} packaging options. Eco-friendly materials, premium quality, and fast UK delivery.`,
-        canonicalUrl: path,
-      };
-    }
-
-    // Example SEO setup for product pages
-    if (path.includes("/product/")) {
-      const productName = path.split("/product/")[1];
-      const readableProductName = productName.replace(/-/g, " ");
-
-      // Example product structured data
-      const schema = {
-        "@context": "https://schema.org/",
-        "@type": "Product",
-        name: readableProductName,
-        description: `Premium quality custom ${readableProductName.toLowerCase()} packaging solutions for your business.`,
-        brand: {
-          "@type": "Brand",
-          name: "Pack it Perfect",
-        },
-        offers: {
-          "@type": "Offer",
-          url: `https://packageitperfect.com/${path}`,
-          priceCurrency: "GBP",
-          availability: "https://schema.org/InStock",
-        },
-      };
-
-      return {
-        title: `${readableProductName} | Custom Packaging Solutions`,
-        description: `Premium quality custom ${readableProductName.toLowerCase()} packaging. Eco-friendly options, free design assistance, and fast delivery.`,
-        canonicalUrl: path,
-        schema: schema,
-      };
-    }
-
-    return {};
-  };
-
-  const meta = getMetaForRoute();
-
-  return (
-    <>
-      <SEO {...meta} />
-      <Component {...componentProps} />
-    </>
-  );
-};
 
 export default App;

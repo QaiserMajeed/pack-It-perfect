@@ -16,7 +16,7 @@ import {
   faWineBottle,
 } from "@fortawesome/free-solid-svg-icons";
 import OptimizedImage from "./OptimizeImage"; // Using your existing optimized image component
-
+import { useCurrency } from "../hooks/useCurrency";
 // Styled Components
 const PageContainer = styled.div`
   max-width: 1200px;
@@ -440,44 +440,12 @@ const FAQAnswer = styled.p`
   line-height: 1.6;
 `;
 
-const CTASection = styled.div`
-  background-color: #f8f8f8;
-  border-radius: 8px;
-  padding: 3rem 2rem;
-  text-align: center;
-`;
 
-const CTATitle = styled.h2`
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 1.5rem;
-`;
-
-const CTADescription = styled.p`
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #555;
-  max-width: 800px;
-  margin: 0 auto 2rem;
-`;
-
-const CTAButton = styled.a`
-  display: inline-block;
-  background-color: #000;
-  color: white;
-  font-weight: 600;
-  padding: 1rem 2rem;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #333;
-    color: white;
-  }
-`;
 
 const JarsCupsPage = () => {
+  // Use custom hook for currency conversion
+  const { formatPrice } = useCurrency();
+  // Function to convert price to selected currency
   // Use placeholder images if actual images are not available
   // In a production environment, replace these with your actual image paths
   const placeholderImage = (name) => {
@@ -508,7 +476,7 @@ const JarsCupsPage = () => {
       material: "glass",
       features: ["eco"],
       capacity: "500ml",
-      price: "£0.45",
+      price: "0.45",
       salePrice: null,
       image: "/images/products/JarsCups/glass-mason-jar.jpg",
     },
@@ -521,8 +489,8 @@ const JarsCupsPage = () => {
       material: "paper",
       features: ["eco", "new"],
       capacity: "350ml",
-      price: "£0.28",
-      salePrice: "£0.22",
+      price: "0.28",
+      salePrice: "0.22",
       image: "/images/products/JarsCups/kraft-paper-coffee-cup.jpg",
     },
     {
@@ -534,7 +502,7 @@ const JarsCupsPage = () => {
       material: "plastic",
       features: [],
       capacity: "500ml",
-      price: "£0.38",
+      price: "0.38",
       salePrice: null,
       image: "/images/products/JarsCups/clear-plastic-smoothie-cup.jpg",
     },
@@ -547,7 +515,7 @@ const JarsCupsPage = () => {
       material: "glass",
       features: ["eco"],
       capacity: "300ml",
-      price: "£0.52",
+      price: "0.52",
       salePrice: null,
       image: "/images/products/JarsCups/jam-jar-screw-lid.jpg",
     },
@@ -559,7 +527,7 @@ const JarsCupsPage = () => {
       material: "bamboo",
       features: ["eco", "new"],
       capacity: "400ml",
-      price: "£0.85",
+      price: "0.85",
       salePrice: null,
       image: "/images/products/JarsCups/eco-bamboo-coffee-cup.jpg",
     },
@@ -572,8 +540,8 @@ const JarsCupsPage = () => {
       material: "plastic",
       features: [],
       capacity: "50ml",
-      price: "£0.12",
-      salePrice: "£0.10",
+      price: "0.12",
+      salePrice: "0.10",
       image: "/images/products/JarsCups/sauce-dipping-cup.jpg",
     },
     {
@@ -585,7 +553,7 @@ const JarsCupsPage = () => {
       material: "glass",
       features: ["new"],
       capacity: "100ml",
-      price: "£0.65",
+      price: "0.65",
       salePrice: null,
       image: "/images/products/JarsCups/cosmetic-cream-jar.jpg",
     },
@@ -597,7 +565,7 @@ const JarsCupsPage = () => {
       material: "paper",
       features: ["eco"],
       capacity: "250ml",
-      price: "£0.32",
+      price: "0.32",
       salePrice: null,
       image: "/images/products/JarsCups/double-wall-paper-cup.jpg",
     },
@@ -610,8 +578,8 @@ const JarsCupsPage = () => {
       material: "plastic",
       features: [],
       capacity: "750ml",
-      price: "£0.42",
-      salePrice: "£0.35",
+      price: "0.42",
+      salePrice: "0.35",
       image: "/images/products/JarsCups/plastic-storage-jar.jpg",
     },
     {
@@ -623,8 +591,8 @@ const JarsCupsPage = () => {
       material: "glass",
       features: ["eco", "new"],
       capacity: "600ml",
-      price: "£1.10",
-      salePrice: "£0.99",
+      price: "1.10",
+      salePrice: "0.99",
       image: "/images/products/JarsCups/glass-smoothie-bottle.jpg",
     },
     {
@@ -636,7 +604,7 @@ const JarsCupsPage = () => {
       material: "glass",
       features: ["eco"],
       capacity: "50ml",
-      price: "£0.30",
+      price: "0.30",
       salePrice: null,
       image: "/images/products/JarsCups/mini-honey-jar.jpg",
     },
@@ -649,7 +617,7 @@ const JarsCupsPage = () => {
       material: "paper",
       features: ["eco"],
       capacity: "300ml",
-      price: "£0.36",
+      price: "0.36",
       salePrice: null,
       image: "/images/products/JarsCups/compostable-coffee-cup.jpg",
     },
@@ -662,8 +630,8 @@ const JarsCupsPage = () => {
       material: "plastic",
       features: [],
       capacity: "700ml",
-      price: "£1.50",
-      salePrice: "£1.25",
+      price: "1.50",
+      salePrice: "1.25",
       image: "/images/products/JarsCups/protein-shaker-bottle.jpg",
     },
     {
@@ -675,7 +643,7 @@ const JarsCupsPage = () => {
       material: "rPET",
       features: ["eco"],
       capacity: "500ml",
-      price: "£0.40",
+      price: "0.40",
       salePrice: null,
       image: "/images/products/JarsCups/recycled-pet-smoothie-cup.jpg",
     },
@@ -688,7 +656,7 @@ const JarsCupsPage = () => {
       material: "glass",
       features: [],
       capacity: "1000ml",
-      price: "£0.95",
+      price: "0.95",
       salePrice: null,
       image: "/images/products/JarsCups/wide-mouth-storage-jar.jpg",
     },
@@ -701,7 +669,7 @@ const JarsCupsPage = () => {
       material: "glass",
       features: ["eco", "new"],
       capacity: "250ml",
-      price: "£0.60",
+      price: "0.60",
       salePrice: null,
       image: "/images/products/JarsCups/frosted-glass-jar-cork.jpg",
     },
@@ -713,8 +681,8 @@ const JarsCupsPage = () => {
       material: "plastic",
       features: [],
       capacity: "500ml",
-      price: "£0.20",
-      salePrice: "£0.15",
+      price: "0.20",
+      salePrice: "0.15",
       image: "/images/products/JarsCups/plastic-party-cup.jpg",
     },
     {
@@ -725,7 +693,7 @@ const JarsCupsPage = () => {
       material: "paper",
       features: ["eco"],
       capacity: "450ml",
-      price: "£0.30",
+      price: "0.30",
       salePrice: null,
       image: "/images/products/JarsCups/recyclable-cold-cup.jpg",
     },
@@ -737,7 +705,7 @@ const JarsCupsPage = () => {
       material: "glass",
       features: [],
       capacity: "200ml",
-      price: "£0.58",
+      price: "0.58",
       salePrice: null,
       image: "/images/products/JarsCups/amber-apothecary-jar.jpg",
     },
@@ -750,8 +718,8 @@ const JarsCupsPage = () => {
       material: "plastic",
       features: ["new"],
       capacity: "300ml",
-      price: "£0.75",
-      salePrice: "£0.68",
+      price: "0.75",
+      salePrice: "0.68",
       image: "/images/products/JarsCups/child-sippy-cup.jpg",
     },
     {
@@ -762,7 +730,7 @@ const JarsCupsPage = () => {
       material: "ceramic",
       features: [],
       capacity: "350ml",
-      price: "£1.20",
+      price: "1.20",
       salePrice: null,
       image: "/images/products/JarsCups/ceramic-coffee-mug.jpg",
     },
@@ -774,8 +742,8 @@ const JarsCupsPage = () => {
       material: "glass",
       features: ["eco"],
       capacity: "800ml",
-      price: "£0.89",
-      salePrice: "£0.80",
+      price: "0.89",
+      salePrice: "0.80",
       image: "/images/products/JarsCups/glass-jar-bamboo-lid.jpg",
     },
     {
@@ -786,7 +754,7 @@ const JarsCupsPage = () => {
       material: "glass",
       features: [],
       capacity: "120ml",
-      price: "£0.48",
+      price: "0.48",
       salePrice: null,
       image: "/images/products/JarsCups/hexagon-honey-jar.jpg",
     },
@@ -799,8 +767,8 @@ const JarsCupsPage = () => {
       material: "metal",
       features: ["eco", "new"],
       capacity: "500ml",
-      price: "£2.50",
-      salePrice: "£2.10",
+      price: "2.50",
+      salePrice: "2.10",
       image: "/images/products/JarsCups/stainless-steel-travel-mug.jpg",
     },
     {
@@ -811,7 +779,7 @@ const JarsCupsPage = () => {
       material: "glass",
       features: [],
       capacity: "30ml",
-      price: "£0.25",
+      price: "0.25",
       salePrice: null,
       image: "/images/products/JarsCups/tiny-sample-jar.jpg",
     },
@@ -1039,11 +1007,11 @@ const JarsCupsPage = () => {
                 <ProductPrice>
                   {product.salePrice ? (
                     <>
-                      <span className="old-price">{product.price}</span>
-                      <span className="sale-price">{product.salePrice}</span>
+                      <span className="old-price">{formatPrice(product.price)}</span>
+                      <span className="sale-price">{formatPrice( product.salePrice)}</span>
                     </>
                   ) : (
-                    <span>{product.price}</span>
+                    <span>{formatPrice( product.price)}</span>
                   )}
                 </ProductPrice>
 

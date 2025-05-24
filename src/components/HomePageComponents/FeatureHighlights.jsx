@@ -10,6 +10,9 @@ import {
   faShippingFast,
   faPencilRuler,
 } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
+import { useCountryContent } from "../../hooks/useCountryContent";
+import { useLocalization } from "../../hooks/useLocalization";
 
 // Add the icons to the library
 library.add(faSterlingSign, faTruck, faBox, faShippingFast, faPencilRuler);
@@ -84,34 +87,36 @@ const FeatureDescription = styled.p`
 `;
 
 const FeatureHighlights = React.memo(function FeatureHighlights() {
-  const features = [
-    {
-      icon: faSterlingSign,
-      title: "No Die and Plate Charges",
-      description: "Save on setup costs",
-    },
-    {
-      icon: faTruck,
-      title: "Delivery within 7-10 working days",
-      description: "Fast turnaround time",
-    },
-    {
-      icon: faBox,
-      title: "Starting from 100 units",
-      description: "Low minimum order quantity",
-    },
-    {
-      icon: faShippingFast,
-      title: "Free Shipping all across UK",
-      description: "No hidden delivery costs",
-    },
-    {
-      icon: faPencilRuler,
-      title: "Free Designing Assistance",
-      description: "Professional design support",
-    },
-  ];
+  const { t } = useTranslation();
+  const { getCountryName } = useCountryContent();
 
+ const features = [
+   {
+     icon: faSterlingSign,
+     title: t("features.noDieCharges"),
+     description: "Save on setup costs",
+   },
+   {
+     icon: faTruck,
+     title: t("features.fastDelivery"),
+     description: "Fast turnaround time",
+   },
+   {
+     icon: faBox,
+     title: t("features.lowMinimum"),
+     description: "Low minimum order quantity",
+   },
+   {
+     icon: faShippingFast,
+     title: t("features.freeShipping"),
+     description: "No hidden delivery costs",
+   },
+   {
+     icon: faPencilRuler,
+     title: t("features.freeDesign"),
+     description: "Professional design support",
+   },
+ ];
   return (
     <FeaturesContainer>
       <div className="container">
